@@ -1,0 +1,30 @@
+{
+	"name": "hoangviethung009",
+	"version": "1.0.0",
+	"description": "basicsource",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hoangviethung/Basic-Source-Front-End.git"
+	},
+	"keywords": [
+		"basicsource"
+	],
+	"author": "hoangviethung",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/hoangviethung/Basic-Source-Front-End/issues"
+	},
+	"homepage": "https://github.com/hoangviethung/Basic-Source-Front-End#readme",
+	"dependencies": {
+		"swiper": "^6.4.5"
+	},
+	"devDependencies": {
+		"bootstrap": "^4.5.0",
+		"jquery": "^3.5.1",
+		"wowjs": "^1.1.3"
+	}
+}
