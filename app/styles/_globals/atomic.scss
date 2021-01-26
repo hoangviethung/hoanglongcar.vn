@@ -131,3 +131,25 @@
 	@extend .pt-section;
 	@extend .pb-section;
 }
+.mt-section {
+	margin-top: 24px;
+	@media (min-width: 768px) {
+		margin-top: 40px;
+	}
+	@media (min-width: 1200px) {
+		margin-top: 80px;
+	}
+}
+.mb-section {
+	margin-bottom: 24px;
+	@media (min-width: 768px) {
+		margin-bottom: 40px;
+	}
+	@media (min-width: 1200px) {
+		margin-bottom: 80px;
+	}
+}
+.mr-section {
+	@extend .mt-section;
+	@extend .mb-section;
+}

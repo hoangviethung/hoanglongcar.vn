@@ -39,7 +39,7 @@ body {
 	font-family: 'Open Sans';
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 1.5;
+	line-height: 24px;
 	color: var(--body);
 	text-align: left;
 	background-color: var(--white);
@@ -62,12 +62,10 @@ h4,
 h5,
 h6 {
 	margin-top: 0;
-	margin-bottom: 0.5rem;
 }
 
 p {
-	margin-top: 0;
-	margin-bottom: 1rem;
+	margin: 0;
 }
 
 abbr[title],
@@ -82,7 +80,6 @@ abbr[data-original-title] {
 }
 
 address {
-	margin-bottom: 1rem;
 	font-style: normal;
 	line-height: inherit;
 }
@@ -93,7 +90,6 @@ dl {
 	padding: 0;
 	list-style: none;
 	margin-top: 0;
-	margin-bottom: 1rem;
 }
 
 ol ol,
@@ -108,12 +104,7 @@ dt {
 }
 
 dd {
-	margin-bottom: 0.5rem;
 	margin-left: 0;
-}
-
-blockquote {
-	margin: 0 0 1rem;
 }
 
 b,
@@ -167,7 +158,6 @@ samp {
 
 pre {
 	margin-top: 0;
-	margin-bottom: 1rem;
 	overflow: auto;
 	-ms-overflow-style: scrollbar;
 }
@@ -205,7 +195,6 @@ th {
 
 label {
 	display: inline-block;
-	margin-bottom: 0.5rem;
 }
 
 button {
@@ -291,7 +280,6 @@ legend {
 	width: 100%;
 	max-width: 100%;
 	padding: 0;
-	margin-bottom: 0.5rem;
 	font-size: 1.5rem;
 	line-height: inherit;
 	color: inherit;
