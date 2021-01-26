@@ -1,0 +1,30 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 500;
+	height: 150px;
+	padding: 25px 0;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	ul {
+		display: flex;
+		margin-left: auto;
+	}
+	li {
+		+ li {
+			margin-left: 42px;
+		}
+	}
+	a {
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		line-height: 24px;
+		font-weight: 700;
+		color: var(--white);
+	}
+}
