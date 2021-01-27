@@ -1,4 +1,4 @@
-// CORE VALUE
+-let corevalues = {1: 'DỊCH VỤ CHẤT LƯỢNG', 2: 'HÀI LÒNG KHÁCH HÀNG', 3: 'chi phí hợp lý', 4: 'NHÂN VIÊN CHUYÊN NGHIỆP'};
 section.index-core-value.pd-section.mt-section
 	.container
 		.title-section.color-light.has-line.text-center
@@ -6,38 +6,9 @@ section.index-core-value.pd-section.mt-section
 				span hoanglong 
 				|  giá trị cốt lõi
 		.list-item.row.mt-section
-			.col-lg-3.col-sm-6.item
-				.icon
-					img(src='./images/index/core-value-01.png' alt='GIA-TRI-COT-LOI-01')
-				h3 DỊCH VỤ CHẤT LƯỢNG
-				p
-					| Với quy trình sản xuất hiện đại và kiểm tra
-					| nghiêm ngặt, chúng tôi luôn nỗ lực mang đến cho
-					| khách hàng sản phẩm chất lượng, bền bỉ, hiện
-					| đại.
-			.col-lg-3.col-sm-6.item
-				.icon
-					img(src='./images/index/core-value-02.png' alt='GIA-TRI-COT-LOI-01')
-				h3 HÀI LÒNG KHÁCH HÀNG
-				p
-					| Đối với chúng tôi, khách hàng luôn là ưu tiên
-					| hàng đầu, luôn cố gắng cải tiến và hoàn thiện
-					| sản phẩm & dịch vụ để tối đa hóa sự hài lòng của
-					| khách hàng.
-			.col-lg-3.col-sm-6.item
-				.icon
-					img(src='./images/index/core-value-03.png' alt='GIA-TRI-COT-LOI-01')
-				h3 chi phí hợp lý
-				p
-					| Hiểu được tâm lý khách hàng cùng với mong muốn
-					| mang đến sự trải nghiệm, cung cấp những dòng sản
-					| phẩm chính hãng, hiện đại cùng mức giá phải
-					| chăng.
-			.col-lg-3.col-sm-6.item
-				.icon
-					img(src='./images/index/core-value-04.png' alt='GIA-TRI-COT-LOI-01')
-				h3 NHÂN VIÊN CHUYÊN NGHIỆP
-				p
-					| Đội ngũ Chuyên viên kỹ thuật dày dặn kinh ng
-					| hiệm, được đào tạo một cách bài bản, cùng với
-					| niềm đam mê và kiến thức chuyên môn vững chắc.
+			each val,key in corevalues
+				.col-lg-3.col-sm-6.item
+					.icon
+						img(src=`./images/index/core-value-0${key}.png` alt='GIA-TRI-COT-LOI')
+					h3 #{val}
+					p.lcl.lcl-4 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit nobis officia deleniti aliquid quos fuga distinctio, esse, soluta, pariatur temporibus excepturi?

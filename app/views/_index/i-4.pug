@@ -1,41 +1,24 @@
--let category = {x01: 'DVD', x02: 'FILM CÁCH NHIỆT', x03: 'CAMERA HÀNH TRÌNH', x04: 'GHÊ NỆM DA'};
--let i;
-// CATEGORIES
+-let categories = {1: 'DVD', 2: 'FILM CÁCH NHIỆT', 3: 'CAMERA HÀNH TRÌNH', 4: 'GHÊ NỆM DA'};
 section.index-categories-product.pt-section
 	.container
 		.title-section.has-line
 			h2 sản phẩm của chúng tôi
-		
 		.slider-index-categories-product
 			.slider-thumb
 				.swiper-container
 					.swiper-wrapper
-						-for(i=1;i<5;i++)
+						each val,key in categories
 							.swiper-slide
-								if i == 1
-									p.text-center #{category.x01}
-								else if i == 2
-									p.text-center #{category.x02}
-								else if i == 3
-									p.text-center #{category.x03}
-								else
-									p.text-center #{category.x04}
+								p.text-center #{val}
 			.slider-active
 				.swiper-container
 					.swiper-wrapper
-						-for(i=1;i<5;i++)
+						each val,key in categories
 							.swiper-slide
 								.content
-									if i == 1
-										h3 HOANGLONG CAR / #{category.x01}
-									else if i == 2
-										h3 HOANGLONG CAR / #{category.x02}
-									else if i == 3
-										h3 HOANGLONG CAR / #{category.x03}
-									else
-										h3 HOANGLONG CAR / #{category.x04}
+									h3 HOANGLONG CAR / #{val}
 									p Màn hình DVD Android là sản phẩm giải trí dành cho ô tô giúp thư giãn, giải tỏa mệt mỏi khi lái xe đường dài. Ngoài ra màn hình ô tô còn là công cụ giải trí xem video và nghe nhạc, nó còn được tích hợp kết nối với các thiết bị hỗ trợ khác như: camera 360 cho ô tô, camera hành trình, cảm biến lùi, cảm biến áp suất lốp… giúp bạn có những chuyến đi an toàn hơn khi tham gia giao thông.
 									.CTA
 										a.btn.btn-large.text-uppercase(href="#") tìm hiểu thêm
 								.image
-									img(src=`./images/index/category-0${i}.png` alt=`CATEGORY-PRODUCT-0${i}`)
+									img(src=`./images/index/category-0${key}.png` alt=`CATEGORY-PRODUCT`)

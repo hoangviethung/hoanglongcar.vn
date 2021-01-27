@@ -1,0 +1,12 @@
+-let process = {1: 'Quy Trình Số 1', 2: 'Quy Trình Số 2', 3: 'Quy Trình Số 3', 4: 'Quy Trình Số 4'};
+section.index-working-process.pd-section.bg-section.mt-section(style="--data-bg:url('../../images/index/bg-index-working-process.png')")
+	.container
+		.title-section.has-line.color-light.text-center
+			h2 sản phẩm của chúng tôi
+		.row.list-item
+			each val,key in process
+				.col-md-3
+					.item
+						img.object-cover.object-resize(src=`./images/index/working-process-0${key}.png`, alt="QUY-TRINH-LAM-VIEC")
+						span #{key}
+						h3 #{val}

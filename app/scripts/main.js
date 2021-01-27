@@ -17,6 +17,10 @@ const initSliderCategoryProduct = () => {
 		'.index-categories-product .slider-active .swiper-container',
 		{
 			effect: 'fade',
+			simulateTouch: false,
+			thumbs: {
+				swiper: sliderThumb,
+			},
 		},
 	);
 };

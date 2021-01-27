@@ -3,6 +3,7 @@
 		margin-top: 16px;
 	}
 	.CTA {
+		margin-top: 16px;
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -68,9 +69,6 @@
 	}
 }
 
-.index-category-product {
-}
-
 .slider-index-categories-product {
 	.slider-active {
 		.swiper-slide {
@@ -113,11 +111,126 @@
 			cursor: pointer;
 			padding: 24px;
 			border: 1px solid var(--border);
+			transition: 0.3s all ease-in-out;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 0;
+				transform: translateX(-50%);
+				height: 5px;
+				background: var(--primary);
+				transition: 0.3s all ease-in-out;
+			}
+			&.swiper-slide-thumb-active {
+				&:after {
+					width: 100%;
+				}
+			}
+			@media (min-width: 1025px) {
+				&:hover {
+					background: var(--border);
+				}
+			}
 		}
 		p {
 			font-size: 1.4rem;
 			letter-spacing: 1px;
 			font-weight: 700;
 		}
+	}
+}
+
+.index-working-process {
+	.list-item {
+		margin-top: 40px;
+	}
+	.item {
+		position: relative;
+		padding-bottom: calc(306 / 306 * 100%);
+	}
+	h3,
+	span {
+		position: absolute;
+		left: 16px;
+	}
+	h3 {
+		color: var(--white);
+		font-size: 2.4rem;
+		bottom: 16px;
+	}
+	span {
+		font-size: 3.2rem;
+		color: var(--primary);
+		font-weight: 700;
+		top: 16px;
+
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba($color: #2d2d2d, $alpha: 0.8);
+	}
+}
+
+.index-sale-off {
+	[class*='col-'] {
+		&:first-child {
+			padding-right: 110px;
+		}
+	}
+	.item {
+		position: relative;
+	}
+	.img {
+		max-width: 528px;
+		height: 480px;
+		overflow: hidden;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #675959, $alpha: 0.8);
+		}
+	}
+	.voucher {
+		position: absolute;
+		bottom: -10%;
+		right: 0;
+	}
+	.content {
+		margin-top: 16px;
+		p {
+			margin-top: 16px;
+		}
+		ul {
+			margin-top: 22px;
+		}
+		li {
+			font-weight: 700;
+			&:before {
+				content: '\f00c';
+				font-family: 'Font Awesome 5 Pro';
+				color: var(--primary);
+				margin-right: 8px;
+			}
+			+ li {
+				margin-top: 8px;
+			}
+		}
+	}
+}
+
+.index-new {
+	background: #f2f2f2;
+	.list-item {
+		margin-top: 24px;
 	}
 }
