@@ -25,7 +25,20 @@ const initSliderCategoryProduct = () => {
 	);
 };
 
+const initSliderPartner = () => {
+	let slider = new Swiper('.slider-partners .swiper-container', {
+		slidesPerView: 5,
+		loop: true,
+		speed: 2000,
+		spaceBetween: 80,
+		autoplay: {
+			delay: 2000,
+		},
+	});
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 	initHeroBanner();
 	initSliderCategoryProduct();
+	initSliderPartner();
 });

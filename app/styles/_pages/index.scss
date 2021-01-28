@@ -230,7 +230,17 @@
 
 .index-new {
 	background: #f2f2f2;
-	.list-item {
-		margin-top: 24px;
+}
+
+.partners {
+	.item {
+		display: block;
+		position: relative;
+		height: 125px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		border: 1px solid var(--border);
 	}
 }

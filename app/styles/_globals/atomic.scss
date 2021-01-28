@@ -153,3 +153,13 @@
 	@extend .mt-section;
 	@extend .mb-section;
 }
+.mt-title {
+	margin-top: 24px;
+}
+.mb-title {
+	margin-bottom: 24px;
+}
+.mr-title {
+	@extend .mt-section;
+	@extend .mb-section;
+}
