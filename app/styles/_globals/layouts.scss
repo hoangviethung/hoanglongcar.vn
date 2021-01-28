@@ -4,13 +4,25 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 500;
-	height: 150px;
 	padding: 25px 0;
+	transition: 0.3s all ease-in-out;
+	&.fixed {
+		.logo {
+			height: 75px;
+			width: auto;
+			img {
+				height: 100%;
+			}
+		}
+		background: var(--secondary);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+	}
 }
 
 nav {
 	display: flex;
 	align-items: center;
+	transition: 0.3s all ease-in-out;
 	ul {
 		display: flex;
 		margin-left: auto;

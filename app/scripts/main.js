@@ -2,6 +2,15 @@ import { HTTP } from './services/http';
 
 HTTP.get('https://api.github.com/users?per_page=5').subscribe((res) => {});
 
+const fixedHeaderWhenScroll = () => {
+	const header = document.querySelector('header');
+	if (window.pageYOffset > header.offsetHeight) {
+		header.classList.add('fixed');
+	} else {
+		header.classList.remove('fixed');
+	}
+};
+
 const initHeroBanner = () => {
 	let slider = new Swiper('.hero-banner .swiper-container');
 };
@@ -54,9 +63,13 @@ const initializeWowJs = () => {
 	wow.init();
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e) => {
 	initializeWowJs();
 	initHeroBanner();
 	initSliderCategoryProduct();
 	initSliderPartner();
+});
+
+window.addEventListener('scroll', (e) => {
+	fixedHeaderWhenScroll();
 });

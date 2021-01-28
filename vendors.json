@@ -5,7 +5,8 @@
 	],
 	"js": [
 		"node_modules/swiper/swiper-bundle.js",
-		"node_modules/wowjs/dist/wow.js"
+		"node_modules/wowjs/dist/wow.js",
+		"node_modules/lazysizes/lazysizes.js"
 	],
 	"fonts": []
 }
