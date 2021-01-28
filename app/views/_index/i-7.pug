@@ -5,7 +5,7 @@ section.index-new.pd-section.mt-section
 		.row.list-item
 			-for(i=1;i<4;i++)
 				.col-md-4
-					.item-news
+					.item-news.wow.fadeInLeft(data-wow-delay=`.${i*2}s`)
 						.img
 							img.object-cover.object-resize(src=`./images/index/index-news-0${i}.png`, alt="TIN-TUC-HOANG-LONG")
 						.desc

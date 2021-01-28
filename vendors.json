@@ -1,5 +1,11 @@
 {
-	"css": ["node_modules/swiper/swiper-bundle.css"],
-	"js": ["node_modules/swiper/swiper-bundle.js"],
+	"css": [
+		"node_modules/swiper/swiper-bundle.css",
+		"node_modules/wowjs/css/libs/animate.css"
+	],
+	"js": [
+		"node_modules/swiper/swiper-bundle.js",
+		"node_modules/wowjs/dist/wow.js"
+	],
 	"fonts": []
 }

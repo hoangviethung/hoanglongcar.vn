@@ -11,7 +11,7 @@ section.index-services.pt-section
 				p Nulla Lorem mollit cupidatat irure. Laborum magna nulla duisllamco cillum dolor. Voluptate exercitation incididunt aliquip deseruntswasewop fanderit elit
 				.list-item.row
 					each val,key in services
-						.item.col-md-6
+						.item.col-md-6.wow.fadeInLeft(data-wow-delay=`.${key*2}s`)
 							.icon
 								img(src=`./images/index/service-0${key}.png` alt='DICH-VU-LAP-DAT')
 							h3.lcl.lcl-1 #{val}

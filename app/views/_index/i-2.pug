@@ -7,7 +7,7 @@ section.index-core-value.pd-section.mt-section
 				|  giá trị cốt lõi
 		.list-item.row.mt-section
 			each val,key in corevalues
-				.col-lg-3.col-sm-6.item
+				.col-lg-3.col-sm-6.item.wow.fadeInLeft(data-wow-delay=`.${key*2}s`)
 					.icon
 						img(src=`./images/index/core-value-0${key}.png` alt='GIA-TRI-COT-LOI')
 					h3 #{val}
