@@ -1,32 +1,34 @@
 header
-	.container
-		.header-wrapper
-			a(href="#").logo
-				img.lazyload.blur-up(src='./images/LOGO.svg', width="122", height="100", alt='HOANGLONG-CAR')
-			nav
-				ul
-					li
-						a(href='#') Trang chủ
-					li
-						a(href='#') Giới thiệu
-					li
-						a(href='#') Sản phẩm
-					li
-						a(href='#') Tin tức
-					li
-						a(href='#') Liên hệ
-		.header-wrapper-mobile
-			.nav-mobile
-				ul
-					li
-						a(href='#')
-							<i class="fal fa-home-lg"></i>
-					li
-						a(href='#')
-							<i class="fal fa-store"></i>
-					li
-						a(href='#')
-							<i class="fal fa-newspaper"></i>
-					li
-						a(href="#")
-							<i class="fal fa-bars"></i>
+	.navigation
+		.container
+			.wrapper
+				a(href="#").logo
+					img.lazyload.blur-up(src='./images/LOGO.svg', width="122", height="100", alt='HOANGLONG-CAR')
+				.btn-close
+					<i class="far fa-times-hexagon"></i>
+				nav
+					ul
+						li
+							a(href='#') Trang chủ
+						li
+							a(href='#') Giới thiệu
+						li
+							a(href='#') Sản phẩm
+						li
+							a(href='#') Tin tức
+						li
+							a(href='#') Liên hệ
+	.navigation-mobile
+		.container
+			ul
+				li
+					a(href='#')
+						<i class="fal fa-home-lg"></i>
+				li
+					a(href='#')
+						<i class="fal fa-store"></i>
+				li
+					a(href='#')
+						<i class="fal fa-newspaper"></i>
+				li
+					<i class="fal fa-bars"></i>

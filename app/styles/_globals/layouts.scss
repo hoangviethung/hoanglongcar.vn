@@ -6,14 +6,6 @@ header {
 	z-index: 500;
 	padding: 25px 0;
 	transition: 0.3s all ease-in-out;
-	.logo {
-		img {
-			width: auto;
-		}
-		@media (max-width: 1024.98px) {
-			display: none;
-		}
-	}
 	@media (min-width: 1025px) {
 		&.fixed {
 			background: var(--secondary);
@@ -34,17 +26,61 @@ header {
 		}
 	}
 	@media (max-width: 1024.98px) {
-		background: var(--secondary);
-		padding: 16px 0;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 		top: unset;
 		bottom: 0;
+		padding: 0;
 	}
 }
 
-.header-wrapper {
-	display: flex;
-	align-items: center;
+.navigation {
+	.container {
+		height: 100%;
+	}
+	.logo {
+		img {
+			width: auto;
+		}
+		@media (max-width: 1024.98px) {
+			margin-bottom: 56px;
+		}
+	}
+	.btn-close {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		font-size: 4.4rem;
+		color: var(--white);
+		@media (min-width: 1025px) {
+			display: none;
+		}
+	}
+	.wrapper {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		@media (max-width: 1024.98px) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	@media (max-width: 1024.98px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: var(--secondary);
+		z-index: 10;
+		transition: 0.3s all ease-in-out;
+		// HIDDEN
+		opacity: 0;
+		visibility: hidden;
+		// SHOW
+		&.show {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
 }
 
 nav {
@@ -60,6 +96,9 @@ nav {
 		+ li {
 			margin-left: 42px;
 		}
+		@media (max-width: 1024.98px) {
+			text-align: center;
+		}
 	}
 	a {
 		text-transform: uppercase;
@@ -74,20 +113,9 @@ nav {
 		}
 	}
 	@media (max-width: 1024.98px) {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		background: var(--secondary);
-		transition: 0.3s all ease-in-out;
-		// HIDDEN
-		opacity: 0;
-		visibility: hidden;
+		margin: 0 auto;
 		ul {
 			flex-direction: column;
-			margin-left: auto;
-			margin-right: auto;
 		}
 		li + li {
 			margin-left: 0;
@@ -97,20 +125,19 @@ nav {
 			font-size: 2.4rem;
 			font-weight: 400;
 		}
-		.show {
-			opacity: 1;
-			visibility: visible;
-		}
 	}
 }
 
-.nav-mobile {
+.navigation-mobile {
+	padding: 16px 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(178px);
 	ul {
 		display: flex;
 		justify-content: space-between;
 		li {
-			font-size: 3.2rem;
-			color: var(--white);
+			font-size: 2.4rem;
+			color: var(--light);
 		}
 	}
 	@media (min-width: 1025px) {

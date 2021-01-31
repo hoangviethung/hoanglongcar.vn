@@ -11,6 +11,26 @@ const fixedHeaderWhenScroll = () => {
 	}
 };
 
+const showNaviationMobile = () => {
+	const itemsNavigationMobile = document.querySelectorAll(
+		'.navigation-mobile ul li',
+	);
+	const navigation = document.querySelector('.navigation');
+	const body = document.querySelector('body');
+	const btnClose = document.querySelector('.navigation .btn-close');
+	itemsNavigationMobile[itemsNavigationMobile.length - 1].addEventListener(
+		'click',
+		(e) => {
+			navigation.classList.add('show');
+			body.classList.add('no-scroll');
+		},
+	);
+	btnClose.addEventListener('click', (e) => {
+		navigation.classList.remove('show');
+		body.classList.remove('no-scroll');
+	});
+};
+
 const initHeroBanner = () => {
 	let slider = new Swiper('.hero-banner .swiper-container');
 };
@@ -20,6 +40,9 @@ const initSliderCategoryProduct = () => {
 		'.index-categories-product .slider-thumb .swiper-container',
 		{
 			slidesPerView: 2,
+			autoplay: {
+				delay: 3000,
+			},
 			breakpoints: {
 				1025: {
 					slidesPerView: 4,
@@ -32,6 +55,9 @@ const initSliderCategoryProduct = () => {
 		{
 			effect: 'fade',
 			simulateTouch: false,
+			autoplay: {
+				delay: 3000,
+			},
 			thumbs: {
 				swiper: sliderThumb,
 			},
@@ -113,6 +139,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	initSliderCategoryProduct();
 	initSliderPartner();
 	initSliderNews();
+	showNaviationMobile();
 });
 
 window.addEventListener('scroll', (e) => {
