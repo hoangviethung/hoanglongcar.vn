@@ -99,6 +99,11 @@ nav {
 		@media (max-width: 1024.98px) {
 			text-align: center;
 		}
+		&.active {
+			> a {
+				color: var(--primary);
+			}
+		}
 	}
 	a {
 		text-transform: uppercase;
@@ -129,15 +134,36 @@ nav {
 }
 
 .navigation-mobile {
-	padding: 16px 0;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(178px);
 	ul {
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
 		li {
+			position: relative;
+			padding: 16px 8px;
+			text-align: center;
+			-ms-flex: 0 0 25%;
+			flex: 0 0 25%;
+			max-width: 25%;
 			font-size: 2.4rem;
 			color: var(--light);
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 3px;
+				width: 100%;
+				background: var(--primary);
+				opacity: 0;
+			}
+			&.active {
+				color: var(--primary);
+				&:after {
+					opacity: 1;
+				}
+			}
 		}
 	}
 	@media (min-width: 1025px) {
