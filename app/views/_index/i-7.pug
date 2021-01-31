@@ -1,16 +1,22 @@
-section.index-new.pd-section.mt-section
+section.slider-news.pd-section
 	.container
 		.title-section.has-line.mb-title
 			h2 BLOG - TIN TỨC & SỰ KIỆN
-		.row.list-item
-			-for(i=1;i<4;i++)
-				.col-md-4
-					.item-news.wow.fadeInLeft(data-wow-delay=`.${i*2}s`)
-						.img
-							img.object-cover.object-resize(src=`./images/index/index-news-0${i}.png`, alt="TIN-TUC-HOANG-LONG")
-						.desc
-							span.time 10.10.2021
-							h3.lcl.lcl-1 TOP 5 THƯƠNG HIỆU DVD ANDOIRD
-							p.lcl.lcl-3 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam...
-							.CTA
-								a(href="#").btn.color-neutral-medium_sub XEM CHI TIẾT
+		.swiper-container
+			.swiper-wrapper
+				-for(j=1;j<4;j++)
+					-for(i=1;i<4;i++)
+						.swiper-slide
+							a(href="#").item-news
+								.img
+									img.object-cover.object-resize(src=`./images/index/index-news-0${i}.png`, alt="TIN-TUC-HOANG-LONG" width="280" height="418")
+								.desc
+									span.time 10.10.2021
+									h3.lcl.lcl-1 TOP 5 THƯƠNG HIỆU DVD ANDOIRD
+									p.lcl.lcl-3 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam...
+									.CTA
+										.btn.color-neutral-medium_sub XEM CHI TIẾT
+			.button-navigation-slider.prev.center-50px
+				i.fas.fa-long-arrow-alt-left
+			.button-navigation-slider.next.center-50px
+				i.fas.fa-long-arrow-alt-right

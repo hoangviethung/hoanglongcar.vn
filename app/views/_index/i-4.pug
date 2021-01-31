@@ -1,4 +1,4 @@
--let categories = {1: 'DVD', 2: 'FILM CÁCH NHIỆT', 3: 'CAMERA HÀNH TRÌNH', 4: 'GHÊ NỆM DA'};
+-let categories = {1: 'HỆ THỐNG DVD', 2: 'FILM CÁCH NHIỆT', 3: 'CAMERA HÀNH TRÌNH', 4: 'GHÊ NỆM DA'};
 section.index-categories-product.pt-section
 	.container
 		.title-section.has-line.mb-title
@@ -9,16 +9,16 @@ section.index-categories-product.pt-section
 					.swiper-wrapper
 						each val,key in categories
 							.swiper-slide
-								p.text-center #{val}
+								p.text-center.lcl.lcl-1 #{val}
 			.slider-active
 				.swiper-container
 					.swiper-wrapper
 						each val,key in categories
 							.swiper-slide
 								.content
-									h3 HOANGLONG CAR / #{val}
-									p Màn hình DVD Android là sản phẩm giải trí dành cho ô tô giúp thư giãn, giải tỏa mệt mỏi khi lái xe đường dài. Ngoài ra màn hình ô tô còn là công cụ giải trí xem video và nghe nhạc, nó còn được tích hợp kết nối với các thiết bị hỗ trợ khác như: camera 360 cho ô tô, camera hành trình, cảm biến lùi, cảm biến áp suất lốp… giúp bạn có những chuyến đi an toàn hơn khi tham gia giao thông.
+									h3.lcl.lcl-1 #{val}
+									p.lcl.lcl-5 Màn hình DVD Android là sản phẩm giải trí dành cho ô tô giúp thư giãn, giải tỏa mệt mỏi khi lái xe đường dài. Ngoài ra màn hình ô tô còn là công cụ giải trí xem video và nghe nhạc, nó còn được tích hợp kết nối với các thiết bị hỗ trợ khác như: camera 360 cho ô tô, camera hành trình, cảm biến lùi, cảm biến áp suất lốp… giúp bạn có những chuyến đi an toàn hơn khi tham gia giao thông.
 									.CTA
 										a.btn.btn-large.text-uppercase(href="#") tìm hiểu thêm
 								.image
-									img(src=`./images/index/category-0${key}.png` alt=`CATEGORY-PRODUCT`)
+									img(src=`./images/index/category-0${key}.png` alt=`CATEGORY-PRODUCT`, width="866", height="340")

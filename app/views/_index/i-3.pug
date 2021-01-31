@@ -13,9 +13,9 @@ section.index-services.pt-section
 					each val,key in services
 						.item.col-md-6.wow.fadeInLeft(data-wow-delay=`.${key*2}s`)
 							.icon
-								img(src=`./images/index/service-0${key}.png` alt='DICH-VU-LAP-DAT')
+								img.lazyload.blur-up(src=`./images/index/service-0${key}.png`, width="44", height="44", alt='DICH-VU-LAP-DAT')
 							h3.lcl.lcl-1 #{val}
 							p.lcl.lcl-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dolorum architecto ipsum hic quam, expedita quis asperiores porro nesciunt.
 			// IMGAGE
 			.col-lg-6.image
-				img.object-cover(src='./images/index/service.png' alt='DICH-VU-HOANGLONG')
+				img.object-cover(src='./images/index/service.png', width="570", height="466" alt='DICH-VU-HOANGLONG')

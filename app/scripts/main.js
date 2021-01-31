@@ -19,7 +19,12 @@ const initSliderCategoryProduct = () => {
 	let sliderThumb = new Swiper(
 		'.index-categories-product .slider-thumb .swiper-container',
 		{
-			slidesPerView: 4,
+			slidesPerView: 2,
+			breakpoints: {
+				1025: {
+					slidesPerView: 4,
+				},
+			},
 		},
 	);
 	let sliderActive = new Swiper(
@@ -36,12 +41,51 @@ const initSliderCategoryProduct = () => {
 
 const initSliderPartner = () => {
 	let slider = new Swiper('.slider-partners .swiper-container', {
-		slidesPerView: 5,
+		slidesPerView: 2,
 		loop: true,
 		speed: 2000,
-		spaceBetween: 80,
+		spaceBetween: 10,
 		autoplay: {
 			delay: 2000,
+		},
+		breakpoints: {
+			575: {
+				spaceBetween: 24,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1025: {
+				slidesPerView: 5,
+				spaceBetween: 44,
+			},
+			1440: {
+				slidesPerView: 5,
+				spaceBetween: 80,
+			},
+		},
+	});
+};
+
+const initSliderNews = () => {
+	let slider = new Swiper('.slider-news .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		spaceBetween: 20,
+		autoplay: {
+			delay: 4000,
+		},
+		navigation: {
+			nextEl: '.slider-news .button-navigation-slider.next',
+			prevEl: '.slider-news .button-navigation-slider.prev',
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+			},
+			1025: {
+				slidesPerView: 3,
+			},
 		},
 	});
 };
@@ -68,6 +112,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	initHeroBanner();
 	initSliderCategoryProduct();
 	initSliderPartner();
+	initSliderNews();
 });
 
 window.addEventListener('scroll', (e) => {

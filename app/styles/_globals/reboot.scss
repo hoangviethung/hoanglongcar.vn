@@ -11,7 +11,6 @@ html {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	box-sizing: border-box;
 	-ms-overflow-style: scrollbar;
-	overflow-x: hidden;
 	// FONT SIZE
 	font-size: 52.5%;
 	@media (min-width: 768px) {
@@ -40,10 +39,11 @@ body {
 	font-family: 'Open Sans';
 	font-size: 1.6rem;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 1.6;
 	color: var(--body);
 	text-align: left;
 	background-color: var(--white);
+	overflow-x: hidden;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
@@ -171,6 +171,8 @@ figure {
 img {
 	vertical-align: middle;
 	border-style: none;
+	max-width: 100%;
+	height: auto;
 }
 
 svg {

@@ -5,8 +5,8 @@ section.index-working-process.pd-section.bg-section.mt-section(style="--data-bg:
 			h2 quy trình làm việc
 		.row.list-item
 			each val,key in process
-				.col-md-3
+				.col-lg-3.col-6
 					.item.wow.fadeInLeft(data-wow-delay=`.${key*2}s`)
-						img.object-cover.object-resize(src=`./images/index/working-process-0${key}.png`, alt="QUY-TRINH-LAM-VIEC")
+						img.object-cover.object-resize.lazyload.blur-up(src=`./images/index/working-process-0${key}.png`, width="306", height="306", alt="QUY-TRINH-LAM-VIEC")
 						span #{key}
 						h3 #{val}
