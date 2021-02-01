@@ -107,6 +107,7 @@ nav {
 	}
 	a {
 		text-transform: uppercase;
+		user-select: none;
 		font-size: 1.6rem;
 		font-weight: 700;
 		color: var(--white);

@@ -1,12 +1,22 @@
 -let cars = {30: 'Toyota', 10: 'Land Rover', 12: 'Lexus', 32: 'BMW'};
+-let categories = {30: 'Hệ thống DVD', 10: 'Film cách nhiệt', 12: 'Camera hành trình', 32: 'Ghế nệm da'};
 aside.aside-menu-products
-	h3 Danh mục theo loại xe
-	ul.product-categories
-		each val,key in cars
-			li.category-item
-				.form-group.checkbox__group
-					label
-						.checkbox__custom
-							input(type="checkbox")
+	.filter-block
+		h3 Danh mục phụ kiện
+		ul.product-categories
+			each val,key in categories
+				li.category-item
+					a.lcl.lcl-1(href="products.html")
 						span #{val}
-						span (#{key})s
+						span (#{key})
+	.filter-block
+		h3 Danh mục theo loại xe
+		ul.cars
+			each val,key in cars
+				li.car-item
+					.form-group.checkbox__group
+						label
+							.checkbox__custom
+								input(type="checkbox")
+							span #{val}
+							span (#{key})

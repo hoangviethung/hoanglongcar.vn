@@ -45,10 +45,20 @@
 }
 
 .checkbox__group {
-	user-select: none;
 	label {
 		cursor: pointer;
 		display: inline-flex;
 		align-items: center;
+		user-select: none;
+		span {
+			transition: 0.3s all ease-in-out;
+		}
+	}
+	@media (min-width: 1025px) {
+		&:hover {
+			span {
+				color: var(--primary);
+			}
+		}
 	}
 }

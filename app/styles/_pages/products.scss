@@ -1,17 +1,74 @@
 .aside-menu-products {
 	h3 {
+		position: relative;
+		font-size: 2.4rem;
 		margin-bottom: 16px;
+		padding-bottom: 4px;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 48px;
+			height: 24px;
+			background: var(--primary);
+			z-index: -1;
+		}
+	}
+	ul {
+		li {
+			+ li {
+				margin-top: 8px;
+			}
+		}
+	}
+	.filter-block {
+		+ .filter-block {
+			margin-top: 32px;
+		}
 	}
 }
-.product-categories {
-	.category-item {
-		a {
-		}
+
+.cars {
+	.car-item {
 		span {
 			margin-left: 8px;
 		}
-		+ .category-item {
-			margin-top: 8px;
+	}
+}
+
+.product-categories {
+	.category-item {
+		> a {
+			position: relative;
+			padding-left: 24px;
+			transition: 0.3s all ease-in-out;
+			&:before {
+				content: '\f054';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				font-family: 'Font Awesome 5 Pro';
+			}
 		}
+		span {
+			+ span {
+				margin-left: 8px;
+			}
+		}
+		@media (min-width: 1025px) {
+			&:hover {
+				> a {
+					color: var(--primary);
+				}
+			}
+		}
+	}
+}
+
+.products {
+	.item-product {
+		margin-bottom: 20px;
 	}
 }

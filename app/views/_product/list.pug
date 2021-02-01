@@ -1,0 +1,15 @@
+-let products = {1: 'Ninja Silhouette', 2: 'Happy Ninja', 3: 'Ship Your Idea', 4: 'Ninja Silhouette', 5: 'Ship Your Idea', 6:'Ship Your Idea', 7: 'Ship Your Idea'};
+section.products
+	.row.list-product
+		each val,key in products
+			.col-md-4.item-product
+				.card-product
+					.img
+						img.lazyload.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, alt="SAN-PHAM-HOANGLONGCAR")
+					.information
+						h3.lcl.lcl-1 #{val}
+						h4 10.000.000
+							san VNĐ
+						del 10.000.000
+							san VNĐ
+						p.lcl.lcl-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta quam quidem consequuntur, dolore porro autem quasi aliquam praesentium esse harum eos. Unde ut quae, deserunt repellat atque totam aut?
