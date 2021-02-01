@@ -1,0 +1,17 @@
+.aside-menu-products {
+	h3 {
+		margin-bottom: 16px;
+	}
+}
+.product-categories {
+	.category-item {
+		a {
+		}
+		span {
+			margin-left: 8px;
+		}
+		+ .category-item {
+			margin-top: 8px;
+		}
+	}
+}

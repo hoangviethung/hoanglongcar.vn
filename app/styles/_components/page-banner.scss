@@ -1,0 +1,36 @@
+.page-banner {
+	position: relative;
+	height: 350px;
+	overflow: hidden;
+	div {
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	h1 {
+		color: var(--white);
+		font-size: 4.4rem;
+	}
+	ul {
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+		li {
+			color: var(--white);
+			+ li {
+				&:before {
+					content: '/';
+					position: relative;
+					left: 0;
+					top: 0;
+					margin: 0 12px;
+					color: var(--white);
+				}
+			}
+			&:last-child {
+				color: var(--primary);
+			}
+		}
+	}
+}

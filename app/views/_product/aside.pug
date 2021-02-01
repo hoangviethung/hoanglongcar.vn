@@ -1,0 +1,12 @@
+-let cars = {30: 'Toyota', 10: 'Land Rover', 12: 'Lexus', 32: 'BMW'};
+aside.aside-menu-products
+	h3 Danh mục theo loại xe
+	ul.product-categories
+		each val,key in cars
+			li.category-item
+				.form-group.checkbox__group
+					label
+						.checkbox__custom
+							input(type="checkbox")
+						span #{val}
+						span (#{key})s

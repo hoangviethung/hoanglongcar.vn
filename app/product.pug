@@ -1,0 +1,18 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "index-page"
+	- pageTitle = "Hoàng Long Car | Sản Phẩm"
+	- pageBanner = "./images/page-banner/1.jpg"
+
+block main
+	// PAGE BANNER
+	include ./views/_components/page-banner
+	// LIS PRODUCT
+	section.products.pd-section
+		.container
+			.row
+				.col-lg-3.col-md-4
+					include ./views/_product/aside
+				.col-lg-9.col-md-8
+					include ./views/_product/list

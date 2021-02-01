@@ -1,6 +1,6 @@
-import { HTTP } from './services/http';
+// import { HTTP } from './services/http';
 
-HTTP.get('https://api.github.com/users?per_page=5').subscribe((res) => {});
+// HTTP.get('https://api.github.com/users?per_page=5').subscribe((res) => {});
 
 const fixedHeaderWhenScroll = () => {
 	const header = document.querySelector('header');
