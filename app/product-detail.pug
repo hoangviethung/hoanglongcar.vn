@@ -1,0 +1,12 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "index-page"
+	- pageTitle = "Hoàng Long Car | Sản Phẩm Chi Tiết"
+	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
+	-let breadcrumb = {1:'Trang chủ', 2:'Sản phẩm', 3:'Ninja Silhouette'};
+block main
+	// PAGE BANNER
+	include ./views/_components/page-banner
+	// PRODUCT DETAIL OVERVIEW
+	include ./views/_product-detail/overview

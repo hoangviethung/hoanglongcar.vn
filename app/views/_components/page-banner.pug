@@ -1,9 +1,8 @@
 .page-banner
-	img.lazyload.blur-up(src=pageBanner, width="1920", height="350", alt="HOANG-LONG-CAR")
+	img.lazyload.blur-up.object-cover(src=pageBanner, width="1920", height="350", alt="HOANG-LONG-CAR")
 	div
 		h1 Sản phẩm
 		ul
-			li
-				a(href="#") Trang chủ
-			li
-				a(href="#") Sản phẩm
+			each val, key in breadcrumb
+				li
+					a(href="#") #{val}

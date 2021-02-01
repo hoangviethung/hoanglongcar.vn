@@ -1,0 +1,22 @@
+section.product-detail-overview.pd-section
+	.container
+		.row
+			.col-md-6
+				.slider-product-detail
+					.slider-active
+						.swiper-container
+							.swiper-wrapper
+								-for(i=1;i<6;i++)
+									.swiper-slide
+										figure
+											img.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${i}.jpg`, alt="SAN-PHAM-CHI-TIET-HOANGLONGCAR")
+					.slider-thumb
+						.swiper-container
+							.swiper-wrapper
+								-for(j=1;j<6;j++)
+									.swiper-slide
+										figure
+											img.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${j}.jpg`, alt="SAN-PHAM-CHI-TIET-HOANGLONGCAR")
+			.col-md-6
+				.information-product-detail
+					h1 Ninja Silhouette

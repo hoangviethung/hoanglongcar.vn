@@ -116,6 +116,38 @@ const initSliderNews = () => {
 	});
 };
 
+const initSliderProductDetail = () => {
+	let sliderThumb = new Swiper(
+		'.slider-product-detail .slider-thumb .swiper-container',
+		{
+			slidesPerView: 2,
+			spaceBetween: 16,
+			speed: 1500,
+			autoplay: {
+				delay: 3000,
+			},
+			breakpoints: {
+				1025: {
+					slidesPerView: 4,
+				},
+			},
+		},
+	);
+	let sliderActive = new Swiper(
+		'.slider-product-detail .slider-active .swiper-container',
+		{
+			effect: 'fade',
+			speed: 1500,
+			autoplay: {
+				delay: 3000,
+			},
+			thumbs: {
+				swiper: sliderThumb,
+			},
+		},
+	);
+};
+
 const initializeWowJs = () => {
 	var wow = new WOW({
 		boxClass: 'wow', // animated element css class (default is wow)
@@ -139,6 +171,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	initSliderCategoryProduct();
 	initSliderPartner();
 	initSliderNews();
+	initSliderProductDetail();
 	showNaviationMobile();
 });
 
