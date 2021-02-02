@@ -1,9 +1,23 @@
 -let products = {1: 'Ninja Silhouette', 2: 'Happy Ninja', 3: 'Ship Your Idea', 4: 'Ninja Silhouette', 5: 'Ship Your Idea', 6:'Ship Your Idea', 7: 'Ship Your Idea'};
 section.products
+	.collection-bar
+		.collection-toolbar
+			ul.toolbar-right
+				li
+					.select__custom
+						select(name="abc")
+							option(value="title-ascending" selected='selected') Sắp sếp theo
+							option(value="manual") Featured
+							option(value="title-ascending") Alphabetically, A-Z
+							option(value="title-descending") Alphabetically, Z-A
+							option(value="price-ascending") Price, low to high
+							option(value="price-descending") Price, high to low
+							option(value="created-descending") Date, new to old
+							option(value="created-ascending") Date, old to new
 	.row.list-product
 		each val,key in products
 			.col-md-4.item-product
-				.card-product
+				a(href="#").card-product
 					.img
 						img.lazyload.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, alt="SAN-PHAM-HOANGLONGCAR")
 					.information

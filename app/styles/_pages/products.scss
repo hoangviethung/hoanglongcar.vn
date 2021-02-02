@@ -1,67 +1,83 @@
 .aside-menu-products {
-	h3 {
+	h2 {
 		position: relative;
 		font-size: 2.4rem;
 		margin-bottom: 16px;
-		padding-bottom: 4px;
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 48px;
-			height: 24px;
-			background: var(--primary);
-			z-index: -1;
-		}
 	}
 	ul {
 		li {
 			+ li {
-				margin-top: 8px;
+				margin-top: 16px;
 			}
 		}
 	}
 	.filter-block {
 		+ .filter-block {
-			margin-top: 32px;
+			margin-top: 56px;
 		}
 	}
-}
-
-.cars {
-	.car-item {
-		span {
-			margin-left: 8px;
-		}
-	}
-}
-
-.product-categories {
-	.category-item {
-		> a {
-			position: relative;
-			padding-left: 24px;
-			transition: 0.3s all ease-in-out;
-			&:before {
-				content: '\f054';
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				font-family: 'Font Awesome 5 Pro';
+	.categories {
+		.category-item {
+			> a {
+				position: relative;
+				padding-left: 24px;
+				transition: 0.3s all ease-in-out;
+				&:before {
+					content: '\f054';
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					font-family: 'Font Awesome 5 Pro';
+				}
+			}
+			span {
+				+ span {
+					margin-left: 8px;
+				}
+			}
+			@media (min-width: 1025px) {
+				&:hover {
+					> a {
+						color: var(--primary);
+					}
+				}
 			}
 		}
-		span {
-			+ span {
+	}
+	.cars {
+		.car-item {
+			span {
 				margin-left: 8px;
 			}
 		}
-		@media (min-width: 1025px) {
-			&:hover {
-				> a {
-					color: var(--primary);
-				}
+	}
+	.products__hot {
+		.product-item__hot {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		.img {
+			position: relative;
+			-ms-flex: 0 0 75px;
+			flex: 0 0 75px;
+			max-width: 75px;
+			height: 75px;
+		}
+		.informarion {
+			-ms-flex-preferred-size: 0;
+			flex-basis: 0;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			max-width: 100%;
+			padding-left: 16px;
+			h3 {
+				font-size: 1.6rem;
+			}
+			h4,
+			del {
+				font-size: 1.4rem;
 			}
 		}
 	}
@@ -70,5 +86,15 @@
 .products {
 	.item-product {
 		margin-bottom: 20px;
+	}
+	.collection-bar {
+		margin-bottom: 44px;
+		.collection-toolbar {
+			display: flex;
+			align-items: center;
+		}
+		.toolbar-right {
+			margin-left: auto;
+		}
 	}
 }

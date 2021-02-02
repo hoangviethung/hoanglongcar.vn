@@ -1,9 +1,13 @@
 .card-product {
+	display: block;
 	border: 1px solid var(--border);
 	.img {
 		position: relative;
 		overflow: hidden;
 		padding-bottom: calc(300 / 300 * 100%);
+		img {
+			transition: 0.3s all linear;
+		}
 	}
 	.information {
 		padding: 16px;
@@ -25,5 +29,14 @@
 	}
 	p {
 		font-size: 1.2rem;
+	}
+	@media (min-width: 1025px) {
+		&:hover {
+			.img {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
 	}
 }
