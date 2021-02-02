@@ -37,9 +37,9 @@ section {
 body {
 	margin: 0;
 	font-family: 'Josefin Sans';
-	font-size: 1.6rem;
-	font-weight: 400;
-	line-height: 1.6;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1.7;
 	color: var(--body);
 	text-align: left;
 	background-color: var(--white);
@@ -103,17 +103,14 @@ ul ol {
 	margin-bottom: 0;
 }
 
-dt {
-	font-weight: 700;
-}
-
 dd {
 	margin-left: 0;
 }
 
 b,
-strong {
-	font-weight: bolder;
+strong,
+dt {
+	font-weight: 700;
 }
 
 small {

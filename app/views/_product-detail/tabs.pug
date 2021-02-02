@@ -1,0 +1,36 @@
+section.tabs-product-detail.pb-section
+	.container.tab-container
+		ul.tab__list
+			li.item(toggle-for="specifications") Thông số kĩ thuật
+			li.item(toggle-for="description") Mô tả
+			li.item(toggle-for="policy") Chính sách bảo hành
+		.tab__content
+			.content(tab-id="specifications")
+				table
+					tr
+						th Text
+						th Text
+						th Text
+					-for(i=1;i<4;i++)
+						tr
+							td Text
+							td Text
+							td Text
+			.content(tab-id="description")
+				.description
+					p Vestibulum curae torquent diam diam commodo parturient penatibus nunc dui adipiscing convallis bulum parturient suspendisse parturient a.Parturient in parturient scelerisque nibh lectus quam a natoque adipiscing a vestibulum hendrerit et pharetra fames nunc natoque dui.
+					b Adipiscing Convallis Bulum
+					ul
+						li Vestibulum penatibus nunc dui adipiscing convallis bulum parturient suspendisse.
+						li Abitur parturient praesent lectus quam a natoque adipiscing a vestibulum hendre.
+						li Diam parturient dictumst parturient scelerisque nibh lectus.
+					p Scelerisque adipiscing bibendum sem vestibulum et in a a a purus lectus faucibus lobortis tincidunt purus lectus nisl class eros.Condimentum a et ullamcorper dictumst mus et tristique elementum nam inceptos hac parturient scelerisque vestibulum amet elit ut volutpat.
+			.content(tab-id="policy")
+				.description
+					p Vestibulum curae torquent diam diam commodo parturient penatibus nunc dui adipiscing convallis bulum parturient suspendisse parturient a.Parturient in parturient scelerisque nibh lectus quam a natoque adipiscing a vestibulum hendrerit et pharetra fames nunc natoque dui.
+					b Adipiscing Convallis Bulum
+					ul
+						li Vestibulum penatibus nunc dui adipiscing convallis bulum parturient suspendisse.
+						li Abitur parturient praesent lectus quam a natoque adipiscing a vestibulum hendre.
+						li Diam parturient dictumst parturient scelerisque nibh lectus.
+					p Scelerisque adipiscing bibendum sem vestibulum et in a a a purus lectus faucibus lobortis tincidunt purus lectus nisl class eros.Condimentum a et ullamcorper dictumst mus et tristique elementum nam inceptos hac parturient scelerisque vestibulum amet elit ut volutpat.

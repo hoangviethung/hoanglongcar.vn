@@ -1,0 +1,22 @@
+block let
+	- otherProducts = {1:'Sản phẩm số 1', 2:'Sản phẩm số 2', 3:'Sản phẩm số 3', 4:'Sản phẩm số 4', 5:'Sản phẩm số 5', 6:'Sản phấm só 7'}
+section.other-products.pd-section
+	.container
+		.title-section.has-line.text-center
+			h2
+				span hoanglong 
+				|  giá trị cốt lõi
+		.swiper-container
+			.swiper-wrapper
+				each val,key in otherProducts
+					.swiper-slide
+						a(href="product-detail.html").card-product
+							.img
+								img.lazyload.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, alt="SAN-PHAM-HOANGLONGCAR")
+							.information
+								h3.lcl.lcl-1 #{val}
+								h4 10.000.000
+									san VNĐ
+								del 10.000.000
+									san VNĐ
+								p.lcl.lcl-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta quam quidem consequuntur, dolore porro autem quasi aliquam praesentium esse harum eos. Unde ut quae, deserunt repellat atque totam aut?

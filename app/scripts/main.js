@@ -1,5 +1,5 @@
 // import { HTTP } from './services/http';
-
+import Tab from './libraries/tabs';
 // HTTP.get('https://api.github.com/users?per_page=5').subscribe((res) => {});
 
 const fixedHeaderWhenScroll = () => {
@@ -122,7 +122,7 @@ const initSliderProductDetail = () => {
 		{
 			slidesPerView: 2,
 			spaceBetween: 16,
-			speed: 1500,
+			speed: 1000,
 			autoplay: {
 				delay: 3000,
 			},
@@ -137,12 +137,26 @@ const initSliderProductDetail = () => {
 		'.slider-product-detail .slider-active .swiper-container',
 		{
 			effect: 'fade',
-			speed: 1500,
+			speed: 1000,
 			autoplay: {
 				delay: 3000,
 			},
 			thumbs: {
 				swiper: sliderThumb,
+			},
+		},
+	);
+};
+
+const initSliderProductOther = () => {
+	let slider = new Swiper(
+		'.other-products .swiper-container',
+		{
+			speed: 1000,
+			slidesPerView: 4,
+			spaceBetween: 24,
+			autoplay: {
+				delay: 3000,
 			},
 		},
 	);
@@ -173,6 +187,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 	initSliderNews();
 	initSliderProductDetail();
 	showNaviationMobile();
+	initSliderProductOther();
+	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 
 window.addEventListener('scroll', (e) => {

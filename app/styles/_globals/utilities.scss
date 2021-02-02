@@ -63,6 +63,8 @@
 }
 
 .btn {
+	cursor: pointer;
+	user-select: none;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -87,6 +89,12 @@
 		color: var(--neutral-medium_sub);
 		border: 1px solid var(--neutral-medium_sub);
 	}
+	&.no-border {
+		border: 0;
+	}
+	span {
+		margin-left: 8px;
+	}
 	.icon {
 		width: 16px;
 		height: 16px;
@@ -99,6 +107,27 @@
 		&:hover {
 			color: var(--dark);
 			background: var(--primary);
+		}
+	}
+}
+
+.share-button {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+	border-radius: 50%;
+	transition: 0.3s all ease-in-out;
+	@media (min-width: 1025px) {
+		&:hover {
+			color: var(--white);
+			background: var(--dark);
 		}
 	}
 }
