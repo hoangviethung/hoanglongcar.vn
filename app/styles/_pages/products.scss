@@ -1,7 +1,7 @@
 .aside-menu-products {
 	h2 {
-		position: relative;
 		font-size: 2.4rem;
+		position: relative;
 		margin-bottom: 16px;
 	}
 	ul {
@@ -13,7 +13,7 @@
 	}
 	.filter-block {
 		+ .filter-block {
-			margin-top: 56px;
+			margin-top: 44px;
 		}
 	}
 	.categories {
@@ -81,6 +81,16 @@
 			}
 		}
 	}
+	@media (max-width: 1024.98px) {
+		position: fixed;
+		width: 90px;
+		left: 50%;
+		top: 50%;
+		width: 80%;
+		background: var(--white);
+		transform: translate(-50%, -50%);
+		z-index: 50;
+	}
 }
 
 .products {
@@ -92,6 +102,15 @@
 		.collection-toolbar {
 			display: flex;
 			align-items: center;
+		}
+		.toolbar-left {
+			font-size: 1.4rem;
+			height: 48px;
+			display: flex;
+			align-items: center;
+			@media (min-width: 1025px) {
+				display: none;
+			}
 		}
 		.toolbar-right {
 			margin-left: auto;

@@ -7,18 +7,6 @@
 	margin-left: auto;
 }
 
-// @media (min-width: 576px) {
-// 	.container {
-// 		max-width: 540px;
-// 	}
-// }
-
-// @media (min-width: 768px) {
-// 	.container {
-// 		max-width: 720px;
-// 	}
-// }
-
 @media (min-width: 1025px) {
 	.container {
 		max-width: 960px;
@@ -508,7 +496,7 @@
 	}
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
 	.col-lg {
 		-ms-flex-preferred-size: 0;
 		flex-basis: 0;

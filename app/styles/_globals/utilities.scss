@@ -132,6 +132,27 @@
 	}
 }
 
+.filter-button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 9px 15px 9px 20px;
+	height: 48px;
+	min-width: 230px;
+	border: 2px solid var(--border);
+	span {
+		margin-left: 8px;
+	}
+	&:after {
+		content: '\f424';
+		font-family: 'Font Awesome 5 Pro';
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
 .title-section {
 	h2 {
 		font-family: 'SVN-Neutraface 2';
