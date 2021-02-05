@@ -66,6 +66,7 @@
 .select__custom {
 	position: relative;
 	select {
+		color: var(--body);
 		cursor: pointer;
 		padding: 9px 15px 9px 20px;
 		height: 48px;

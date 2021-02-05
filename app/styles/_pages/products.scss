@@ -14,33 +14,34 @@
 	.filter-block {
 		+ .filter-block {
 			margin-top: 44px;
+			@media (max-width: 767.98px) {
+				margin-top: 24px;
+			}
 		}
 	}
-	.categories {
-		.category-item {
-			> a {
-				position: relative;
-				padding-left: 24px;
-				transition: 0.3s all ease-in-out;
-				&:before {
-					content: '\f054';
-					position: absolute;
-					left: 0;
-					top: 50%;
-					transform: translateY(-50%);
-					font-family: 'Font Awesome 5 Pro';
-				}
+	.category-item {
+		> a {
+			position: relative;
+			padding-left: 24px;
+			transition: 0.3s all ease-in-out;
+			&:before {
+				content: '\f054';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				font-family: 'Font Awesome 5 Pro';
 			}
-			span {
-				+ span {
-					margin-left: 8px;
-				}
+		}
+		span {
+			+ span {
+				margin-left: 8px;
 			}
-			@media (min-width: 1025px) {
-				&:hover {
-					> a {
-						color: var(--primary);
-					}
+		}
+		@media (min-width: 1025px) {
+			&:hover {
+				> a {
+					color: var(--primary);
 				}
 			}
 		}
@@ -81,15 +82,49 @@
 			}
 		}
 	}
+	.fiiter-submit {
+		position: fixed;
+		display: flex;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: var(--white);
+		padding: 16px;
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+		.btn + .btn {
+			margin-left: 24px;
+		}
+		@media (min-width: 1025px) {
+			display: none;
+		}
+	}
+	.filter-wrapper {
+		height: calc(100vh - 86px - 24px);
+		overflow-y: auto;
+	}
 	@media (max-width: 1024.98px) {
 		position: fixed;
-		width: 90px;
-		left: 50%;
-		top: 50%;
-		width: 80%;
+		left: 0;
+		top: 0;
+		width: 60%;
+		height: 100vh;
+		padding: 24px;
 		background: var(--white);
-		transform: translate(-50%, -50%);
-		z-index: 50;
+		z-index: 600;
+		//HIDDEN
+		transform: translateX(-100%);
+		transition: transform 500ms cubic-bezier(1, 0, 0, 1) 0ms,
+			left 500ms cubic-bezier(1, 0, 0, 1) 0ms;
+		&.active {
+			transform: translateX(0);
+		}
+	}
+	@media (max-width: 575.98px) {
+		padding: 16px;
+		width: 80%;
+		.filter-wrapper {
+			height: calc(100vh - 76px - 24px);
+		}
 	}
 }
 
@@ -101,6 +136,7 @@
 		margin-bottom: 44px;
 		.collection-toolbar {
 			display: flex;
+			flex-wrap: wrap;
 			align-items: center;
 		}
 		.toolbar-left {
@@ -114,6 +150,13 @@
 		}
 		.toolbar-right {
 			margin-left: auto;
+			@media (max-width: 767.98px) {
+				margin-left: 0;
+				margin-top: 16px;
+			}
+		}
+		@media (max-width: 767.98px) {
+			margin-bottom: 24px;
 		}
 	}
 }

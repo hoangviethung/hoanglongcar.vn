@@ -1,0 +1,17 @@
+section.product-detail-gallery.pt-section
+	.container
+		.title-section.has-line
+			h2
+				| hình ảnh 
+				span thật tế
+		.grid-masonry
+			-for(i=1;i<10;i++)
+				.grid-masonry-item
+					a(href=`./images/gallery/${i}.jpg`, data-fancybox="gallery_01")
+						.img
+							img(src=`./images/gallery/${i}.jpg`, alt="HOANGLONGCAR-ANH-THUC-TE")
+			-for(i=1;i<10;i++)
+				.grid-masonry-item
+					a(href=`./images/gallery/${i}.jpg`, data-fancybox="gallery_01")
+						.img
+							img(src=`./images/gallery/${i}.jpg`, alt="HOANGLONGCAR-ANH-THUC-TE")

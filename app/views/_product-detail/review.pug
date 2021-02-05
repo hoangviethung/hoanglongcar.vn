@@ -1,0 +1,36 @@
+block let
+	- reviews = {hoang_van_long:'Hoàng Văn Long', hoang_viet_hung:'Hoàng Việt Hùng', nguyen_thi_kim_qui:'Nguyễn Thị Kim Quí', le_huynh_song_toan:'Lê Huỳnh Song Toàn', huynh_duc_chan:'Huỳnh Đức Chấn'}
+section.product-detail-review.pt-section
+	.container
+		.title-section.has-line
+			h2
+				| khách hàng 
+				span đánh giá
+		.row
+			.col-lg-3
+				.total-review
+					h3 Chất lượng: 
+						span tốt
+					.list-star
+						-for(i=0;i<5;i++)
+							i.fad.fa-star
+					b Dựa vào tổng số
+						span 7300
+						| đánh giá.
+					p Cùng xem các đánh giá của khách hàng HoangLongCar.
+			.col-lg-9
+				.slider-review
+					.swiper-container
+						.swiper-wrapper
+							each val,key in reviews
+								.swiper-slide
+									.customer-information
+										.avatar
+											img.object-cover(src=`images/customers/${key}.jpg`, alt=`${key}`)
+										.description
+											h3 #{val}
+											span Doanh nhân, 23 tuổi
+											p “Here you can read some details about a nifty little lifecycle of your order's journey from the time you place your order to your new treasures arriving at your doorstep.”
+											.list-star(rate="1")
+												-for(i=0;i<5;i++)
+													i.fad.fa-star

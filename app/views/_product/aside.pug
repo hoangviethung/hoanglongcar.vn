@@ -3,33 +3,36 @@ block let
 	- categories = {30: 'Hệ thống DVD', 10: 'Film cách nhiệt', 12: 'Camera hành trình', 32: 'Ghế nệm da'};
 	- types = {1: 'Đang giảm giá', 2: 'Sản phẩm nổi bật', 3: 'Sản phẩm có quà tặng'}
 aside.aside-menu-products
-	.filter-block
-		h2 Danh mục
-		ul.categories
-			each val,key in categories
-				li.category-item
-					a.lcl.lcl-1(href="products.html")
-						span #{val}
-						span (#{key})
-	.filter-block
-		h2 Trạng thái
-		ul.cars
-			each val,key in types
-				li.car-item
-					.form-group.checkbox__group
-						label
-							.checkbox__custom
-								input(type="checkbox")
+	.filter-wrapper
+		.filter-block
+			h2 Danh mục
+			ul.categories
+				each val,key in categories
+					li.category-item
+						a.lcl.lcl-1(href="products.html")
 							span #{val}
 							span (#{key})
-	.filter-block
-		h2 Loại xe
-		ul.cars
-			each val,key in cars
-				li.car-item
-					.form-group.checkbox__group
-						label
-							.checkbox__custom
-								input(type="checkbox")
-							span #{val}
-							span (#{key})
+		.filter-block
+			h2 Trạng thái
+			ul.cars
+				each val,key in types
+					li.car-item
+						.form-group.checkbox__group
+							label
+								.checkbox__custom
+									input(type="checkbox")
+								span #{val}
+								span (#{key})
+		.filter-block
+			h2 Loại xe
+			ul.cars
+				each val,key in cars
+					li.car-item
+						.form-group.checkbox__group
+							label
+								.checkbox__custom
+									input(type="checkbox")
+								span #{val}
+								span (#{key})
+	.fiiter-submit
+		.btn.color-dark.btn-large.btn-close Xác nhận

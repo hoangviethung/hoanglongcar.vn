@@ -67,19 +67,22 @@ header {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: 70%;
 		height: 100vh;
 		background: var(--secondary);
-		z-index: 10;
+		z-index: 550;
 		transition: 0.3s all ease-in-out;
 		// HIDDEN
-		opacity: 0;
-		visibility: hidden;
+		transform: translateX(-100%);
+		transition: transform 500ms cubic-bezier(1, 0, 0, 1) 0ms,
+			left 500ms cubic-bezier(1, 0, 0, 1) 0ms;
 		// SHOW
 		&.show {
-			opacity: 1;
-			visibility: visible;
+			transform: translateX(0);
 		}
+	}
+	@media (max-width: 575.98px) {
+		width: 85%;
 	}
 }
 
@@ -90,19 +93,50 @@ nav {
 	margin-left: auto;
 	ul {
 		display: flex;
+		align-items: center;
 		margin-left: auto;
+		@media (max-width: 1024.98px) {
+			flex-direction: column;
+		}
 	}
 	li {
 		+ li {
 			margin-left: 42px;
-		}
-		@media (max-width: 1024.98px) {
-			text-align: center;
+			@media (max-width: 1024.98px) {
+				margin-left: 0;
+				margin-top: 32px;
+			}
 		}
 		&.active {
 			> a {
 				color: var(--primary);
 			}
+		}
+		&:last-child {
+			padding-right: 0.7rem;
+			position: relative;
+			a {
+				font-size: 2.4rem;
+			}
+			@media (max-width: 1024.98px) {
+				display: none;
+			}
+			span {
+				position: absolute;
+				right: 0;
+				top: 0;
+				background: var(--primary);
+				color: var(--body);
+				border-radius: 5rem;
+				z-index: 10;
+				padding: 0 0.5rem;
+				font-weight: 600;
+				font-size: 1.1rem;
+				pointer-events: none;
+			}
+		}
+		@media (max-width: 1024.98px) {
+			text-align: center;
 		}
 	}
 	a {
@@ -110,6 +144,7 @@ nav {
 		user-select: none;
 		font-size: 1.6rem;
 		font-weight: 700;
+		letter-spacing: 1.2px;
 		color: var(--white);
 		transition: 0.3s all ease-in-out;
 		@media (min-width: 1025px) {
@@ -117,20 +152,13 @@ nav {
 				color: var(--primary);
 			}
 		}
-	}
-	@media (max-width: 1024.98px) {
-		margin: 0 auto;
-		ul {
-			flex-direction: column;
-		}
-		li + li {
-			margin-left: 0;
-			margin-top: 32px;
-		}
-		a {
+		@media (max-width: 1024.98px) {
 			font-size: 2.4rem;
 			font-weight: 400;
 		}
+	}
+	@media (max-width: 1024.98px) {
+		margin: 0 auto;
 	}
 }
 
@@ -149,6 +177,22 @@ nav {
 			max-width: 25%;
 			font-size: 2.4rem;
 			color: var(--light);
+			a {
+				position: relative;
+				span {
+					position: absolute;
+					right: 0;
+					top: 0;
+					background: var(--primary);
+					color: var(--body);
+					border-radius: 5rem;
+					z-index: 10;
+					padding: 0 0.5rem;
+					font-weight: 600;
+					font-size: 1.1rem;
+					pointer-events: none;
+				}
+			}
 			&:after {
 				content: '';
 				position: absolute;
@@ -163,6 +207,11 @@ nav {
 				color: var(--primary);
 				&:after {
 					opacity: 1;
+				}
+			}
+			&:nth-child(3) {
+				a {
+					padding-right: 0.7rem;
 				}
 			}
 		}

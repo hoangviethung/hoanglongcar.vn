@@ -18,11 +18,28 @@
 				background: var(--primary);
 				border-radius: 50%;
 				transition: 0.3s all ease-in-out;
+				@media (max-width: 575.98px) {
+					left: 0;
+					bottom: unset;
+					top: 50%;
+				}
+			}
+			@media (max-width: 575.98px) {
+				padding-bottom: 0;
+				padding-left: 16px;
 			}
 			&.active {
 				color: var(--body);
 				&:after {
 					transform: scale(1) translateX(-50%);
+					@media (max-width: 1024.98px) {
+						transform: scale(1) translateY(-50%);
+					}
+				}
+			}
+			+ .item {
+				@media (max-width: 575.98px) {
+					margin-top: 16px;
 				}
 			}
 		}

@@ -1,4 +1,4 @@
-.overlay {
+#overlay {
 	cursor: pointer;
 	position: fixed;
 	height: 100%;
@@ -6,14 +6,13 @@
 	top: 0;
 	left: 0;
 	background: rgba($color: #000000, $alpha: 0.8);
-	z-index: 600;
+	z-index: 550;
 	opacity: 0;
-	visibility: hidden;
 	pointer-events: none;
-	transition: 0.3s opacity ease-in-out;
+	transition: opacity 500ms cubic-bezier(1, 0, 0, 1) 0ms,
+		left 500ms cubic-bezier(1, 0, 0, 1) 0ms;
 	&.active {
 		opacity: 1;
-		visibility: visible;
 		pointer-events: visible;
 	}
 }
@@ -409,5 +408,49 @@
 		overflow: hidden;
 		border: 1px solid var(--border);
 		padding: 16px;
+	}
+}
+
+.list-star {
+	color: var(--primary);
+	&[rate='4'] {
+		i {
+			&:nth-child(5) {
+				color: var(--body);
+			}
+		}
+	}
+	&[rate='3'] {
+		i {
+			&:nth-child(5),
+			&:nth-child(4) {
+				color: var(--body);
+			}
+		}
+	}
+	&[rate='2'] {
+		i {
+			&:nth-child(5),
+			&:nth-child(4),
+			&:nth-child(3) {
+				color: var(--body);
+			}
+		}
+	}
+	&[rate='1'] {
+		i {
+			&:nth-child(5),
+			&:nth-child(4),
+			&:nth-child(3),
+			&:nth-child(2) {
+				color: var(--body);
+			}
+		}
+	}
+}
+
+.grid-masonry {
+	.grid-masonry-item {
+		float: left;
 	}
 }
