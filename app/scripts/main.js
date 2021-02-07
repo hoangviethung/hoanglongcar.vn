@@ -170,6 +170,29 @@ const initSliderNews = () => {
 	});
 };
 
+const initSliderVideoGallery = () => {
+	let slider = new Swiper('.slider-video-gallery .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		spaceBetween: 20,
+		autoplay: {
+			delay: 4000,
+		},
+		navigation: {
+			nextEl: '.slider-video-gallery .button-navigation-slider.next',
+			prevEl: '.slider-video-gallery .button-navigation-slider.prev',
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+			},
+			1025: {
+				slidesPerView: 3,
+			},
+		},
+	});
+};
+
 const initSliderProductDetail = () => {
 	let sliderThumb = new Swiper(
 		'.slider-product-detail .slider-thumb .swiper-container',
@@ -301,6 +324,46 @@ const scrollToGalleryProductDetail = () => {
 	}
 };
 
+const qualityInput = () => {
+	const items = document.querySelectorAll('.quality-product-input');
+	items.forEach((item) => {
+		const plus = item.querySelector('.btn-plus');
+		const minus = item.querySelector('.btn-minus');
+		const input = item.querySelector('input');
+		let currentValue = input.getAttribute('value');
+		plus.addEventListener('click', (e) => {
+			currentValue++;
+			if (currentValue > 5) {
+				plus.classList.add('disabled');
+			} else {
+				plus.classList.remove('disabled');
+				input.setAttribute('value', currentValue);
+			}
+			console.log(currentValue);
+		});
+		minus.addEventListener('click', (e) => {
+			currentValue--;
+			if (currentValue < 1) {
+				minus.classList.add('disabled');
+			} else {
+				minus.classList.remove('disabled');
+				input.setAttribute('value', currentValue);
+			}
+			console.log(currentValue);
+		});
+	});
+};
+
+const deleteRowTableCart = () => {
+	const buttonsDelete = document.querySelectorAll('.table-cart .btn-delete');
+	buttonsDelete.forEach((item) => {
+		item.addEventListener('click', (e) => {
+			console.log();
+			item.parentElement.parentElement.remove();
+		});
+	});
+};
+
 window.addEventListener('load', (e) => {
 	initializeMasonryJs();
 	initializeWowJs();
@@ -309,6 +372,7 @@ window.addEventListener('load', (e) => {
 	initSliderCategoryProduct();
 	initSliderPartner();
 	initSliderNews();
+	initSliderVideoGallery();
 	initSliderProductDetail();
 	initSliderProductOther();
 	initSliderProductReview();
@@ -316,6 +380,8 @@ window.addEventListener('load', (e) => {
 	showFilterMobile();
 	moveNavOutHeader(1024);
 	scrollToGalleryProductDetail();
+	qualityInput();
+	deleteRowTableCart();
 	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 

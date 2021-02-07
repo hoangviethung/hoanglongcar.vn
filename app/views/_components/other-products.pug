@@ -11,9 +11,9 @@ section.other-products.pd-section
 				each val,key in otherProducts
 					.swiper-slide
 						a(href="product-detail.html").card-product
-							.img
-								img.lazyload.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, alt="SAN-PHAM-HOANGLONGCAR")
-							.information
+							.product__img
+								img.lazyload.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, width="300", height="300", alt="SAN-PHAM-HOANGLONGCAR")
+							.product__information
 								h3.lcl.lcl-1 #{val}
 								h4 10.000.000
 									san VNĐ

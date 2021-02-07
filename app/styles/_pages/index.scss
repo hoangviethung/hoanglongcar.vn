@@ -17,9 +17,6 @@
 		justify-content: flex-end;
 	}
 	.image {
-		img {
-			width: 100%;
-		}
 		@media (max-width: 767.98px) {
 			margin-top: 24px;
 		}
@@ -84,6 +81,7 @@
 
 .index-services {
 	p {
+		font-size: 1.5rem;
 		margin-top: 8px;
 	}
 	.list-item {
@@ -95,7 +93,7 @@
 	.item {
 		&:nth-child(3),
 		&:nth-child(4) {
-			margin-top: 16px;
+			margin-top: 24px;
 		}
 		@media (max-width: 575.98px) {
 			&:nth-child(1),
@@ -205,24 +203,6 @@
 			}
 		}
 	}
-	.list-item {
-		margin-top: 40px;
-	}
-	.item {
-		overflow: hidden;
-		position: relative;
-		padding-bottom: calc(306 / 306 * 100%);
-		img {
-			transition: 0.3s all ease-in-out;
-		}
-		@media (min-width: 1025px) {
-			&:hover {
-				img {
-					transform: scale(1.2);
-				}
-			}
-		}
-	}
 	h3,
 	span {
 		position: absolute;
@@ -232,6 +212,7 @@
 		color: var(--white);
 		font-size: 2.4rem;
 		bottom: 16px;
+		transition: 0.3s all ease-in-out;
 		@media (max-width: 1024.98px) {
 			font-size: 2rem;
 		}
@@ -254,6 +235,28 @@
 			font-size: 2.4rem;
 		}
 	}
+	.list-item {
+		margin-top: 40px;
+	}
+	.item {
+		overflow: hidden;
+		position: relative;
+		padding-bottom: calc(306 / 306 * 100%);
+		background: var(--gray);
+		img {
+			transition: 0.3s all ease-in-out;
+		}
+		@media (min-width: 1025px) {
+			&:hover {
+				h3 {
+					color: var(--primary);
+				}
+				img {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
 }
 
 .index-sale-off {
@@ -269,6 +272,7 @@
 			@media (max-width: 767.98px) {
 				order: 2;
 				margin-top: 24px;
+				padding-right: 10px;
 			}
 		}
 	}
@@ -299,18 +303,21 @@
 			height: 100%;
 			background: rgba($color: #675959, $alpha: 0.8);
 		}
-		@media (max-width: 1024.98px) {
-		}
 		@media (max-width: 767.98px) {
 			display: none;
 		}
 	}
 	.voucher {
+		max-width: 350px;
+		width: 100%;
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		@media (max-width: 767.98px) {
 			position: relative;
+		}
+		@media (max-width: 575.98px) {
+			max-width: 100%;
 		}
 	}
 	.content {

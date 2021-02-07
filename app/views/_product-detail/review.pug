@@ -10,12 +10,12 @@ section.product-detail-review.pt-section
 			.col-lg-3
 				.total-review
 					h3 Chất lượng: 
-						span tốt
+						span.color-green tốt
 					.list-star
 						-for(i=0;i<5;i++)
 							i.fad.fa-star
 					b Dựa vào tổng số
-						span 7300
+						span 142
 						| đánh giá.
 					p Cùng xem các đánh giá của khách hàng HoangLongCar.
 			.col-lg-9
@@ -26,10 +26,10 @@ section.product-detail-review.pt-section
 								.swiper-slide
 									.customer-information
 										.avatar
-											img.object-cover(src=`images/customers/${key}.jpg`, alt=`${key}`)
+											img.object-cover(src=`images/customers/${key}.jpg`, width="80", height="80", alt=`${key}`)
 										.description
 											h3 #{val}
-											span Doanh nhân, 23 tuổi
+											span Doanh nhân - 23 tuổi
 											p “Here you can read some details about a nifty little lifecycle of your order's journey from the time you place your order to your new treasures arriving at your doorstep.”
 											.list-star(rate="1")
 												-for(i=0;i<5;i++)

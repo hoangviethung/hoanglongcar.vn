@@ -1,17 +1,31 @@
 section.product-detail-gallery.pt-section
 	.container
-		.title-section.has-line
-			h2
-				| hình ảnh 
-				span thật tế
-		.grid-masonry
-			-for(i=1;i<10;i++)
-				.grid-masonry-item
-					a(href=`./images/gallery/${i}.jpg`, data-fancybox="gallery_01")
-						.img
-							img(src=`./images/gallery/${i}.jpg`, alt="HOANGLONGCAR-ANH-THUC-TE")
-			-for(i=1;i<10;i++)
-				.grid-masonry-item
-					a(href=`./images/gallery/${i}.jpg`, data-fancybox="gallery_01")
-						.img
-							img(src=`./images/gallery/${i}.jpg`, alt="HOANGLONGCAR-ANH-THUC-TE")
+		.gallery-wrapper
+			.title-section.has-line
+				h2
+					| hình ảnh 
+					span thực tế
+			.grid-masonry
+				-for(i=1;i<10;i++)
+					.grid-masonry-item
+						a(href=`./images/gallery/${i}.jpg`, data-fancybox="gallery_image")
+							.img
+								img(src=`./images/gallery/${i}.jpg`, alt="HOANGLONGCAR-ANH-THUC-TE")
+				-for(i=1;i<10;i++)
+					.grid-masonry-item
+						a(href=`./images/gallery/${i}.jpg`, data-fancybox="gallery_image")
+							.img
+								img(src=`./images/gallery/${i}.jpg`, alt="HOANGLONGCAR-ANH-THUC-TE")
+		.gallery-wrapper.pt-section
+			.title-section.has-line
+				h2
+					| video 
+					span thực tế
+			.slider-video-gallery
+				.swiper-container
+					.swiper-wrapper
+						-for(j=1;j<5;j++)
+							.swiper-slide
+									a(data-fancybox="gallery_video" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk") 
+										.video__thumbnail.isVideo
+											img.object-cover.object-resize(src=`./images/gallery/${j}.jpg`, width="500", height="250", alt="HOANGLONGCAR-VIDEO-THUC-TE")

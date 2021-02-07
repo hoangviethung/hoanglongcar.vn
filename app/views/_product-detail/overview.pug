@@ -9,14 +9,14 @@ section.product-detail-overview.pd-section
 								-for(i=1;i<6;i++)
 									.swiper-slide
 										figure
-											img.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${i}.jpg`, alt="SAN-PHAM-CHI-TIET-HOANGLONGCAR")
+											img.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${i}.jpg`, width="300", height="300", alt="SAN-PHAM-CHI-TIET-HOANGLONGCAR")
 					.slider-thumb
 						.swiper-container
 							.swiper-wrapper
 								-for(j=1;j<6;j++)
 									.swiper-slide
 										figure
-											img.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${j}.jpg`, alt="SAN-PHAM-CHI-TIET-HOANGLONGCAR")
+											img.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${j}.jpg`, width="300", height="300", alt="SAN-PHAM-CHI-TIET-HOANGLONGCAR")
 			.col-md-8.col-sm-6
 				.information-product-detail
 					.share-button
@@ -27,5 +27,23 @@ section.product-detail-overview.pd-section
 						span VNĐ
 					del 2.300.000
 						span VNĐ
-					.btn.color-dark.btn-large.btn-scroll-to-gallery Xem ảnh thực tế
-					.btn.color-dark.btn-large Thêm vào bảng báo giá
+					ul
+						li
+							p Thương hiệu
+							p Yamaha
+						li
+							p Bảo hành
+							p 2 năm
+						li
+							p Tình trạng
+							p.color-green Còn hàng
+					.quality-product-input
+						input(type="text" value="1" readonly)
+						.qly-n
+							.btn.btn-plus
+								i.fal.fa-plus
+							.btn.btn-minus
+								i.fal.fa-minus
+					.btn-group
+						.btn.bg-gray.btn-large.btn-scroll-to-gallery Xem ảnh thực tế
+						.btn.bg-primary.btn-large Thêm vào bảng báo giá

@@ -99,8 +99,10 @@
 		}
 	}
 	.filter-wrapper {
-		height: calc(100vh - 86px - 24px);
-		overflow-y: auto;
+		@media (max-width: 1024.98px) {
+			height: calc(100vh - 86px - 24px);
+			overflow-y: auto;
+		}
 	}
 	@media (max-width: 1024.98px) {
 		position: fixed;

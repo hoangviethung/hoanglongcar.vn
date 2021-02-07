@@ -6,6 +6,7 @@
 	.slider-thumb {
 		margin-top: 16px;
 		figure {
+			cursor: pointer;
 			position: relative;
 			&:after {
 				content: '';
@@ -46,13 +47,55 @@
 	h2 {
 		color: var(--primary);
 		font-size: 3.2rem;
-		margin-top: 2rem;
+		margin-top: 1.6rem;
 	}
 	del {
 		display: block;
 	}
-	.btn {
+	ul {
+		width: 50%;
+		margin-top: 2.4rem;
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			p {
+				-ms-flex: 0 0 50%;
+				flex: 0 0 50%;
+				max-width: 50%;
+				font-weight: 400;
+				&.color-red {
+					color: var(--accent-red);
+				}
+				&.color-green {
+					color: var(--accent-green);
+				}
+			}
+			+ li {
+				margin-top: 1rem;
+			}
+		}
+		@media (max-width: 1439.98px) {
+			width: 100%;
+		}
+	}
+	.btn-group {
+		display: flex;
+		flex-wrap: wrap;
 		margin-top: 3rem;
+		@media (max-width: 767.98px) {
+			.btn {
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				+ .btn {
+					margin-top: 0.8rem;
+				}
+			}
+		}
+	}
+	.quality-product-input {
+		margin-top: 2rem;
+		max-width: 24rem;
 	}
 	@media (max-width: 575.98px) {
 		margin-top: 24px;
@@ -182,6 +225,12 @@
 			span {
 				text-transform: uppercase;
 				margin-left: 4px;
+				&.color-green {
+					color: var(--accent-green);
+				}
+				&.color-red {
+					color: var(--accent-red);
+				}
 			}
 			@media (max-width: 767.98px) {
 				margin-bottom: 4px;
@@ -218,7 +267,7 @@
 		max-width: 80px;
 		overflow: hidden;
 		border-radius: 50%;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+		background: var(--gray);
 	}
 	.description {
 		-ms-flex-preferred-size: 0;
@@ -274,6 +323,7 @@
 			padding: 4px;
 			.img {
 				position: relative;
+				background: var(--gray);
 				&:after,
 				&:before {
 					position: absolute;
@@ -325,5 +375,13 @@
 		@media (max-width: 1024.98px) {
 			max-height: 400px;
 		}
+	}
+}
+
+.slider-video-gallery {
+	.video__thumbnail {
+		position: relative;
+		overflow: hidden;
+		padding-bottom: calc(300 / 400 * 100%);
 	}
 }

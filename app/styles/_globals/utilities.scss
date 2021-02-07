@@ -74,6 +74,7 @@
 	color: var(--white);
 	border: 1px solid var(--white);
 	transition: 0.3s all ease-in-out;
+	border-radius: 0.3rem;
 	&.btn-large {
 		padding: 16px 24px;
 		@media (max-width: 575.98px) {
@@ -84,9 +85,29 @@
 		color: var(--dark);
 		border: 1px solid var(--dark);
 	}
+	&.color-primary {
+		color: var(--body);
+		background: var(--primary);
+		border: 0;
+	}
 	&.color-neutral-medium_sub {
 		color: var(--neutral-medium_sub);
 		border: 1px solid var(--neutral-medium_sub);
+	}
+	&.bg-dark {
+		color: var(--white);
+		background: var(--dark);
+	}
+	&.bg-primary {
+		color: var(--body);
+		background: var(--primary);
+	}
+	&.bg-gray {
+		color: var(--body);
+		background: var(--gray);
+		&:hover {
+			background: var(--neutral-light_disable);
+		}
 	}
 	&.no-border {
 		border: 0;
@@ -234,8 +255,6 @@
 }
 
 .voucher {
-	max-width: 350px;
-	width: 100%;
 	text-align: center;
 	.top,
 	.bottom {
@@ -264,6 +283,21 @@
 		.CTA {
 			margin-top: 24px;
 		}
+	}
+}
+
+.isVideo {
+	position: relative;
+	&:after {
+		content: '\f144';
+		font-family: 'Font Awesome 5 Pro';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 5.6rem;
+		color: var(--white);
+		pointer-events: none;
 	}
 }
 
@@ -325,78 +359,6 @@
 	background: #f2f2f2;
 }
 
-.item-news {
-	display: block;
-	background: var(--white);
-	.img {
-		overflow: hidden;
-		position: relative;
-		padding-bottom: calc(280 / 418 * 100%);
-		img {
-			transition: 0.3s all ease-in-out;
-		}
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: var(--black);
-			opacity: 0;
-			transition: 0.3s all ease-in-out;
-			pointer-events: none;
-		}
-	}
-	.desc {
-		padding: 16px;
-	}
-	.time {
-		display: inline-block;
-		font-size: 1.4rem;
-		margin-bottom: 8px;
-		&:before {
-			content: '\f017';
-			font-family: 'Font Awesome 5 Pro';
-			margin-right: 8px;
-		}
-	}
-	h3 {
-		position: relative;
-		font-size: 1.8rem;
-		font-weight: 700;
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			height: 2px;
-			width: 80px;
-			background: var(--primary);
-		}
-	}
-	p {
-		color: var(--neutral-medium_sub);
-		margin-top: 16px;
-	}
-	.CTA {
-		text-align: right;
-		margin-top: 24px;
-	}
-	@media (min-width: 1025px) {
-		&:hover {
-			.img {
-				img {
-					transform: scale(1.1);
-				}
-				&:after {
-					opacity: 0.5;
-				}
-			}
-		}
-	}
-}
-
 .partners {
 	.item {
 		display: block;
@@ -452,5 +414,14 @@
 .grid-masonry {
 	.grid-masonry-item {
 		float: left;
+	}
+}
+
+#popop-form-contact {
+	max-width: 550px;
+	width: 100%;
+	h3 {
+		font-size: 2.4rem;
+		margin-bottom: 2rem;
 	}
 }
