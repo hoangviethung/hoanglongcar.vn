@@ -156,6 +156,7 @@
 		}
 	}
 	.slider-thumb {
+		position: relative;
 		.swiper-slide {
 			cursor: pointer;
 			padding: 24px;
@@ -187,6 +188,21 @@
 			font-size: 1.4rem;
 			letter-spacing: 1px;
 			font-weight: 700;
+		}
+		.button-navigation-slider {
+			@media (min-width: 1025px) {
+				display: none;
+			}
+			top: 0;
+			&.prev {
+				left: 0;
+			}
+			&.next {
+				left: calc(44px + 16px);
+			}
+		}
+		@media (max-width: 1024.98px) {
+			padding-top: 56px;
 		}
 	}
 }

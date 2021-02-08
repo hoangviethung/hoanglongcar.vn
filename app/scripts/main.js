@@ -94,8 +94,11 @@ const initSliderCategoryProduct = () => {
 		'.index-categories-product .slider-thumb .swiper-container',
 		{
 			slidesPerView: 2,
-			autoplay: {
-				delay: 3000,
+			navigation: {
+				nextEl:
+					'.index-categories-product .button-navigation-slider.next',
+				prevEl:
+					'.index-categories-product .button-navigation-slider.prev',
 			},
 			breakpoints: {
 				1025: {
@@ -111,6 +114,12 @@ const initSliderCategoryProduct = () => {
 			simulateTouch: false,
 			autoplay: {
 				delay: 3000,
+			},
+			navigation: {
+				nextEl:
+					'.index-categories-product .button-navigation-slider.next',
+				prevEl:
+					'.index-categories-product .button-navigation-slider.prev',
 			},
 			thumbs: {
 				swiper: sliderThumb,
