@@ -14,8 +14,14 @@
 .form-group {
 	margin-bottom: 1.5rem;
 	label {
+		color: var(--neutral-medium_sub);
+		font-size: 1.4rem;
 		font-weight: 500;
 		margin-bottom: 0.5rem;
+	}
+	textarea {
+		padding: 1.5rem;
+		height: 20rem;
 	}
 }
 
