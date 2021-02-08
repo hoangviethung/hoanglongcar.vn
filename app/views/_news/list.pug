@@ -1,0 +1,15 @@
+-let news = {1: 'TOP 5 THƯƠNG HIỆU DVD ANDOIRD', 2: 'Happy Ninja', 3: 'Ship Your Idea', 4: 'Ninja Silhouette', 5: 'Ship Your Idea', 6:'Ship Your Idea', 7: 'Ship Your Idea', 8: 'Ship Your Idea'};
+section.news.pd-section
+	.container
+		.row
+			each val,key in news
+				.col-md-4.col-sm-6
+					a(href="404.html").card-news.mb-item
+						.news__img
+							img.object-cover.object-resize.lazyload.blur-up(src=`./images/news/news-0${key}.jpg`, width="280", height="418", alt="TIN-TUC-HOANGLONGCAR")
+						.news__desc.border
+							span.news__time 10.10.2021
+							h3.lcl.lcl-1 #{val}
+							p.lcl.lcl-3 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam...
+							.CTA
+								.btn.color-neutral-medium_sub XEM CHI TIẾT

@@ -24,6 +24,9 @@
 	}
 	.news__desc {
 		padding: 16px;
+		&.border {
+			border: 1px solid var(--border);
+		}
 	}
 	.news__time {
 		display: inline-block;
@@ -56,6 +59,9 @@
 	.CTA {
 		text-align: right;
 		margin-top: 24px;
+	}
+	&.mb-item {
+		margin-bottom: 2.4rem;
 	}
 	@media (min-width: 1025px) {
 		&:hover {

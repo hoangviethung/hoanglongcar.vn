@@ -1,0 +1,13 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "news-page"
+	- pageTitle = "Hoàng Long Car | Tin Tức"
+	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
+	- breadcrumb = {1:'Trang chủ', 2:'Tin Tức'};
+	- namePage = "Tin tức"
+block main
+	// PAGE BANNER
+	include ./views/_components/page-banner
+	// LIS NEWS
+	include ./views/_news/list
