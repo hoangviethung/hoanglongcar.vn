@@ -4,7 +4,7 @@
 		padding-bottom: calc(300 / 300 * 100%);
 	}
 	.slider-thumb {
-		margin-top: 16px;
+		margin-top: 1.6rem;
 		figure {
 			cursor: pointer;
 			position: relative;
@@ -15,7 +15,7 @@
 				transform: translateX(-50%);
 				bottom: 0;
 				width: 0;
-				height: 5px;
+				height: 0.5rem;
 				background: var(--primary);
 				transition: 0.5s all ease-in-out;
 			}
@@ -98,7 +98,7 @@
 		max-width: 24rem;
 	}
 	@media (max-width: 575.98px) {
-		margin-top: 24px;
+		margin-top: 2.4rem;
 		padding: 0;
 	}
 }
@@ -112,7 +112,7 @@
 			font-size: 2.8rem;
 			font-weight: 700;
 			+ .item {
-				margin-left: 56px;
+				margin-left: 5.6rem;
 				@media (max-width: 575.98px) {
 					margin-left: 0;
 				}
@@ -128,12 +128,12 @@
 		}
 	}
 	.tab__content {
-		margin-top: 56px;
+		margin-top: 5.6rem;
 		table {
 			width: 100%;
 			th,
 			td {
-				border: 1px solid var(--border);
+				border: 0.1rem solid var(--border);
 				padding: 2rem;
 			}
 		}
@@ -152,15 +152,15 @@
 			}
 		}
 		@media (max-width: 1024.98px) {
-			margin-top: 24px;
+			margin-top: 2.4rem;
 		}
 	}
 }
 
 .product-detail-meta {
-	padding: 32px 0;
-	border-top: 1px solid var(--border);
-	border-bottom: 1px solid var(--border);
+	padding: 3.2rem 0;
+	border-top: 0.1rem solid var(--border);
+	border-bottom: 0.1rem solid var(--border);
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -171,7 +171,7 @@
 			span,
 			a {
 				font-weight: 300;
-				margin-left: 8px;
+				margin-left: 0.8rem;
 			}
 			a {
 				text-decoration: underline;
@@ -189,42 +189,27 @@
 			}
 		}
 		li + li {
-			margin-left: 24px;
+			margin-left: 2.4rem;
 			@media (max-width: 767.98px) {
 				margin-left: 0;
-				margin-top: 8px;
+				margin-top: 0.8rem;
 			}
 		}
 	}
 	@media (max-width: 767.98px) {
-		padding: 16px 0;
-	}
-}
-
-.other-products {
-	.title-section {
-		margin-bottom: 80px;
-		@media (max-width: 1024.98px) {
-			margin-bottom: 40px;
-		}
-		@media (max-width: 575.98px) {
-			margin-bottom: 24px;
-		}
+		padding: 1.6rem 0;
 	}
 }
 
 .product-detail-review {
-	.title-section {
-		margin-bottom: 24px;
-	}
 	.total-review {
 		padding-right: calc(4.6805555556vw - 26.6666666667px);
 		h3 {
 			font-size: 1.8rem;
-			margin-bottom: 8px;
+			margin-bottom: 0.8rem;
 			span {
 				text-transform: uppercase;
-				margin-left: 4px;
+				margin-left: 0.4rem;
 				&.color-green {
 					color: var(--accent-green);
 				}
@@ -233,22 +218,22 @@
 				}
 			}
 			@media (max-width: 767.98px) {
-				margin-bottom: 4px;
+				margin-bottom: 0.4rem;
 			}
 		}
 		.list-star {
-			margin-bottom: 16px;
+			margin-bottom: 1.6rem;
 			@media (max-width: 767.98px) {
-				margin-bottom: 8px;
+				margin-bottom: 0.8rem;
 			}
 		}
 		b,
 		p {
 			display: block;
-			margin-top: 4px;
+			margin-top: 0.4rem;
 			span {
 				text-decoration: underline;
-				margin: 0 4px;
+				margin: 0 0.4rem;
 			}
 		}
 	}
@@ -261,10 +246,10 @@
 	}
 	.avatar {
 		position: relative;
-		height: 80px;
-		-ms-flex: 0 0 80px;
-		flex: 0 0 80px;
-		max-width: 80px;
+		height: 8rem;
+		-ms-flex: 0 0 8rem;
+		flex: 0 0 8rem;
+		max-width: 8rem;
 		overflow: hidden;
 		border-radius: 50%;
 		background: var(--gray);
@@ -275,52 +260,49 @@
 		-ms-flex-positive: 1;
 		flex-grow: 1;
 		max-width: 100%;
-		padding-left: 24px;
+		padding-left: 2.4rem;
 		h3 {
 			font-size: 1.8rem;
-			margin-bottom: 4px;
+			margin-bottom: 0.4rem;
 		}
 		span {
 			font-weight: 500;
 		}
 	}
 	.swiper-slide {
-		border-right: 1px solid var(--border);
-		padding-right: 24px;
+		border-right: 0.1rem solid var(--border);
+		padding-right: 2.4rem;
 		@media (max-width: 767.98px) {
 			border-right: 0;
 			padding-right: 0;
 		}
 	}
 	@media (max-width: 1024.98px) {
-		margin-top: 24px;
+		margin-top: 2.4rem;
 	}
 }
 
 .product-detail-gallery {
-	.title-section {
-		margin-bottom: 24px;
-	}
 	.grid-masonry {
-		max-height: 650px;
+		max-height: 65rem;
 		overflow-y: auto;
 		&::-webkit-scrollbar-track {
-			box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+			box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
 			background-color: #dfdfdf;
 		}
 		&::-webkit-scrollbar {
-			width: 8px;
-			height: 8px;
+			width: 0.8rem;
+			height: 0.8rem;
 			background-color: #dfdfdf;
 		}
 		&::-webkit-scrollbar-thumb {
-			box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+			box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
 			background-color: var(--dark);
 		}
 		.grid-masonry-item {
 			cursor: pointer;
 			width: 25%;
-			padding: 4px;
+			padding: 0.3rem;
 			.img {
 				position: relative;
 				background: var(--gray);

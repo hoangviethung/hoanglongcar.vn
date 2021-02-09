@@ -4,15 +4,15 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 500;
-	padding: 25px 0;
+	padding: 2.4rem 0;
 	transition: 0.3s all ease-in-out;
 	@media (min-width: 1025px) {
 		&.fixed {
 			background: var(--secondary);
-			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
-			padding: 10px 0;
+			box-shadow: 0 0.3rem 0.6rem rgba($color: #000000, $alpha: 0.16);
+			padding: 1rem 0;
 			.logo {
-				height: 60px;
+				height: 6rem;
 				width: auto;
 				img {
 					height: 100%;
@@ -41,13 +41,13 @@ header {
 			width: auto;
 		}
 		@media (max-width: 1024.98px) {
-			margin-bottom: 56px;
+			margin-bottom: 5.6rem;
 		}
 	}
 	.btn-close {
 		position: absolute;
-		top: 24px;
-		right: 24px;
+		top: 2.4rem;
+		right: 2.4rem;
 		font-size: 4.4rem;
 		color: var(--white);
 		@media (min-width: 1025px) {
@@ -101,10 +101,10 @@ nav {
 	}
 	li {
 		+ li {
-			margin-left: 42px;
+			margin-left: 4.2rem;
 			@media (max-width: 1024.98px) {
 				margin-left: 0;
-				margin-top: 32px;
+				margin-top: 3.2rem;
 			}
 		}
 		&.active {
@@ -170,7 +170,7 @@ nav {
 		flex-wrap: wrap;
 		li {
 			position: relative;
-			padding: 16px 8px;
+			padding: 1.6rem 0.8rem;
 			text-align: center;
 			-ms-flex: 0 0 25%;
 			flex: 0 0 25%;
@@ -198,7 +198,7 @@ nav {
 				position: absolute;
 				bottom: 0;
 				left: 0;
-				height: 3px;
+				height: 0.3rem;
 				width: 100%;
 				background: var(--primary);
 				opacity: 0;
@@ -223,7 +223,7 @@ nav {
 
 footer {
 	position: relative;
-	padding: 56px 0;
+	padding: 5.6rem 0;
 	&:after {
 		content: '';
 		position: absolute;
@@ -240,9 +240,9 @@ footer {
 	}
 	[class*='col-'] {
 		&:first-child {
-			padding-right: 56px;
+			padding-right: 5.6rem;
 			@media (max-width: 1199.98px) {
-				padding-right: 132px;
+				padding-right: 1.32rem;
 			}
 			@media (max-width: 1024.98px) {
 				padding-right: 10px;
@@ -252,10 +252,10 @@ footer {
 		&:nth-child(3),
 		&:nth-child(4) {
 			@media (max-width: 1024.98px) {
-				margin-top: 56px;
+				margin-top: 5.6rem;
 			}
 			@media (max-width: 767.98px) {
-				margin-top: 24px;
+				margin-top: 2.4rem;
 			}
 		}
 	}
@@ -263,7 +263,7 @@ footer {
 		display: inline-block;
 	}
 	.list-information {
-		margin-top: 24px;
+		margin-top: 2.4rem;
 	}
 	.item-information {
 		display: flex;
@@ -291,7 +291,7 @@ footer {
 			}
 		}
 		+ li {
-			margin-top: 16px;
+			margin-top: 1.6rem;
 		}
 	}
 	.socials {
@@ -302,13 +302,13 @@ footer {
 		color: var(--white);
 		font-size: 1.8rem;
 		font-weight: 700;
-		padding-bottom: 2px;
-		margin-bottom: 24px;
+		padding-bottom: 0.2rem;
+		margin-bottom: 2.4rem;
 		&:after {
 			content: '';
 			position: absolute;
-			width: 24px;
-			height: 2px;
+			width: 2.4rem;
+			height: 0.2rem;
 			bottom: 0;
 			left: 0;
 			background: var(--white);
@@ -316,16 +316,16 @@ footer {
 	}
 	.item-social {
 		background: var(--dark);
-		border-radius: 4px;
+		border-radius: 0.3rem;
 		> a {
-			width: 32px;
-			height: 32px;
+			width: 3.2rem;
+			height: 3.2rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
 		+ .item-social {
-			margin-left: 8px;
+			margin-left: 0.8rem;
 		}
 	}
 	.item-navigation {
@@ -339,12 +339,12 @@ footer {
 			}
 		}
 		+ .item-navigation {
-			margin-top: 16px;
+			margin-top: 1.6rem;
 		}
 	}
 }
 
 .copy-right {
-	padding: 14px 0;
+	padding: 1.4rem 0;
 	background: var(--primary);
 }

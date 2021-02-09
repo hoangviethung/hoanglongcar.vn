@@ -110,15 +110,15 @@
 	left: 0;
 }
 .pt-section {
-	padding-top: 50px;
+	padding-top: 5rem;
 	@media (min-width: 1200px) {
-		padding-top: 80px;
+		padding-top: 8rem;
 	}
 }
 .pb-section {
-	padding-bottom: 50px;
+	padding-bottom: 5rem;
 	@media (min-width: 1200px) {
-		padding-bottom: 80px;
+		padding-bottom: 8rem;
 	}
 }
 .pd-section {
@@ -126,15 +126,15 @@
 	@extend .pb-section;
 }
 .mt-section {
-	margin-top: 50px;
+	margin-top: 5rem;
 	@media (min-width: 1200px) {
-		margin-top: 80px;
+		margin-top: 8rem;
 	}
 }
 .mb-section {
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 	@media (min-width: 1200px) {
-		margin-bottom: 80px;
+		margin-bottom: 8rem;
 	}
 }
 .mr-section {
@@ -142,15 +142,15 @@
 	@extend .mb-section;
 }
 .mt-title {
-	margin-top: 24px;
+	margin-top: 2.4rem;
 	@media (max-width: 575.98px) {
-		margin-top: 16px;
+		margin-top: 1.6rem;
 	}
 }
 .mb-title {
-	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
 	@media (max-width: 575.98px) {
-		margin-bottom: 16px;
+		margin-bottom: 1.6rem;
 	}
 }
 .mr-title {

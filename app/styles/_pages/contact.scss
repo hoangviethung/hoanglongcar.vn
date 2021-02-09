@@ -9,7 +9,7 @@
 		margin-top: 2.4rem;
 	}
 	.contact__information {
-		max-width: 500px;
+		max-width: 50rem;
 		width: 100%;
 		a,
 		p,
@@ -26,7 +26,7 @@
 			margin-bottom: 1rem;
 			i {
 				color: var(--primary);
-				margin-right: 8px;
+				margin-right: 0.8rem;
 			}
 			@media (max-width: 575.98px) {
 				font-size: 1.8rem;
@@ -36,7 +36,7 @@
 			+ li {
 				margin-top: 3.2rem;
 				padding-top: 3.2rem;
-				border-top: 1px solid #2d2d2d;
+				border-top: 0.1rem solid #2d2d2d;
 				@media (max-width: 767.98px) {
 					margin-top: 0;
 					padding-top: 0;
@@ -48,11 +48,15 @@
 				flex: 0 0 50%;
 				max-width: 50%;
 				margin-bottom: 2.4rem;
+				padding-right: 1.6rem;
+				padding-left: 1.6rem;
 			}
 			@media (max-width: 575.98px) {
 				-ms-flex: 0 0 100%;
 				flex: 0 0 100%;
 				max-width: 100%;
+				padding-right: 0;
+				padding-left: 0;
 			}
 		}
 		@media (max-width: 767.98px) {
@@ -60,6 +64,12 @@
 			flex-wrap: wrap;
 			margin-bottom: 4.4rem;
 			max-width: 100%;
+			margin-right: -1.6rem;
+			margin-left: -1.6rem;
+		}
+		@media (max-width: 575.98px) {
+			margin-right: 0;
+			margin-left: 0;
 		}
 	}
 }

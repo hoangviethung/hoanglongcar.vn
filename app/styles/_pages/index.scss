@@ -9,16 +9,16 @@
 	}
 
 	p {
-		margin-top: 16px;
+		margin-top: 1.6rem;
 	}
 	.CTA {
-		margin-top: 16px;
+		margin-top: 1.6rem;
 		display: flex;
 		justify-content: flex-end;
 	}
 	.image {
 		@media (max-width: 767.98px) {
-			margin-top: 24px;
+			margin-top: 2.4rem;
 		}
 	}
 }
@@ -29,8 +29,8 @@
 		font-size: 1.6rem;
 		font-weight: 700;
 		color: var(--light);
-		letter-spacing: 1px;
-		margin-top: 16px;
+		letter-spacing: 0.1rem;
+		margin-top: 1.6rem;
 		text-transform: uppercase;
 		@media (max-width: 1024.98px) {
 			text-align: center;
@@ -41,11 +41,11 @@
 	}
 	p {
 		color: var(--neutral-light_disable);
-		margin-top: 8px;
+		margin-top: 0.8rem;
 		max-width: 90%;
 		@media (max-width: 1024.98px) {
 			text-align: center;
-			margin: 8px auto 0;
+			margin: 0.8rem auto 0;
 		}
 		@media (max-width: 575.98px) {
 			text-align: left;
@@ -60,7 +60,7 @@
 			}
 			@media (max-width: 575.98px) {
 				margin: 0;
-				width: 44px;
+				width: 4.4rem;
 			}
 		}
 	}
@@ -68,12 +68,12 @@
 		@media (max-width: 1024.98px) {
 			&:nth-child(3),
 			&:nth-child(4) {
-				margin-top: 30px;
+				margin-top: 3rem;
 			}
 		}
 		@media (max-width: 575.98px) {
 			&:nth-child(2) {
-				margin-top: 30px;
+				margin-top: 3rem;
 			}
 		}
 	}
@@ -82,32 +82,32 @@
 .index-services {
 	p {
 		font-size: 1.5rem;
-		margin-top: 8px;
+		margin-top: 0.8rem;
 	}
 	.list-item {
-		margin-top: 24px;
+		margin-top: 2.4rem;
 		h3 {
-			margin-top: 16px;
+			margin-top: 1.6rem;
 		}
 	}
 	.item {
 		&:nth-child(3),
 		&:nth-child(4) {
-			margin-top: 24px;
+			margin-top: 2.4rem;
 		}
 		@media (max-width: 575.98px) {
 			&:nth-child(1),
 			&:nth-child(2) {
-				margin-top: 16px;
+				margin-top: 1.6rem;
 			}
 		}
 	}
 	.image {
-		@media (max-width: 992px) {
+		@media (max-width: 1024.98px) {
 			display: none;
 		}
 		@media (min-width: 1200px) {
-			padding-left: 100px;
+			padding-left: 10rem;
 		}
 	}
 }
@@ -116,24 +116,24 @@
 	.slider-active {
 		.swiper-slide {
 			background: #616161;
-			padding: 56px;
+			padding: 5.6rem;
 			@media (max-width: 575.98px) {
-				padding: 24px;
+				padding: 2.4rem;
 			}
 		}
 		.content {
 			h3 {
 				position: relative;
 				font-size: 2.4rem;
-				padding-bottom: 8px;
-				margin-bottom: 20px;
+				padding-bottom: 0.8rem;
+				margin-bottom: 2rem;
 				&:after {
 					content: '';
 					position: absolute;
 					bottom: 0;
 					left: 0;
-					width: 80px;
-					height: 2px;
+					width: 8rem;
+					height: 0.2rem;
 					background: var(--primary);
 				}
 			}
@@ -142,7 +142,7 @@
 				color: var(--white);
 			}
 			.CTA {
-				margin-top: 24px;
+				margin-top: 2.4rem;
 			}
 		}
 		.image {
@@ -159,8 +159,8 @@
 		position: relative;
 		.swiper-slide {
 			cursor: pointer;
-			padding: 24px;
-			border: 1px solid var(--border);
+			padding: 2.4rem;
+			border: 0.1rem solid var(--border);
 			transition: 0.3s all ease-in-out;
 			&:after {
 				content: '';
@@ -169,7 +169,7 @@
 				left: 50%;
 				width: 0;
 				transform: translateX(-50%);
-				height: 5px;
+				height: 0.5rem;
 				background: var(--primary);
 				transition: 0.5s all ease-in-out;
 			}
@@ -186,7 +186,7 @@
 		}
 		p {
 			font-size: 1.4rem;
-			letter-spacing: 1px;
+			letter-spacing: 0.1rem;
 			font-weight: 700;
 		}
 		.button-navigation-slider {
@@ -198,11 +198,11 @@
 				left: 0;
 			}
 			&.next {
-				left: calc(44px + 16px);
+				left: calc(4.4rem + 1.6rem);
 			}
 		}
 		@media (max-width: 1024.98px) {
-			padding-top: 56px;
+			padding-top: 5.6rem;
 		}
 	}
 }
@@ -212,22 +212,22 @@
 		&:last-child,
 		&:nth-last-child(2) {
 			@media (max-width: 1024.98px) {
-				margin-top: 24px;
+				margin-top: 2.4rem;
 			}
 			@media (max-width: 767.98px) {
-				margin-top: 20px;
+				margin-top: 2rem;
 			}
 		}
 	}
 	h3,
 	span {
 		position: absolute;
-		left: 16px;
+		left: 1.6rem;
 	}
 	h3 {
 		color: var(--white);
 		font-size: 2.4rem;
-		bottom: 16px;
+		bottom: 1.6rem;
 		transition: 0.3s all ease-in-out;
 		@media (max-width: 1024.98px) {
 			font-size: 2rem;
@@ -237,22 +237,22 @@
 		font-size: 3.2rem;
 		color: var(--primary);
 		font-weight: 700;
-		top: 16px;
-		width: 56px;
-		height: 56px;
+		top: 1.6rem;
+		width: 5.6rem;
+		height: 5.6rem;
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background: rgba($color: #2d2d2d, $alpha: 0.8);
 		@media (max-width: 767.98px) {
-			width: 44px;
-			height: 44px;
+			width: 4.4rem;
+			height: 4.4rem;
 			font-size: 2.4rem;
 		}
 	}
 	.list-item {
-		margin-top: 40px;
+		margin-top: 4rem;
 	}
 	.item {
 		overflow: hidden;
@@ -278,28 +278,27 @@
 .index-sale-off {
 	[class*='col-'] {
 		&:first-child {
-			padding-right: 110px;
+			padding-right: 11rem;
 			@media (max-width: 1199.98px) {
-				padding-right: 56px;
+				padding-right: 5.6rem;
 			}
 			@media (max-width: 1024.98px) {
-				padding-right: 0;
+				padding-right: 10px;
 			}
 			@media (max-width: 767.98px) {
 				order: 2;
-				margin-top: 24px;
-				padding-right: 10px;
+				margin-top: 1.4rem;
 			}
 		}
 	}
 	.item {
 		position: relative;
-		padding-right: 56px;
-		padding-bottom: 56px;
+		padding-right: 5.6rem;
+		padding-bottom: 5.6rem;
 		height: 100%;
 		@media (max-width: 1024.98px) {
-			padding-right: 24px;
-			padding-bottom: 24px;
+			padding-right: 2.4rem;
+			padding-bottom: 2.4rem;
 		}
 		@media (max-width: 767.98px) {
 			padding-right: 0;
@@ -324,7 +323,7 @@
 		}
 	}
 	.voucher {
-		max-width: 350px;
+		max-width: 35rem;
 		width: 100%;
 		position: absolute;
 		bottom: 0;

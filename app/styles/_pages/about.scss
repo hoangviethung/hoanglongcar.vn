@@ -1,0 +1,47 @@
+.about {
+	position: relative;
+	background: var(--primary);
+	h2 {
+		font-size: 1.8rem;
+		margin-bottom: 0.8rem;
+	}
+	h1 {
+		font-size: 3.2rem;
+		font-weight: 900;
+		margin-bottom: 1.6rem;
+	}
+	p {
+		font-weight: 400;
+	}
+	.signature {
+		margin-top: 1.6rem;
+		b {
+			font-size: 1.4rem;
+			display: block;
+			margin-top: 0.8rem;
+		}
+	}
+	.content {
+		&-left {
+			max-width: 45rem;
+			width: 100%;
+		}
+		&-right {
+			padding-left: 8rem;
+		}
+	}
+	.background {
+		background-image: var(--data-bg);
+		background-size: cover;
+		left: auto;
+		right: 0;
+		width: 50%;
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 0;
+		height: 100%;
+	}
+}
