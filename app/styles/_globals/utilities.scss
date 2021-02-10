@@ -373,6 +373,27 @@
 	}
 }
 
+.card-our-team {
+	.member__image {
+		position: relative;
+		padding-bottom: calc(295 / 295 * 100%);
+	}
+	.member__information {
+		margin-top: 1.6rem;
+		h3,
+		p {
+			text-align: center;
+		}
+		h3 {
+			font-size: 2.4rem;
+		}
+		p {
+			color: var(--neutral-medium_sub);
+			font-weight: 500;
+		}
+	}
+}
+
 .list-star {
 	color: var(--primary);
 	&[rate='4'] {

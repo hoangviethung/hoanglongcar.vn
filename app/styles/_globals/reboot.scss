@@ -21,19 +21,6 @@ html {
 	}
 }
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
-	display: block;
-}
-
 body {
 	margin: 0;
 	font-family: 'Fira Sans';
@@ -47,6 +34,19 @@ body {
 	&.no-scroll {
 		overflow-y: hidden;
 	}
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {

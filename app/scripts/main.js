@@ -179,6 +179,29 @@ const initSliderNews = () => {
 	});
 };
 
+const initSliderOurTeam = () => {
+	let slider = new Swiper('.slider-our-team .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		spaceBetween: 20,
+		autoplay: {
+			delay: 4000,
+		},
+		navigation: {
+			nextEl: '.slider-our-team .button-navigation-slider.next',
+			prevEl: '.slider-our-team .button-navigation-slider.prev',
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 3,
+			},
+			1025: {
+				slidesPerView: 4,
+			},
+		},
+	});
+};
+
 const initSliderVideoGallery = () => {
 	let slider = new Swiper('.slider-video-gallery .swiper-container', {
 		slidesPerView: 1,
@@ -240,6 +263,10 @@ const initSliderProductOther = () => {
 		slidesPerView: 1,
 		autoplay: {
 			delay: 3000,
+		},
+		navigation: {
+			nextEl: '.other-products .button-navigation-slider.next',
+			prevEl: '.other-products .button-navigation-slider.prev',
 		},
 		breakpoints: {
 			768: {
@@ -381,6 +408,7 @@ window.addEventListener('load', (e) => {
 	initSliderCategoryProduct();
 	initSliderPartner();
 	initSliderNews();
+	initSliderOurTeam();
 	initSliderVideoGallery();
 	initSliderProductDetail();
 	initSliderProductOther();
