@@ -1,10 +1,11 @@
 extends views/_layouts/layout
 
 block var
-	- bodyClass = "index-page"
-	- pageTitle = "Hoàng Long Car | Sản Phẩm Chi Tiết"
-	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
-	-let breadcrumb = {1:'Trang chủ', 2:'Sản phẩm', 3:'Ninja Silhouette'};
+	- bodyClass = "product-detail-page";
+	- pageTitle = "Hoàng Long Car | Sản Phẩm Chi Tiết";
+	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg";
+	- breadcrumb = {1:'Trang chủ', 2:'Sản phẩm', 3:'Ninja Silhouette'};
+	- namePage = "Sản Phẩm Chi Tiết";
 block main
 	// PAGE BANNER
 	include ./views/_components/page-banner
@@ -14,5 +15,9 @@ block main
 	include ./views/_product-detail/tabs
 	// PRODUCT DETAIL META
 	include ./views/_product-detail/meta
+	// PRODUCT DETAIL REVIEW
+	include ./views/_product-detail/review
+	// PRODUCT DETAIL GALLERY
+	include ./views/_product-detail/gallery
 	// PRODUCT OTHER
 	include ./views/_components/other-products

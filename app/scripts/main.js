@@ -1,6 +1,4 @@
-// import { HTTP } from './services/http';
 import Tab from './libraries/tabs';
-// HTTP.get('https://api.github.com/users?per_page=5').subscribe((res) => {});
 
 const fixedHeaderWhenScroll = () => {
 	const header = document.querySelector('header');
@@ -18,17 +16,73 @@ const showNaviationMobile = () => {
 	const navigation = document.querySelector('.navigation');
 	const body = document.querySelector('body');
 	const btnClose = document.querySelector('.navigation .btn-close');
+	const overlay = document.querySelector('#overlay');
 	itemsNavigationMobile[itemsNavigationMobile.length - 1].addEventListener(
 		'click',
 		(e) => {
 			navigation.classList.add('show');
 			body.classList.add('no-scroll');
+			overlay.classList.add('active');
 		},
 	);
-	btnClose.addEventListener('click', (e) => {
-		navigation.classList.remove('show');
-		body.classList.remove('no-scroll');
-	});
+	if (btnClose) {
+		btnClose.addEventListener('click', (e) => {
+			navigation.classList.remove('show');
+			body.classList.remove('no-scroll');
+			overlay.classList.remove('active');
+		});
+	}
+	if (overlay) {
+		overlay.addEventListener('click', (e) => {
+			navigation.classList.remove('show');
+			body.classList.remove('no-scroll');
+			overlay.classList.remove('active');
+		});
+	}
+};
+
+const moveNavOutHeader = (responsive) => {
+	const nav = document.querySelector('.navigation');
+	const body = document.querySelector('body');
+	const header = document.querySelector('header .nav-config-mobile');
+	if (window.innerWidth < responsive) {
+		if (nav && body) {
+			body.append(nav);
+		}
+	} else {
+		if (nav && header) {
+			header.appendChild(nav);
+		}
+	}
+};
+
+const showFilterMobile = () => {
+	const btn = document.querySelector('.collection-bar .filter-button');
+	const asdie = document.querySelector('.aside-menu-products');
+	const body = document.querySelector('body');
+	const btnClose = document.querySelector('.aside-menu-products .btn-close');
+	const overlay = document.querySelector('#overlay');
+	if (btn) {
+		btn.addEventListener('click', (e) => {
+			asdie.classList.add('active');
+			body.classList.add('no-scroll');
+			overlay.classList.add('active');
+		});
+		if (btnClose) {
+			btnClose.addEventListener('click', (e) => {
+				asdie.classList.remove('active');
+				body.classList.remove('no-scroll');
+				overlay.classList.remove('active');
+			});
+		}
+		if (overlay) {
+			overlay.addEventListener('click', (e) => {
+				asdie.classList.remove('active');
+				body.classList.remove('no-scroll');
+				overlay.classList.remove('active');
+			});
+		}
+	}
 };
 
 const initHeroBanner = () => {
@@ -40,8 +94,11 @@ const initSliderCategoryProduct = () => {
 		'.index-categories-product .slider-thumb .swiper-container',
 		{
 			slidesPerView: 2,
-			autoplay: {
-				delay: 3000,
+			navigation: {
+				nextEl:
+					'.index-categories-product .button-navigation-slider.next',
+				prevEl:
+					'.index-categories-product .button-navigation-slider.prev',
 			},
 			breakpoints: {
 				1025: {
@@ -57,6 +114,12 @@ const initSliderCategoryProduct = () => {
 			simulateTouch: false,
 			autoplay: {
 				delay: 3000,
+			},
+			navigation: {
+				nextEl:
+					'.index-categories-product .button-navigation-slider.next',
+				prevEl:
+					'.index-categories-product .button-navigation-slider.prev',
 			},
 			thumbs: {
 				swiper: sliderThumb,
@@ -116,6 +179,52 @@ const initSliderNews = () => {
 	});
 };
 
+const initSliderOurTeam = () => {
+	let slider = new Swiper('.slider-our-team .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		spaceBetween: 20,
+		autoplay: {
+			delay: 4000,
+		},
+		navigation: {
+			nextEl: '.slider-our-team .button-navigation-slider.next',
+			prevEl: '.slider-our-team .button-navigation-slider.prev',
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 3,
+			},
+			1025: {
+				slidesPerView: 4,
+			},
+		},
+	});
+};
+
+const initSliderVideoGallery = () => {
+	let slider = new Swiper('.slider-video-gallery .swiper-container', {
+		slidesPerView: 1,
+		speed: 1000,
+		spaceBetween: 20,
+		autoplay: {
+			delay: 4000,
+		},
+		navigation: {
+			nextEl: '.slider-video-gallery .button-navigation-slider.next',
+			prevEl: '.slider-video-gallery .button-navigation-slider.prev',
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+			},
+			1025: {
+				slidesPerView: 3,
+			},
+		},
+	});
+};
+
 const initSliderProductDetail = () => {
 	let sliderThumb = new Swiper(
 		'.slider-product-detail .slider-thumb .swiper-container',
@@ -149,17 +258,48 @@ const initSliderProductDetail = () => {
 };
 
 const initSliderProductOther = () => {
-	let slider = new Swiper(
-		'.other-products .swiper-container',
-		{
-			speed: 1000,
-			slidesPerView: 4,
-			spaceBetween: 24,
-			autoplay: {
-				delay: 3000,
+	let slider = new Swiper('.other-products .swiper-container', {
+		speed: 1000,
+		slidesPerView: 1,
+		autoplay: {
+			delay: 3000,
+		},
+		navigation: {
+			nextEl: '.other-products .button-navigation-slider.next',
+			prevEl: '.other-products .button-navigation-slider.prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			},
+			1025: {
+				slidesPerView: 4,
+				spaceBetween: 24,
 			},
 		},
-	);
+	});
+};
+
+const initSliderProductReview = () => {
+	let slider = new Swiper('.product-detail-review .swiper-container', {
+		speed: 1000,
+		slidesPerView: 1,
+		simulateTouch: false,
+		autoplay: {
+			delay: 3000,
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+			},
+			1440: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			},
+		},
+	});
 };
 
 const initializeWowJs = () => {
@@ -179,18 +319,113 @@ const initializeWowJs = () => {
 	wow.init();
 };
 
-document.addEventListener('DOMContentLoaded', (e) => {
+const initializeMasonryJs = () => {
+	var elements = document.querySelectorAll('.grid-masonry');
+	elements.forEach((item) => {
+		var msnry = new Masonry(item, {
+			itemSelector: '.grid-masonry-item',
+			isAnimated: true,
+			animationOptions: {
+				duration: 700,
+				easing: 'linear',
+				queue: false,
+			},
+		});
+	});
+};
+
+const initializeFancyAppJs = () => {
+	$('[data-fancybox]').fancybox({
+		// Options will go here
+		thumbs: {
+			autoStart: true,
+		},
+		transitionEffect: 'zoom-in-out',
+		// Duration in ms for transition animation
+		transitionDuration: 366,
+	});
+};
+
+const scrollToGalleryProductDetail = () => {
+	const btn = document.querySelector('.btn-scroll-to-gallery');
+	const sectionScrollTo = document.querySelector('.product-detail-gallery');
+	if (btn) {
+		btn.addEventListener('click', (e) => {
+			sectionScrollTo.scrollIntoView({
+				behavior: 'smooth',
+				block: 'center',
+				inline: 'nearest',
+			});
+		});
+	}
+};
+
+const qualityInput = () => {
+	const items = document.querySelectorAll('.quality-product-input');
+	items.forEach((item) => {
+		const plus = item.querySelector('.btn-plus');
+		const minus = item.querySelector('.btn-minus');
+		const input = item.querySelector('input');
+		let currentValue = input.getAttribute('value');
+		plus.addEventListener('click', (e) => {
+			currentValue++;
+			if (currentValue > 5) {
+				plus.classList.add('disabled');
+			} else {
+				plus.classList.remove('disabled');
+				input.setAttribute('value', currentValue);
+			}
+			console.log(currentValue);
+		});
+		minus.addEventListener('click', (e) => {
+			currentValue--;
+			if (currentValue < 1) {
+				minus.classList.add('disabled');
+			} else {
+				minus.classList.remove('disabled');
+				input.setAttribute('value', currentValue);
+			}
+			console.log(currentValue);
+		});
+	});
+};
+
+const deleteRowTableCart = () => {
+	const buttonsDelete = document.querySelectorAll('.table-cart .btn-delete');
+	buttonsDelete.forEach((item) => {
+		item.addEventListener('click', (e) => {
+			console.log();
+			item.parentElement.parentElement.remove();
+		});
+	});
+};
+
+window.addEventListener('load', (e) => {
+	initializeMasonryJs();
 	initializeWowJs();
+	initializeFancyAppJs();
 	initHeroBanner();
 	initSliderCategoryProduct();
 	initSliderPartner();
 	initSliderNews();
+	initSliderOurTeam();
+	initSliderVideoGallery();
 	initSliderProductDetail();
-	showNaviationMobile();
 	initSliderProductOther();
+	initSliderProductReview();
+	showNaviationMobile();
+	showFilterMobile();
+	moveNavOutHeader(1024);
+	scrollToGalleryProductDetail();
+	qualityInput();
+	deleteRowTableCart();
 	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 
 window.addEventListener('scroll', (e) => {
 	fixedHeaderWhenScroll();
+});
+
+window.addEventListener('resize', () => {
+	moveNavOutHeader(1024);
 });

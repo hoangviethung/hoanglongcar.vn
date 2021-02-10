@@ -1,0 +1,13 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "cart-page"
+	- pageTitle = "Hoàng Long Car | Bảng báo giá"
+	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
+	- breadcrumb = {1:'Trang chủ', 2:'Bảng báo giá'};
+	- namePage = "Bảng Báo Giá"
+block main
+	// PAGE BANNER
+	include ./views/_components/page-banner
+	// BẢNG BÁO GIÁ
+	include ./views/_cart/cart

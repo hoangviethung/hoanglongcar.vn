@@ -1,11 +1,12 @@
 header
+	.nav-config-mobile
 	.navigation
 		.container
 			.wrapper
 				a(href="index.html").logo
 					img.lazyload.blur-up(src='./images/LOGO.svg', width="122", height="100", alt='HOANGLONG-CAR')
 				.btn-close
-					<i class="far fa-times-hexagon"></i>
+					i.far.fa-times-hexagon
 				nav
 					ul
 						li.active
@@ -18,17 +19,22 @@ header
 							a(href='news.html') Tin tức
 						li
 							a(href='contact.html') Liên hệ
+						li
+							a(href='cart.html')
+								i.fal.fa-shopping-cart
+								span 0
 	.navigation-mobile
 		.container
 			ul
 				li.active
 					a(href='index.html')
-						<i class="fal fa-home-lg"></i>
+						i.fal.fa-home-lg
 				li
-					a(href='about.html')
-						<i class="fal fa-store"></i>
+					a(href='products.html')
+						i.fal.fa-store
 				li
-					a(href='news.html')
-						<i class="fal fa-newspaper"></i>
+					a(href='cart.html')
+						i.fal.fa-shopping-cart
+						span 0
 				li
-					<i class="fal fa-bars"></i>
+					i.fal.fa-bars

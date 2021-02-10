@@ -3,7 +3,7 @@ extends views/_layouts/layout
 block var
 	- bodyClass = "index-page"
 	- pageTitle = "Hoàng Long Car"
-
+	- titleSliderNews = "BLOG - TIN TỨC & SỰ KIỆN"
 block main
 	// HERO BANNER
 	include ./views/_components/hero-banner
@@ -20,6 +20,6 @@ block main
 	// SALE OFF
 	include ./views/_index/i-6
 	// NEWS
-	include ./views/_index/i-7
+	include ./views/_components/slider-news
 	// PARTNER
-	include ./views/_index/i-8
+	include ./views/_components/partner

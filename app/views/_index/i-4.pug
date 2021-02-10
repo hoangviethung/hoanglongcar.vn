@@ -6,6 +6,10 @@ section.index-categories-product.pt-section
 			h2 sản phẩm của chúng tôi
 		.slider-index-categories-product
 			.slider-thumb
+				.button-navigation-slider.prev
+					i.fas.fa-long-arrow-alt-left
+				.button-navigation-slider.next
+					i.fas.fa-long-arrow-alt-right
 				.swiper-container
 					.swiper-wrapper
 						each val,key in categories
@@ -20,6 +24,6 @@ section.index-categories-product.pt-section
 									h3.lcl.lcl-1 #{val}
 									p.lcl.lcl-5 Màn hình DVD Android là sản phẩm giải trí dành cho ô tô giúp thư giãn, giải tỏa mệt mỏi khi lái xe đường dài. Ngoài ra màn hình ô tô còn là công cụ giải trí xem video và nghe nhạc, nó còn được tích hợp kết nối với các thiết bị hỗ trợ khác như: camera 360 cho ô tô, camera hành trình, cảm biến lùi, cảm biến áp suất lốp… giúp bạn có những chuyến đi an toàn hơn khi tham gia giao thông.
 									.CTA
-										a.btn.btn-large.text-uppercase(href="#") tìm hiểu thêm
+										a.btn.btn-large.text-uppercase(href="products.html") tìm hiểu thêm
 								.image
 									img(src=`./images/index/category-0${key}.png` alt=`CATEGORY-PRODUCT-HOANGLONGCAR`, width="866", height="340")

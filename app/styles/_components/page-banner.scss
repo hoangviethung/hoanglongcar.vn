@@ -1,12 +1,13 @@
 .page-banner {
 	position: relative;
-	height: 350px;
+	height: 35rem;
 	overflow: hidden;
 	div {
 		position: absolute;
 		top: 70%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		width: 90%;
 	}
 	h1 {
 		text-align: center;
@@ -16,7 +17,7 @@
 	ul {
 		display: flex;
 		justify-content: center;
-		margin-top: 16px;
+		margin-top: 1.6rem;
 		li {
 			color: var(--white);
 			+ li {
@@ -25,13 +26,19 @@
 					position: relative;
 					left: 0;
 					top: 0;
-					margin: 0 12px;
+					margin: 0 1.2rem;
 					color: var(--white);
 				}
 			}
 			&:last-child {
 				color: var(--primary);
 			}
+		}
+	}
+	@media (max-width: 575.98px) {
+		height: 25rem;
+		div {
+			top: 50%;
 		}
 	}
 }

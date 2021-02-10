@@ -1,0 +1,20 @@
+block let
+	- members = {1: 'Hoàng Văn Long', 2: 'Hoàng Việt Hùng', 3: 'Nguyễn Thị Kim Quí', 4: 'Trần Đức Chấn', 5: 'Lê Huỳnh Song Toàn'}
+section.slider-our-team.pd-section
+	.container
+		.title-section.text-center.has-line.mb-title
+			h2 #{titleSliderOurTeam}
+		.swiper-container
+			.swiper-wrapper
+				each val,key in members
+					.swiper-slide
+						.card-our-team
+							.member__image
+								img.object-cover.object-resize(src=`./images/team/team_0${key}.jpg`, width="250", height="250" alt="TEAM-HOANGLONGCAR")
+							.member__information
+								h3.lcl.lcl-1 #{val}
+								p.lcl.lcl-1 CEO
+			.button-navigation-slider.prev.center-50px
+				i.fas.fa-long-arrow-alt-left
+			.button-navigation-slider.next.center-50px
+				i.fas.fa-long-arrow-alt-right

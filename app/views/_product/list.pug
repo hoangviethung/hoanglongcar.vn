@@ -21,14 +21,13 @@ section.products
 							option(value="created-ascending") Date, old to new
 	.row.list-product
 		each val,key in products
-			.col-md-4.item-product
+			.col-6.col-md-4.item-product
 				a(href="product-detail.html").card-product
-					.img
-						img.lazyload.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, alt="SAN-PHAM-HOANGLONGCAR")
-					.information
+					.product__img
+						img.lazyload.blur-up.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, width="300", height="300", alt="SAN-PHAM-HOANGLONGCAR")
+						span
+					.product__information
 						h3.lcl.lcl-1 #{val}
-						h4 10.000.000
-							san VNĐ
-						del 10.000.000
-							san VNĐ
+						h4 10.000.000 VNĐ
+						del 50.000.000 VNĐ
 						p.lcl.lcl-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta quam quidem consequuntur, dolore porro autem quasi aliquam praesentium esse harum eos. Unde ut quae, deserunt repellat atque totam aut?

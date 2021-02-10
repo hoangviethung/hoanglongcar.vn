@@ -2,8 +2,15 @@ extends views/_layouts/layout
 
 block var
 	- bodyClass = "about-page"
-	- pageTitle = "About"
-
+	- pageTitle = "Hoàng Long Car | Giới Thiệu"
+	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
+	- breadcrumb = {1:'Trang chủ', 2:'Giới thiệu'};
+	- namePage = "Giới Thiệu"
+	- titleSliderOurTeam = "TEAM HOANGLONGCAR"
 block main
-	.container
-		p This is about page
+	// PAGE BANNER
+	include ./views/_components/page-banner
+	// ABOUT
+	include ./views/_about/about
+	// OUR TEAM
+	include ./views/_components/slider-our-team

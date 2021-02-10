@@ -13,7 +13,12 @@
 @import '_components/hero-banner';
 @import '_components/page-banner';
 @import '_components/card-product';
+@import '_components/card-news';
+@import '_components/404';
 
 @import '_pages/index';
+@import '_pages/about';
 @import '_pages/products';
 @import '_pages/product-detail';
+@import '_pages/cart';
+@import '_pages/contact';

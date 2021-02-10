@@ -1,0 +1,126 @@
+.cart {
+	background: var(--secondary);
+}
+
+.table-cart {
+	background: var(--white);
+	overflow-x: auto;
+	padding: 3rem;
+	table {
+		width: 100%;
+		min-width: 100rem;
+	}
+	th,
+	td {
+		border: 1px solid var(--border);
+		height: 6rem;
+		padding: 1.5rem;
+		border-radius: 0.3rem;
+		@media (max-width: 1024.98px) {
+			font-size: 1.4rem;
+		}
+	}
+	tr {
+		td,
+		th {
+			&:first-child {
+				width: 10%;
+			}
+			&:nth-child(2) {
+				width: 31.66666%;
+				h4 {
+					font-size: 1.8rem;
+				}
+				span {
+					font-size: 1.2rem;
+					font-weight: 500;
+					color: var(--neutral-medium_sub);
+				}
+			}
+			&:nth-child(3) {
+				width: 16.666667%;
+			}
+			&:nth-child(4) {
+				width: 16.666667%;
+			}
+			&:nth-child(5) {
+				width: 16.666667%;
+			}
+			&:nth-child(6) {
+				width: 8.333333%;
+				text-align: center;
+				.btn {
+					background: var(--neutral-light_disable);
+					i {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
+		background-color: #dfdfdf;
+	}
+	&::-webkit-scrollbar {
+		width: 0.8rem;
+		height: 0.8rem;
+		background-color: #dfdfdf;
+	}
+	&::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
+		background-color: var(--dark);
+	}
+}
+
+.cart-total-wrapper {
+	margin-top: 2.4rem;
+}
+
+.cart-total {
+	background: var(--white);
+	padding: 2.5rem;
+	.input-group {
+		margin: 1.5rem 0;
+	}
+	h3 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+	ul {
+		li {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 1rem 0;
+			+ li {
+				border-top: 0.1rem dashed var(--border);
+			}
+			&:last-child {
+				b {
+					&:last-child {
+						color: var(--primary);
+						font-size: 2.2rem;
+						@media (max-width: 1439.98px) {
+							font-size: 2rem;
+						}
+					}
+				}
+			}
+		}
+		b {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+	.btn-popup-form {
+		margin-top: 2.4rem;
+	}
+	@media (max-width: 767.98px) {
+		margin-top: 2.4rem;
+	}
+}
