@@ -1,0 +1,44 @@
+.news-detail {
+	.share-post {
+		display: flex;
+		align-items: center;
+		margin-top: 4.4rem;
+		p {
+			padding-right: 1.6rem;
+		}
+	}
+	.socials {
+		display: flex;
+	}
+	.item-social {
+		background: var(--primary);
+		border-radius: 0.3rem;
+		> a {
+			color: var(--body);
+			width: 3.2rem;
+			height: 3.2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		+ .item-social {
+			margin-left: 0.8rem;
+		}
+	}
+}
+
+.news-detail-content {
+	img,
+	h2,
+	p,
+	ul {
+		margin: 0.8rem 0;
+	}
+	ul {
+		padding-left: 2.4rem;
+		list-style-type: disc;
+		li + li {
+			margin: 0.8rem 0;
+		}
+	}
+}
