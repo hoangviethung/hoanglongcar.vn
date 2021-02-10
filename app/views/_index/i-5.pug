@@ -1,6 +1,6 @@
 block let
 	- process = {1: 'Tư vấn lắp đặt', 2: 'Đặt lịch hẹn', 3: 'Tiến hành lắp đặt', 4: 'Hoàn thiện & Nhận xe'};
-section.index-working-process.pd-section.bg-section.mt-section(style="--data-bg:url('../../images/background/index-working-process.png')")
+section.index-working-process.pd-section.bg-section.mt-section(style="--data-bg:url('../../images/background/index-working-process.jpg')")
 	.container
 		.title-section.has-line.color-light.text-center
 			h2 quy trình làm việc
@@ -8,6 +8,6 @@ section.index-working-process.pd-section.bg-section.mt-section(style="--data-bg:
 			each val,key in process
 				.col-lg-3.col-6
 					.item.wow.fadeInLeft(data-wow-delay=`.${key*2}s`)
-						img.object-cover.object-resize.lazyload.blur-up(src=`./images/index/working-process-0${key}.png`, width="306", height="306", alt="QUY-TRINH-LAM-VIEC-HOANGLONGCAR")
+						img.object-cover.object-resize.lazyload.blur-up(src=`./images/index/working-process-0${key}.jpg`, width="306", height="306", alt="QUY-TRINH-LAM-VIEC-HOANGLONGCAR")
 						span #{key}
 						h3 #{val}
