@@ -42,3 +42,34 @@
 		}
 	}
 }
+
+.news-related {
+	padding-left: 3.2rem;
+	.card-news-related {
+		+ .card-news-related {
+			margin-top: 1.2rem;
+			padding-top: 1.2rem;
+			border-top: 0.1rem solid var(--border);
+		}
+	}
+	@media (max-width: 767.98px) {
+		padding-left: 0;
+		margin-top: 5.6rem;
+	}
+	.list-news-tags-wrapper {
+		margin-top: 2.4rem;
+	}
+	.list-news-tags {
+		.news-tags {
+			float: left;
+			margin-right: 0.8rem;
+			margin-top: 0.8rem;
+		}
+	}
+}
+
+.news-tags {
+	padding: 0.8rem;
+	border-radius: 0.3rem;
+	border: 0.1rem solid var(--border);
+}

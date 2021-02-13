@@ -1,5 +1,5 @@
 import Tab from './libraries/tabs';
-
+import Loading from './libraries/loading';
 const fixedHeaderWhenScroll = () => {
 	const header = document.querySelector('header');
 	if (window.pageYOffset > header.offsetHeight) {
@@ -401,6 +401,7 @@ const deleteRowTableCart = () => {
 };
 
 window.addEventListener('load', (e) => {
+	Loading();
 	initializeMasonryJs();
 	initializeWowJs();
 	initializeFancyAppJs();

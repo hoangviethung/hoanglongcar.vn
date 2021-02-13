@@ -1,0 +1,22 @@
+block let
+	- newsRelated = {1: 'Preparing Your Car For Winter in Massachusetts Checklist', 2: 'Auto Mufflers and Exhaust System Repair in Framingham and Natick, MA', 3: 'Winter Car Care With Absolute Car Care – Framingham, MA', 4: '5 Effective Ways to Improve Fuel Efficiency on Massachusetts Roads', 5: 'Auto Repair Tips: 5 Signs Your Suspension Needs Repair'}
+section.news-related
+	.list-news-related-wrapper
+		.title-section.has-line.line-center-left.mb-title
+			h2
+				| tin tức 
+				span liên quan
+		.list-news-related
+			each val,key in newsRelated
+				a(href="news-detail.html").card-news-related
+					.card-news-related__img
+						img.lazyload.blur-up.object-cover.object-resize(src=`./images/news/news-related-0${key}.jpg`, alt="TIN-TUC-LIEN-QUAN-HOANGLONGCAR")
+					.card-news-related__information
+						h3.lcl.lcl-3 #{val}
+						time JULY 05 2019
+	.list-news-tags-wrapper
+		.title-section.has-line.line-center-left.mb-title
+			h2 tags
+		.list-news-tags
+			-for(i=1;i<6;i++)
+				a(href="news-detail.html").news-tags tag number #{i}

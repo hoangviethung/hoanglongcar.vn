@@ -4,7 +4,7 @@ block var
 	- bodyClass = "news-detail-page"
 	- pageTitle = "Hoàng Long Car | TOP 5 THƯƠNG HIỆU DVD ANDOIRD"
 	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
-	- breadcrumb = {1:'Trang chủ', 2:'Tin tức', 3:'TOP 5 THƯƠNG HIỆU DVD ANDOIRD'};
+	- breadcrumb = {1:'Trang chủ', 2:'Tin tức', 3:'Tin tức chi tiết'};
 	- namePage = "TOP 5 THƯƠNG HIỆU DVD ANDOIRD"
 block main
 	// PAGE BANNERs
@@ -12,7 +12,9 @@ block main
 	section.news-detail.pd-section
 		.container
 			.row
-				.col-md-8
+				.col-lg-8.col-md-7
 					// NEWS DETAIL
 					include ./views/_news/detail
 					include ./views/_news/share
+				.col-lg-4.col-md-5
+					include ./views/_news/aside
