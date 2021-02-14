@@ -401,7 +401,6 @@ const deleteRowTableCart = () => {
 };
 
 window.addEventListener('load', (e) => {
-	Loading();
 	initializeMasonryJs();
 	initializeWowJs();
 	initializeFancyAppJs();
