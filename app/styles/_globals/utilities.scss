@@ -82,8 +82,8 @@
 		}
 	}
 	&.color-dark {
-		color: var(--dark);
-		border: 0.1rem solid var(--dark);
+		color: var(--body);
+		border: 0.1rem solid var(--body);
 	}
 	&.color-primary {
 		color: var(--body);
@@ -91,12 +91,12 @@
 		border: 0;
 	}
 	&.color-neutral-medium_sub {
-		color: var(--neutral-medium_sub);
-		border: 0.1rem solid var(--neutral-medium_sub);
+		color: var(--gray-text);
+		border: 0.1rem solid var(--gray-text);
 	}
 	&.bg-dark {
 		color: var(--white);
-		background: var(--dark);
+		background: var(--body);
 	}
 	&.bg-primary {
 		color: var(--body);
@@ -106,7 +106,7 @@
 		color: var(--body);
 		background: var(--gray);
 		&:hover {
-			background: var(--neutral-light_disable);
+			background: var(--disable);
 		}
 	}
 	&.no-border {
@@ -125,7 +125,7 @@
 	}
 	@media (min-width: 1025px) {
 		&:hover {
-			color: var(--dark);
+			color: var(--body);
 			background: var(--primary);
 		}
 	}
@@ -147,7 +147,7 @@
 	@media (min-width: 1025px) {
 		&:hover {
 			color: var(--white);
-			background: var(--dark);
+			background: var(--body);
 		}
 	}
 }
@@ -165,7 +165,7 @@
 	}
 	&:after {
 		content: '\f424';
-		font-family: 'Font Awesome 5 Pro';
+		font-family: var(--font-icons);
 		position: absolute;
 		right: 1.6rem;
 		top: 50%;
@@ -175,7 +175,7 @@
 
 .title-section {
 	h2 {
-		font-family: 'SVN-Neutraface 2';
+		font-family: var(--font-title);
 		display: inline-block;
 		font-size: 2.8rem;
 		font-weight: 700;
@@ -240,7 +240,7 @@
 
 .subtitle-section {
 	span {
-		color: var(--neutral-medium_sub);
+		color: var(--gray-text);
 		display: inline-block;
 		font-size: 1.4rem;
 		font-weight: 700;
@@ -263,7 +263,7 @@
 	.top {
 		background: var(--primary);
 		h3 {
-			color: var(--accent-red);
+			color: var(--danger);
 			font-size: 2.8rem;
 			font-weight: 700;
 			margin: 0.8rem 0;
@@ -290,7 +290,7 @@
 	position: relative;
 	&:after {
 		content: '\f144';
-		font-family: 'Font Awesome 5 Pro';
+		font-family: var(--font-icons);
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -388,7 +388,7 @@
 			font-size: 2.4rem;
 		}
 		p {
-			color: var(--neutral-medium_sub);
+			color: var(--gray-text);
 			font-weight: 500;
 		}
 	}

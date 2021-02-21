@@ -62,7 +62,7 @@
 	&::before {
 		font-size: 1.2rem;
 		content: '\f054';
-		font-family: 'Font Awesome 5 Pro';
+		font-family: var(--font-icons);
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -75,7 +75,7 @@
 	&::before {
 		content: '\f054';
 		position: absolute;
-		font-family: 'Font Awesome 5 Pro';
+		font-family: var(--font-icons);
 		font-size: 1.2rem;
 		left: 50%;
 		top: 50%;

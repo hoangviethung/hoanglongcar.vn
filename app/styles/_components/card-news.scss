@@ -34,7 +34,7 @@
 		margin-bottom: 0.8rem;
 		&:before {
 			content: '\f017';
-			font-family: 'Font Awesome 5 Pro';
+			font-family: var(--font-icons);
 			margin-right: 0.8rem;
 		}
 	}
@@ -53,7 +53,7 @@
 		}
 	}
 	p {
-		color: var(--neutral-medium_sub);
+		color: var(--gray-text);
 		margin-top: 1.6rem;
 	}
 	.CTA {

@@ -40,7 +40,7 @@
 		}
 	}
 	p {
-		color: var(--neutral-light_disable);
+		color: var(--disable);
 		margin-top: 0.8rem;
 		max-width: 90%;
 		@media (max-width: 1024.98px) {
@@ -347,7 +347,7 @@
 			font-weight: 700;
 			&:before {
 				content: '\f00c';
-				font-family: 'Font Awesome 5 Pro';
+				font-family: var(--font-icons);
 				color: var(--primary);
 				margin-right: 8px;
 			}

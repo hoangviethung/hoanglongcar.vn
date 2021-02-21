@@ -34,7 +34,7 @@
 				span {
 					font-size: 1.2rem;
 					font-weight: 500;
-					color: var(--neutral-medium_sub);
+					color: var(--gray-text);
 				}
 			}
 			&:nth-child(3) {
@@ -50,7 +50,7 @@
 				width: 8.333333%;
 				text-align: center;
 				.btn {
-					background: var(--neutral-light_disable);
+					background: var(--disable);
 					i {
 						font-weight: 700;
 					}
@@ -69,7 +69,7 @@
 	}
 	&::-webkit-scrollbar-thumb {
 		box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
-		background-color: var(--dark);
+		background-color: var(--body);
 	}
 }
 

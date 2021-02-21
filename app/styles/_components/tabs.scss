@@ -2,7 +2,7 @@
 	.tab__list {
 		.item {
 			position: relative;
-			color: var(--neutral-light_disable);
+			color: var(--disable);
 			cursor: pointer;
 			user-select: none;
 			transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
