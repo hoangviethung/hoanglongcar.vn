@@ -13272,7 +13272,7 @@ header {
         width: auto; }
         header.fixed .logo img {
           height: 100%; }
-      header.fixed nav a {
+      header.fixed nav ul li a {
         font-size: 1.4rem; } }
   @media (max-width: 1024.98px) {
     header {
@@ -13375,15 +13375,19 @@ nav {
         margin-top: 3.2rem; } }
   nav li.active > a {
     color: var(--primary); }
-  nav li:last-child {
+  @media (max-width: 1024.98px) {
+    nav li {
+      text-align: center; } }
+  nav .icon-cart {
+    margin-left: 4.2rem;
     padding-right: 0.7rem;
     position: relative; }
-    nav li:last-child a {
+    nav .icon-cart a {
       font-size: 2.4rem; }
     @media (max-width: 1024.98px) {
-      nav li:last-child {
+      nav .icon-cart {
         display: none; } }
-    nav li:last-child span {
+    nav .icon-cart span {
       position: absolute;
       right: 0;
       top: 0;
@@ -13395,9 +13399,6 @@ nav {
       font-weight: 600;
       font-size: 1.1rem;
       pointer-events: none; }
-  @media (max-width: 1024.98px) {
-    nav li {
-      text-align: center; } }
   nav a {
     text-transform: uppercase;
     -webkit-user-select: none;
@@ -15652,15 +15653,15 @@ footer {
       font-size: 1.2rem;
       font-weight: 500;
       color: var(--gray-text); }
-  .table-cart tr td:nth-child(3),
-  .table-cart tr th:nth-child(3) {
-    width: 16.666667%; }
-  .table-cart tr td:nth-child(4),
-  .table-cart tr th:nth-child(4) {
-    width: 16.666667%; }
-  .table-cart tr td:nth-child(5),
+  .table-cart tr td:nth-child(3), .table-cart tr td:nth-child(4), .table-cart tr td:nth-child(5),
+  .table-cart tr th:nth-child(3),
+  .table-cart tr th:nth-child(4),
   .table-cart tr th:nth-child(5) {
     width: 16.666667%; }
+  .table-cart tr td:nth-child(3) span, .table-cart tr td:nth-child(5) span,
+  .table-cart tr th:nth-child(3) span,
+  .table-cart tr th:nth-child(5) span {
+    margin-left: 4px; }
   .table-cart tr td:nth-child(6),
   .table-cart tr th:nth-child(6) {
     width: 8.333333%;
