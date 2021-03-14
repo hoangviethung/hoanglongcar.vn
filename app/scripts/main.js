@@ -400,6 +400,37 @@ const deleteRowTableCart = () => {
 	});
 };
 
+const getFilterProducts = () => {
+	const itemsFilter = $(
+		'.aside-menu-products .filter-wrapper .checkbox__custom input',
+	);
+	// DANH SÁCH SẢN PHẨM BAM ĐẦU (CHƯA FILTER)
+	const listProductCurrent = $('.list-product');
+	itemsFilter.each(function (index, item) {
+		$(item).on('click', function (e) {
+			const url = $(this).attr('data-url');
+			$.ajax({
+				type: 'GET',
+				url: url,
+				beforeSend: function () {
+					// THÊM LOADING CHO DANH SÁCH SẢN PHẨM
+					listProductCurrent.addClass('loading');
+				},
+				success: function (res) {
+					// DATA TỪ URL REQUEST SAU ĐÓ TÌM ĐOẠN HTML CẦN LẤY
+					const data = $(res).find('.list-product .item-product');
+					// DÁN VÀO HTML HIỆN TẠI
+					listProductCurrent.html(data);
+				},
+				complete: function () {
+					// XÓA LOADING CHO DANH SÁCH SẢN PHẨM
+					listProductCurrent.removeClass('loading');
+				},
+			});
+		});
+	});
+};
+
 window.addEventListener('load', (e) => {
 	initializeMasonryJs();
 	initializeWowJs();
@@ -419,6 +450,7 @@ window.addEventListener('load', (e) => {
 	scrollToGalleryProductDetail();
 	qualityInput();
 	deleteRowTableCart();
+	getFilterProducts();
 	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 

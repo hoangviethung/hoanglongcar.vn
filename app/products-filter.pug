@@ -1,0 +1,19 @@
+extends views/_layouts/layout
+
+block var
+	- bodyClass = "products-page"
+	- pageTitle = "Hoàng Long Car | Sản Phẩm Filter"
+	- pageBanner = "./images/page-banner/products_hoanglongcar.jpg"
+	- breadcrumb = {1:'Trang chủ', 2:'Sản phẩm'};
+	- namePage = "Sản Phẩm"
+block main
+	// PAGE BANNER
+	include ./views/_components/page-banner
+	// LIS PRODUCT
+	section.products.pd-section
+		.container
+			.row
+				.col-lg-3
+					include ./views/_product/aside
+				.col-lg-9
+					include ./views/_product/list-filter

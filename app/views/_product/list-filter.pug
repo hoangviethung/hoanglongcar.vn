@@ -1,0 +1,34 @@
+-let products = {1: 'Đụ Mẹ Filter', 2: 'Cái Lồn Má', 3: 'Bú Cặc', 4: 'Nứng Lồn'};
+section.products
+	.collection-bar
+		.collection-toolbar
+			ul.toolbar-left
+				li
+					.filter-button
+						i.far.fa-filter
+						span Bộ lọc
+			ul.toolbar-right
+				li
+					.select__custom
+						select(name="abc")
+							option(value="title-ascending" selected='selected') Sắp sếp theo
+							option(value="manual") Featured
+							option(value="title-ascending") Alphabetically, A-Z
+							option(value="title-descending") Alphabetically, Z-A
+							option(value="price-ascending") Price, low to high
+							option(value="price-descending") Price, high to low
+							option(value="created-descending") Date, new to old
+							option(value="created-ascending") Date, old to new
+	.row.list-product
+		each val,key in products
+			.col-6.col-md-4.item-product
+				a(href="product-detail.html").card-product
+					.product__img
+						img.lazyload.blur-up.object-cover.object-resize(src=`./images/products/product_hoanglongcar_0${key}.jpg`, width="300", height="300", alt="SAN-PHAM-HOANGLONGCAR")
+						span
+					.product__information
+						h3.lcl.lcl-1 #{val}
+						h4 10.000.000 VNĐ
+						del 50.000.000 VNĐ
+						p.lcl.lcl-3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dicta quam quidem consequuntur, dolore porro autem quasi aliquam praesentium esse harum eos. Unde ut quae, deserunt repellat atque totam aut?
+	include ../_components/pagination

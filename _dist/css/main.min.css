@@ -14197,7 +14197,7 @@ footer {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     cursor: pointer;
-    font-size: 1.6rem; }
+    font-size: 16px; }
     .checkbox__custom input:active {
       -webkit-transform: scale(1.05);
       transform: scale(1.05);
@@ -15149,18 +15149,15 @@ footer {
 .aside-menu-products ul li + li {
   margin-top: 1.6rem; }
 
-.aside-menu-products .filter-block + .filter-block {
-  margin-top: 4.4rem; }
-  @media (max-width: 767.98px) {
-    .aside-menu-products .filter-block + .filter-block {
-      margin-top: 2.4rem; } }
+.aside-menu-products ul li span {
+  margin-left: 0.8rem; }
 
-.aside-menu-products .category-item > a {
+.aside-menu-products ul li > a {
   position: relative;
   padding-left: 2.4rem;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out; }
-  .aside-menu-products .category-item > a:before {
+  .aside-menu-products ul li > a:before {
     content: '\f054';
     position: absolute;
     left: 0;
@@ -15168,16 +15165,20 @@ footer {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     font-family: var(--font-icons); }
-
-.aside-menu-products .category-item span + span {
-  margin-left: 0.8rem; }
+  .aside-menu-products ul li > a span {
+    margin-left: 0; }
+    .aside-menu-products ul li > a span + span {
+      margin-left: 0.8rem; }
 
 @media (min-width: 1025px) {
-  .aside-menu-products .category-item:hover > a {
+  .aside-menu-products ul li:hover > a {
     color: var(--primary); } }
 
-.aside-menu-products .cars .car-item span {
-  margin-left: 0.8rem; }
+.aside-menu-products .filter-block + .filter-block {
+  margin-top: 4.4rem; }
+  @media (max-width: 767.98px) {
+    .aside-menu-products .filter-block + .filter-block {
+      margin-top: 2.4rem; } }
 
 .aside-menu-products .fiiter-submit {
   position: fixed;
@@ -15272,6 +15273,26 @@ footer {
   @media (max-width: 767.98px) {
     .products .collection-bar {
       margin-bottom: 2.4rem; } }
+
+.products .list-product {
+  position: relative; }
+  .products .list-product:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    cursor: not-allowed;
+    -webkit-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
+  .products .list-product.loading:after {
+    opacity: 0.5;
+    visibility: visible; }
 
 .slider-product-detail figure {
   overflow: hidden;

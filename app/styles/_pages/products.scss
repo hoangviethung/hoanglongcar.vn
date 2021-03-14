@@ -9,6 +9,35 @@
 			+ li {
 				margin-top: 1.6rem;
 			}
+			span {
+				margin-left: 0.8rem;
+			}
+			> a {
+				position: relative;
+				padding-left: 2.4rem;
+				transition: 0.3s all ease-in-out;
+				&:before {
+					content: '\f054';
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					font-family: var(--font-icons);
+				}
+				span {
+					margin-left: 0;
+					+ span {
+						margin-left: 0.8rem;
+					}
+				}
+			}
+			@media (min-width: 1025px) {
+				&:hover {
+					> a {
+						color: var(--primary);
+					}
+				}
+			}
 		}
 	}
 	.filter-block {
@@ -16,40 +45,6 @@
 			margin-top: 4.4rem;
 			@media (max-width: 767.98px) {
 				margin-top: 2.4rem;
-			}
-		}
-	}
-	.category-item {
-		> a {
-			position: relative;
-			padding-left: 2.4rem;
-			transition: 0.3s all ease-in-out;
-			&:before {
-				content: '\f054';
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-				font-family: var(--font-icons);
-			}
-		}
-		span {
-			+ span {
-				margin-left: 0.8rem;
-			}
-		}
-		@media (min-width: 1025px) {
-			&:hover {
-				> a {
-					color: var(--primary);
-				}
-			}
-		}
-	}
-	.cars {
-		.car-item {
-			span {
-				margin-left: 0.8rem;
 			}
 		}
 	}
@@ -133,6 +128,29 @@
 		}
 		@media (max-width: 767.98px) {
 			margin-bottom: 2.4rem;
+		}
+	}
+	.list-product {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: var(--gray);
+			top: 0;
+			left: 0;
+			z-index: 10;
+			opacity: 0;
+			visibility: hidden;
+			cursor: not-allowed;
+			transition: 0.3s all ease-in-out;
+		}
+		&.loading {
+			&:after {
+				opacity: 0.5;
+				visibility: visible;
+			}
 		}
 	}
 }
