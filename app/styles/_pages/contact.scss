@@ -7,6 +7,14 @@
 	}
 	.contact__form {
 		margin-top: 2.4rem;
+		button {
+			position: relative;
+			&:after {
+				content: '\f1d8';
+				font-family: 'Font Awesome 5 Pro';
+				margin-left: 8px;
+			}
+		}
 	}
 	.contact__information {
 		max-width: 50rem;
