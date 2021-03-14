@@ -375,7 +375,6 @@ const qualityInput = () => {
 				plus.classList.remove('disabled');
 				input.setAttribute('value', currentValue);
 			}
-			console.log(currentValue);
 		});
 		minus.addEventListener('click', (e) => {
 			currentValue--;
@@ -385,7 +384,6 @@ const qualityInput = () => {
 				minus.classList.remove('disabled');
 				input.setAttribute('value', currentValue);
 			}
-			console.log(currentValue);
 		});
 	});
 };
@@ -431,6 +429,37 @@ const ajaxFilterProducts = () => {
 	});
 };
 
+const tempCartTotal = () => {
+	let sum = 0;
+	const itemsRowTotal = document.querySelectorAll(
+		'.row-cart-item-product .row-total',
+	);
+	itemsRowTotal.forEach((item) => {
+		sum += parseInt(item.textContent);
+	});
+	return sum;
+};
+
+const cartTotal = () => {
+	const cartTotal = document.querySelector('.cart-total');
+	if (cartTotal) {
+		const temp = parseInt(
+			(document.querySelector('.temp').textContent = tempCartTotal()),
+		);
+		const service = parseInt(
+			cartTotal.querySelector('.service').textContent,
+		);
+		const tax = parseInt(cartTotal.querySelector('.tax').textContent);
+		const discount = parseInt(
+			cartTotal.querySelector('.discount').textContent,
+		);
+		let total = cartTotal.querySelector('.total');
+		total.textContent = temp - (service + tax + discount);
+	} else {
+		console.log('Cart Total is not defind');
+	}
+};
+
 window.addEventListener('load', (e) => {
 	initializeMasonryJs();
 	initializeWowJs();
@@ -451,6 +480,7 @@ window.addEventListener('load', (e) => {
 	qualityInput();
 	deleteRowTableCart();
 	ajaxFilterProducts();
+	cartTotal();
 	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 
