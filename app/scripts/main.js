@@ -400,7 +400,7 @@ const deleteRowTableCart = () => {
 	});
 };
 
-const getFilterProducts = () => {
+const ajaxFilterProducts = () => {
 	const itemsFilter = $(
 		'.aside-menu-products .filter-wrapper .checkbox__custom input',
 	);
@@ -450,7 +450,7 @@ window.addEventListener('load', (e) => {
 	scrollToGalleryProductDetail();
 	qualityInput();
 	deleteRowTableCart();
-	getFilterProducts();
+	ajaxFilterProducts();
 	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 
