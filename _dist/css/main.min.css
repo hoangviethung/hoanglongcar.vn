@@ -15721,6 +15721,8 @@ footer {
     max-width: 50%; }
     .cart-total ul b:last-child {
       text-align: right; }
+    .cart-total ul b span + span {
+      margin-left: 4px; }
   .cart-total .btn-popup-form {
     margin-top: 2.4rem; }
   @media (max-width: 767.98px) {
