@@ -375,6 +375,7 @@ const qualityInput = () => {
 				plus.classList.remove('disabled');
 				input.setAttribute('value', currentValue);
 			}
+			updateCartTotal();
 		});
 		minus.addEventListener('click', (e) => {
 			currentValue--;
@@ -384,6 +385,7 @@ const qualityInput = () => {
 				minus.classList.remove('disabled');
 				input.setAttribute('value', currentValue);
 			}
+			updateCartTotal();
 		});
 	});
 };
@@ -392,8 +394,8 @@ const deleteRowTableCart = () => {
 	const buttonsDelete = document.querySelectorAll('.table-cart .btn-delete');
 	buttonsDelete.forEach((item) => {
 		item.addEventListener('click', (e) => {
-			console.log();
 			item.parentElement.parentElement.remove();
+			updateCartTotal();
 		});
 	});
 };
@@ -429,7 +431,20 @@ const ajaxFilterProducts = () => {
 	});
 };
 
+const rowCartTotal = () => {
+	const rowsCart = document.querySelectorAll('.row-cart-item-product');
+	rowsCart.forEach((row) => {
+		const unit = parseInt(row.querySelector('.unit').textContent);
+		const quality = parseInt(
+			row.querySelector('.quality-product-input input').value,
+		);
+		const rowTotal = parseInt(unit * quality);
+		row.querySelector('.row-total').textContent = rowTotal;
+	});
+};
+
 const tempCartTotal = () => {
+	rowCartTotal();
 	let sum = 0;
 	const itemsRowTotal = document.querySelectorAll(
 		'.row-cart-item-product .row-total',
@@ -457,6 +472,14 @@ const cartTotal = () => {
 		total.textContent = temp - (service + tax + discount);
 	} else {
 		console.log('Cart Total is not defind');
+	}
+};
+
+const updateCartTotal = () => {
+	const isCart = document.querySelector('.cart');
+	if (isCart) {
+		tempCartTotal();
+		cartTotal();
 	}
 };
 

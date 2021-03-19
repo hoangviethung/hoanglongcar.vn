@@ -120,6 +120,11 @@
 			&:last-child {
 				text-align: right;
 			}
+			span {
+				+ span {
+					margin-left: 4px;
+				}
+			}
 		}
 	}
 	.btn-popup-form {
