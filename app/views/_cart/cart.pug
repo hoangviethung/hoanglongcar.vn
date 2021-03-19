@@ -21,8 +21,7 @@ section.cart.pd-section
 								span.lcl.lcl-1 Code: SP9052C
 							td
 								p
-									span.unit 2000000
-									span VNĐ
+									span.unit(data-value="20000000")
 							td
 								.quality-product-input
 									input(type="text" value="1" readonly)
@@ -34,7 +33,6 @@ section.cart.pd-section
 							td
 								p
 									span.row-total
-									span VNĐ
 							td
 								.btn.btn-delete
 									i.fal.fa-times
@@ -56,20 +54,19 @@ section.cart.pd-section
 							li
 								b Phí dịch vụ:
 								b
-									span.service 100000
+									span.service(data-value="0")
 							li
 								b Thuế VAT (10%):
 								b
-									span.tax 1500000
+									span.tax(data-value="10")
 							li
 								b Giảm giá:
 								b
-									span.discount 500
+									span.discount(data-value="0")
 							li
 								b Total:
 								b
 									span.total
-									span VNĐ
 						a.btn.bg-dark.btn-popup-form(data-fancybox data-src="#popop-form-contact" href="javascript:;") Điền thông tin tư vấn
 						#popop-form-contact(style="display:none")
 							.title-section.has-line.line-left.mb-title

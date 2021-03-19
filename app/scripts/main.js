@@ -360,6 +360,11 @@ const scrollToGalleryProductDetail = () => {
 	}
 };
 
+const formatter = new Intl.NumberFormat('vi', {
+	style: 'currency',
+	currency: 'VND',
+});
+
 const qualityInput = () => {
 	const items = document.querySelectorAll('.quality-product-input');
 	items.forEach((item) => {
@@ -369,22 +374,15 @@ const qualityInput = () => {
 		let currentValue = input.getAttribute('value');
 		plus.addEventListener('click', (e) => {
 			currentValue++;
-			if (currentValue > 5) {
-				plus.classList.add('disabled');
-			} else {
-				plus.classList.remove('disabled');
-				input.setAttribute('value', currentValue);
-			}
+			input.setAttribute('value', currentValue);
 			updateCartTotal();
 		});
 		minus.addEventListener('click', (e) => {
 			currentValue--;
 			if (currentValue < 1) {
-				minus.classList.add('disabled');
-			} else {
-				minus.classList.remove('disabled');
-				input.setAttribute('value', currentValue);
+				currentValue = 1;
 			}
+			input.setAttribute('value', currentValue);
 			updateCartTotal();
 		});
 	});
@@ -434,12 +432,21 @@ const ajaxFilterProducts = () => {
 const rowCartTotal = () => {
 	const rowsCart = document.querySelectorAll('.row-cart-item-product');
 	rowsCart.forEach((row) => {
-		const unit = parseInt(row.querySelector('.unit').textContent);
+		const unit = parseInt(
+			row.querySelector('.unit').getAttribute('data-value'),
+		);
+		// unit.textContent = formatter.format(unit);
 		const quality = parseInt(
 			row.querySelector('.quality-product-input input').value,
 		);
 		const rowTotal = parseInt(unit * quality);
-		row.querySelector('.row-total').textContent = rowTotal;
+		// IN MÀN HÌNH ĐƠN GIÁ
+		row.querySelector('.unit').textContent = formatter.format(unit);
+		// TỔNG TIỀN HÀNG
+		row.querySelector('.row-total').setAttribute('data-value', rowTotal);
+		row.querySelector('.row-total').textContent = formatter.format(
+			rowTotal,
+		);
 	});
 };
 
@@ -450,7 +457,7 @@ const tempCartTotal = () => {
 		'.row-cart-item-product .row-total',
 	);
 	itemsRowTotal.forEach((item) => {
-		sum += parseInt(item.textContent);
+		sum += parseInt(item.getAttribute('data-value'));
 	});
 	return sum;
 };
@@ -458,18 +465,36 @@ const tempCartTotal = () => {
 const cartTotal = () => {
 	const cartTotal = document.querySelector('.cart-total');
 	if (cartTotal) {
-		const temp = parseInt(
-			(document.querySelector('.temp').textContent = tempCartTotal()),
-		);
+		document
+			.querySelector('.temp')
+			.setAttribute('data-value', tempCartTotal());
+		const temp = document.querySelector('.temp').getAttribute('data-value');
 		const service = parseInt(
-			cartTotal.querySelector('.service').textContent,
+			cartTotal.querySelector('.service').getAttribute('data-value'),
 		);
-		const tax = parseInt(cartTotal.querySelector('.tax').textContent);
+		const tax = parseInt(
+			(temp *
+				cartTotal.querySelector('.tax').getAttribute('data-value')) /
+				100,
+		);
 		const discount = parseInt(
-			cartTotal.querySelector('.discount').textContent,
+			cartTotal.querySelector('.discount').getAttribute('data-value'),
 		);
-		let total = cartTotal.querySelector('.total');
-		total.textContent = temp - (service + tax + discount);
+		cartTotal.querySelector('.temp').textContent = formatter.format(temp);
+		// IN GIÁ TIỀN RA MÀN HÌNH
+		cartTotal.querySelector('.service').textContent = formatter.format(
+			service,
+		);
+		// TIỀN THUẾ
+		cartTotal.querySelector('.tax').textContent = formatter.format(tax);
+		// TIỀN GIẢM GIÁ
+		cartTotal.querySelector('.discount').textContent = formatter.format(
+			discount,
+		);
+		// TỔNG TIỀN
+		cartTotal.querySelector('.total').textContent = formatter.format(
+			temp - (service + tax + discount),
+		);
 	} else {
 		console.log('Cart Total is not defind');
 	}
