@@ -34,6 +34,9 @@ body {
 	&.no-scroll {
 		overflow-y: hidden;
 	}
+	@media (max-width: 1024.98px) {
+		padding-bottom: 56px;
+	}
 }
 
 article,
