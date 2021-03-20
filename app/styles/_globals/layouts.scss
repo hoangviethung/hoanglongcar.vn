@@ -8,7 +8,7 @@ header {
 	transition: 0.3s all ease-in-out;
 	@media (min-width: 1025px) {
 		&.fixed {
-			background: var(--secondary);
+			background: $hvh-secondary-color;
 			box-shadow: 0 0.3rem 0.6rem rgba($color: #000000, $alpha: 0.16);
 			padding: 1rem 0;
 			.logo {
@@ -53,7 +53,7 @@ header {
 		top: 2.4rem;
 		right: 2.4rem;
 		font-size: 4.4rem;
-		color: var(--white);
+		color: $hvh-white-color;
 		@media (min-width: 1025px) {
 			display: none;
 		}
@@ -73,7 +73,7 @@ header {
 		left: 0;
 		width: 70%;
 		height: 100vh;
-		background: var(--secondary);
+		background: $hvh-secondary-color;
 		z-index: 550;
 		transition: 0.3s all ease-in-out;
 		// HIDDEN
@@ -113,7 +113,7 @@ nav {
 		}
 		&.active {
 			> a {
-				color: var(--primary);
+				color: $hvh-primary-color;
 			}
 		}
 
@@ -135,8 +135,8 @@ nav {
 			position: absolute;
 			right: 0;
 			top: 0;
-			background: var(--primary);
-			color: var(--body);
+			background: $hvh-primary-color;
+			color: $hvh-body-text-color;
 			border-radius: 5rem;
 			z-index: 10;
 			padding: 0 0.5rem;
@@ -151,11 +151,11 @@ nav {
 		font-size: 1.6rem;
 		font-weight: 700;
 		letter-spacing: 1.2px;
-		color: var(--white);
+		color: $hvh-white-color;
 		transition: 0.3s all ease-in-out;
 		@media (min-width: 1025px) {
 			&:hover {
-				color: var(--primary);
+				color: $hvh-primary-color;
 			}
 		}
 		@media (max-width: 1024.98px) {
@@ -182,15 +182,15 @@ nav {
 			flex: 0 0 25%;
 			max-width: 25%;
 			font-size: 2.4rem;
-			color: var(--light);
+			color: $hvh-light-color;
 			a {
 				position: relative;
 				span {
 					position: absolute;
 					right: 0;
 					top: 0;
-					background: var(--primary);
-					color: var(--body);
+					background: $hvh-primary-color;
+					color: $hvh-body-text-color;
 					border-radius: 5rem;
 					z-index: 10;
 					padding: 0 0.5rem;
@@ -206,11 +206,11 @@ nav {
 				left: 0;
 				height: 0.3rem;
 				width: 100%;
-				background: var(--primary);
+				background: $hvh-primary-color;
 				opacity: 0;
 			}
 			&.active {
-				color: var(--primary);
+				color: $hvh-primary-color;
 				&:after {
 					opacity: 1;
 				}
@@ -276,7 +276,7 @@ footer {
 		flex-wrap: wrap;
 		p,
 		a {
-			color: var(--white);
+			color: $hvh-white-color;
 		}
 		p {
 			-ms-flex: 0 0 30%;
@@ -292,7 +292,7 @@ footer {
 			transition: 0.3s all ease-in-out;
 			@media (min-width: 1025px) {
 				&:hover {
-					color: var(--primary);
+					color: $hvh-primary-color;
 				}
 			}
 		}
@@ -305,7 +305,7 @@ footer {
 	}
 	.title-navigation {
 		position: relative;
-		color: var(--white);
+		color: $hvh-white-color;
 		font-size: 1.8rem;
 		font-weight: 700;
 		padding-bottom: 0.2rem;
@@ -317,11 +317,11 @@ footer {
 			height: 0.2rem;
 			bottom: 0;
 			left: 0;
-			background: var(--white);
+			background: $hvh-white-color;
 		}
 	}
 	.item-social {
-		background: var(--body);
+		background: $hvh-body-text-color;
 		border-radius: 0.3rem;
 		> a {
 			width: 3.2rem;
@@ -336,11 +336,11 @@ footer {
 	}
 	.item-navigation {
 		a {
-			color: var(--white);
+			color: $hvh-white-color;
 			transition: 0.3s all ease-in-out;
 			@media (min-width: 1025px) {
 				&:hover {
-					color: var(--primary);
+					color: $hvh-primary-color;
 				}
 			}
 		}
@@ -352,5 +352,5 @@ footer {
 
 .copy-right {
 	padding: 1.4rem 0;
-	background: var(--primary);
+	background: $hvh-primary-color;
 }

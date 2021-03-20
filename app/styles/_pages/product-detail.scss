@@ -16,7 +16,7 @@
 				bottom: 0;
 				width: 0;
 				height: 0.5rem;
-				background: var(--primary);
+				background: $hvh-primary-color;
 				transition: 0.5s all ease-in-out;
 			}
 		}
@@ -45,7 +45,7 @@
 		}
 	}
 	h2 {
-		color: var(--primary);
+		color: $hvh-primary-color;
 		font-size: 3.2rem;
 		margin-top: 1.6rem;
 	}
@@ -64,10 +64,10 @@
 				max-width: 50%;
 				font-weight: 400;
 				&.color-red {
-					color: var(--danger);
+					color: $hvh-danger-color;
 				}
 				&.color-green {
-					color: var(--success);
+					color: $hvh-success-color;
 				}
 			}
 			+ li {
@@ -133,7 +133,7 @@
 			width: 100%;
 			th,
 			td {
-				border: 0.1rem solid var(--border);
+				border: 0.1rem solid $hvh-gray-border-color;
 				padding: 2rem;
 			}
 		}
@@ -159,8 +159,8 @@
 
 .product-detail-meta {
 	padding: 3.2rem 0;
-	border-top: 0.1rem solid var(--border);
-	border-bottom: 0.1rem solid var(--border);
+	border-top: 0.1rem solid $hvh-gray-border-color;
+	border-bottom: 0.1rem solid $hvh-gray-border-color;
 	ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -178,7 +178,7 @@
 				transition: 0.3s all ease-in-out;
 				@media (min-width: 1025px) {
 					&:hover {
-						color: var(--primary);
+						color: $hvh-primary-color;
 					}
 				}
 			}
@@ -211,10 +211,10 @@
 				text-transform: uppercase;
 				margin-left: 0.4rem;
 				&.color-green {
-					color: var(--success);
+					color: $hvh-success-color;
 				}
 				&.color-red {
-					color: var(--danger);
+					color: $hvh-danger-color;
 				}
 			}
 			@media (max-width: 767.98px) {
@@ -252,7 +252,7 @@
 		max-width: 8rem;
 		overflow: hidden;
 		border-radius: 50%;
-		background: var(--gray);
+		background: $hvh-gray-color;
 	}
 	.description {
 		-ms-flex-preferred-size: 0;
@@ -270,7 +270,7 @@
 		}
 	}
 	.swiper-slide {
-		border-right: 0.1rem solid var(--border);
+		border-right: 0.1rem solid $hvh-gray-border-color;
 		padding-right: 2.4rem;
 		@media (max-width: 767.98px) {
 			border-right: 0;
@@ -297,7 +297,7 @@
 		}
 		&::-webkit-scrollbar-thumb {
 			box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
-			background-color: var(--body);
+			background-color: $hvh-body-text-color;
 		}
 		.grid-masonry-item {
 			cursor: pointer;
@@ -305,7 +305,7 @@
 			padding: 0.3rem;
 			.img {
 				position: relative;
-				background: var(--gray);
+				background: $hvh-gray-color;
 				&:after,
 				&:before {
 					position: absolute;
@@ -327,8 +327,8 @@
 				&:before {
 					content: '\f002';
 					font-size: 2.4rem;
-					color: var(--white);
-					font-family: var(--font-icons);
+					color: $hvh-white-color;
+					font-family: $hvh-font-icons;
 					//HIDEN
 					opacity: 0;
 					visibility: hidden;

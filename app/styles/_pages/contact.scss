@@ -1,9 +1,9 @@
 .contact {
-	background: var(--secondary);
+	background: $hvh-secondary-color;
 	.box-wrapper {
 		padding: 3rem;
-		background: var(--white);
-		border: 1rem solid var(--primary);
+		background: $hvh-white-color;
+		border: 1rem solid $hvh-primary-color;
 	}
 	.contact__form {
 		margin-top: 2.4rem;
@@ -24,7 +24,7 @@
 		h4,
 		address {
 			font-size: 1.8rem;
-			color: var(--white);
+			color: $hvh-white-color;
 		}
 		p + p {
 			margin-top: 0.8rem;
@@ -33,7 +33,7 @@
 			font-size: 2.4rem;
 			margin-bottom: 1rem;
 			i {
-				color: var(--primary);
+				color: $hvh-primary-color;
 				margin-right: 0.8rem;
 			}
 			@media (max-width: 575.98px) {

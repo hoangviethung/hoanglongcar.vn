@@ -11,7 +11,7 @@
 			height: 100%;
 			opacity: 80%;
 			pointer-events: none;
-			background: var(--black);
+			background: $hvh-black-color;
 			z-index: 1;
 		}
 		@media (min-width: 1025px) {
@@ -27,10 +27,10 @@
 		h2 {
 			font-size: 4rem;
 			text-align: center;
-			color: var(--white);
+			color: $hvh-white-color;
 			text-transform: uppercase;
 			span {
-				color: var(--primary);
+				color: $hvh-primary-color;
 			}
 			+ h2 {
 				margin-top: 1.6rem;
@@ -50,7 +50,7 @@
 			font-size: 1.8rem;
 			font-weight: 700;
 			margin-top: 1.6rem;
-			color: var(--white);
+			color: $hvh-white-color;
 			@media (max-width: 1024.98px) {
 				margin-top: 0.8rem;
 				font-weight: 400;
@@ -63,7 +63,7 @@
 			text-align: center;
 			font-size: 1.8rem;
 			font-weight: 700;
-			color: var(--primary);
+			color: $hvh-primary-color;
 			margin-top: 2.4rem;
 			@media (max-width: 1024.98px) {
 				margin-top: 1.6rem;

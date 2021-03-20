@@ -1,6 +1,6 @@
 .about {
 	position: relative;
-	background: var(--primary);
+	background: $hvh-primary-color;
 	.signature {
 		margin-top: 1.6rem;
 		b {
@@ -44,15 +44,15 @@
 			padding-left: 5rem;
 			h3 {
 				font-size: 4rem;
-				color: var(--white);
+				color: $hvh-white-color;
 			}
 			ul {
 				margin-top: 2.4rem;
 				li {
-					color: var(--white);
+					color: $hvh-white-color;
 					b {
 						font-size: 2.4rem;
-						color: var(--primary);
+						color: $hvh-primary-color;
 					}
 					+ li {
 						margin-top: 1.6rem;

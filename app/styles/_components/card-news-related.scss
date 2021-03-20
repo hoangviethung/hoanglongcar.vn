@@ -6,7 +6,7 @@
 		flex: 0 0 14rem;
 		max-width: 14rem;
 		padding-bottom: calc(200 / 800 * 100%);
-		background: var(--gray);
+		background: $hvh-gray-color;
 		overflow: hidden;
 		img {
 			transition: 0.3s all ease-in-out;
@@ -37,7 +37,7 @@
 		time {
 			font-size: 1.4rem;
 			font-weight: 700;
-			color: var(--gray-text);
+			color: $hvh-gray-text-color;
 		}
 		@media (max-width: 767.98px) {
 		}
@@ -51,7 +51,7 @@
 			}
 			.card-news-related__information {
 				h3 {
-					color: var(--primary);
+					color: $hvh-primary-color;
 				}
 			}
 		}

@@ -1,12 +1,12 @@
 .card-product {
 	display: block;
-	border: 0.1rem solid var(--border);
+	border: 0.1rem solid $hvh-gray-border-color;
 	border-radius: 0.3rem;
 	.product__img {
 		position: relative;
 		overflow: hidden;
 		padding-bottom: calc(300 / 300 * 100%);
-		background: var(--gray);
+		background: $hvh-gray-color;
 		img {
 			transition: 0.3s all linear;
 		}
@@ -25,7 +25,7 @@
 		}
 	}
 	h4 {
-		color: var(--primary);
+		color: $hvh-primary-color;
 		font-size: 1.8rem;
 		span {
 			margin-left: 0.8rem;
@@ -36,7 +36,7 @@
 	}
 	del,
 	p {
-		color: var(--gray-text);
+		color: $hvh-gray-text-color;
 	}
 	del {
 		font-size: 1.6rem;

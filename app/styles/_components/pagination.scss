@@ -1,5 +1,5 @@
 .pagination {
-	background: var(--white);
+	background: $hvh-white-color;
 	display: flex;
 	justify-content: flex-end;
 	padding: 3rem 0;
@@ -25,15 +25,15 @@
 			border-radius: 0.5rem;
 			font-weight: 400;
 			font-size: 1.2rem;
-			background: var(--white);
-			border: 0.1rem solid var(--border);
+			background: $hvh-white-color;
+			border: 0.1rem solid $hvh-gray-border-color;
 			transition: all 0.2s cubic-bezier(0.2, 0.5, 0.5, 0.8);
 		}
 
 		&:hover {
 			a {
 				color: #ffffff;
-				background: var(--secondary);
+				background: $hvh-secondary-color;
 			}
 		}
 
@@ -43,8 +43,8 @@
 
 		&.active {
 			a {
-				color: var(--secondary);
-				background: var(--primary);
+				color: $hvh-secondary-color;
+				background: $hvh-primary-color;
 			}
 		}
 
@@ -61,7 +61,7 @@
 	&::before {
 		font-size: 1.2rem;
 		content: '\f054';
-		font-family: var(--font-icons);
+		font-family: $hvh-font-icons;
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -74,7 +74,7 @@
 	&::before {
 		content: '\f054';
 		position: absolute;
-		font-family: var(--font-icons);
+		font-family: $hvh-font-icons;
 		font-size: 1.2rem;
 		left: 50%;
 		top: 50%;
