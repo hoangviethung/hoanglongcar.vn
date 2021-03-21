@@ -493,7 +493,7 @@ const cartTotal = () => {
 		);
 		// TỔNG TIỀN
 		cartTotal.querySelector('.total').textContent = formatter.format(
-			temp - (service + tax + discount),
+			parseInt(temp) + service + tax - discount,
 		);
 	} else {
 		console.log('Cart Total is not defind');
