@@ -1,19 +1,13 @@
-ul.pagination
-	li.pagination-prev
-		a(href="#")
+nav.navigation.pagination(role='navigation' aria-label='Bài viết')
+	h2.screen-reader-text &Dstrok;i&#x1EC1;u h&#x1B0;&#x1EDB;ng b&agrave;i vi&#x1EBF;t
+	.nav-links
+		a.prev.page-numbers(href='#')
 			span.lnr.lnr-chevron-left
-	li
-		a(href="#") 1
-	li.active
-		a(href="#") 2
-	li
-		a(href="#") 3
-	li
-		a(href="#") 4
-	li.pagination-dot
-		a(href="#") ...
-	li
-		a(href="#") 98
-	li.pagination-next
-		a(href="#")
+		a.page-numbers(href='#') 1
+		span.page-numbers.current(aria-current='page') 2
+		a.page-numbers(href='#') 3
+		span.page-numbers.dots &mldr;
+		a.page-numbers(href='#') 5
+		a.next.page-numbers(href='#')
 			span.lnr.lnr-chevron-right
+

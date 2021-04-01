@@ -1,4 +1,5 @@
 import Tab from './libraries/tabs';
+import wp,{getCookie,readCookie} from './wp-custom';
 
 const fixedHeaderWhenScroll = () => {
 	const header = document.querySelector('header');
@@ -8,14 +9,20 @@ const fixedHeaderWhenScroll = () => {
 		header.classList.remove('fixed');
 	}
 };
+export const checkCart = () =>{
+	if (parseInt(readCookie())==0) {
+		const tbodyRef = document.querySelector('.table-cart').getElementsByTagName('tbody')[0];
+		tbodyRef.insertRow().innerHTML = '<td class="empty-cart" colspan="6">Giỏ hàng trống</td>';
+	}
+}
 
 const showNaviationMobile = () => {
 	const itemsNavigationMobile = document.querySelectorAll(
 		'.navigation-mobile ul li',
 	);
-	const navigation = document.querySelector('.navigation');
+	const navigation = document.querySelector('.main-navigation');
 	const body = document.querySelector('body');
-	const btnClose = document.querySelector('.navigation .btn-close');
+	const btnClose = document.querySelector('.main-navigation .btn-close');
 	const overlay = document.querySelector('#overlay');
 	itemsNavigationMobile[itemsNavigationMobile.length - 1].addEventListener(
 		'click',
@@ -42,7 +49,7 @@ const showNaviationMobile = () => {
 };
 
 const moveNavOutHeader = (responsive) => {
-	const nav = document.querySelector('.navigation');
+	const nav = document.querySelector('.main-navigation');
 	const body = document.querySelector('body');
 	const header = document.querySelector('header .nav-config-mobile');
 	if (window.innerWidth < responsive) {
@@ -360,6 +367,11 @@ const scrollToGalleryProductDetail = () => {
 	}
 };
 
+const formatter = new Intl.NumberFormat('vi', {
+	style: 'currency',
+	currency: 'VND',
+});
+
 const qualityInput = () => {
 	const items = document.querySelectorAll('.quality-product-input');
 	items.forEach((item) => {
@@ -369,23 +381,16 @@ const qualityInput = () => {
 		let currentValue = input.getAttribute('value');
 		plus.addEventListener('click', (e) => {
 			currentValue++;
-			if (currentValue > 5) {
-				plus.classList.add('disabled');
-			} else {
-				plus.classList.remove('disabled');
-				input.setAttribute('value', currentValue);
-			}
-			console.log(currentValue);
+			input.setAttribute('value', currentValue);
+			updateCartTotal();
 		});
 		minus.addEventListener('click', (e) => {
 			currentValue--;
 			if (currentValue < 1) {
-				minus.classList.add('disabled');
-			} else {
-				minus.classList.remove('disabled');
-				input.setAttribute('value', currentValue);
+				currentValue = 1;
 			}
-			console.log(currentValue);
+			input.setAttribute('value', currentValue);
+			updateCartTotal();
 		});
 	});
 };
@@ -394,10 +399,25 @@ const deleteRowTableCart = () => {
 	const buttonsDelete = document.querySelectorAll('.table-cart .btn-delete');
 	buttonsDelete.forEach((item) => {
 		item.addEventListener('click', (e) => {
-			console.log();
-			item.parentElement.parentElement.remove();
+			var id = item.getAttribute('data-id')
+			$.ajax({
+			  type: "get",
+			  url: "/wp-admin/admin-ajax.php",
+			  datatype: "json",
+			  data: {
+				action: "detele_cart",
+				id: id},
+			  success: function (response) {
+				if(response.success){
+				  item.parentElement.parentElement.remove();
+				  updateCartTotal();
+				  checkCart()
+				  $('.hl-cart-total').html(readCookie())
+				}
+			  }
+			});
+		  });
 		});
-	});
 };
 
 const ajaxFilterProducts = () => {
@@ -405,7 +425,7 @@ const ajaxFilterProducts = () => {
 		'.aside-menu-products .filter-wrapper .checkbox__custom input',
 	);
 	// DANH SÁCH SẢN PHẨM BAM ĐẦU (CHƯA FILTER)
-	const listProductCurrent = $('.list-product');
+	const listProductCurrent = $('section .products');
 	itemsFilter.each(function (index, item) {
 		$(item).on('click', function (e) {
 			const url = $(this).attr('data-url');
@@ -431,6 +451,85 @@ const ajaxFilterProducts = () => {
 	});
 };
 
+const rowCartTotal = () => {
+	const rowsCart = document.querySelectorAll('.row-cart-item-product');
+	rowsCart.forEach((row) => {
+		const unit = parseInt(
+			row.querySelector('.unit').getAttribute('data-value'),
+		);
+		// unit.textContent = formatter.format(unit);
+		const quality = parseInt(
+			row.querySelector('.quality-product-input input').value,
+		);
+		const rowTotal = parseInt(unit * quality);
+		// IN MÀN HÌNH ĐƠN GIÁ
+		row.querySelector('.unit').textContent = formatter.format(unit);
+		// TỔNG TIỀN HÀNG
+		row.querySelector('.row-total').setAttribute('data-value', rowTotal);
+		row.querySelector('.row-total').textContent = formatter.format(
+			rowTotal,
+		);
+	});
+};
+
+const tempCartTotal = () => {
+	rowCartTotal();
+	let sum = 0;
+	const itemsRowTotal = document.querySelectorAll(
+		'.row-cart-item-product .row-total',
+	);
+	itemsRowTotal.forEach((item) => {
+		sum += parseInt(item.getAttribute('data-value'));
+	});
+	return sum;
+};
+
+export const cartTotal = () => {
+	const cartTotal = document.querySelector('.cart-total');
+	if (cartTotal) {
+		document
+			.querySelector('.temp')
+			.setAttribute('data-value', tempCartTotal());
+		const temp = document.querySelector('.temp').getAttribute('data-value');
+		const service = parseInt(
+			cartTotal.querySelector('.service').getAttribute('data-value'),
+		);
+		const tax = parseInt(
+			(temp *
+				cartTotal.querySelector('.tax').getAttribute('data-value')) /
+				100,
+		);
+		const discount = parseInt(
+			cartTotal.querySelector('.discount').getAttribute('data-value'),
+		);
+		cartTotal.querySelector('.temp').textContent = formatter.format(temp);
+		// IN GIÁ TIỀN RA MÀN HÌNH
+		cartTotal.querySelector('.service').textContent = formatter.format(
+			service,
+		);
+		// TIỀN THUẾ
+		cartTotal.querySelector('.tax').textContent = formatter.format(tax);
+		// TIỀN GIẢM GIÁ
+		cartTotal.querySelector('.discount').textContent = formatter.format(
+			discount,
+		);
+		// TỔNG TIỀN
+		cartTotal.querySelector('.total').textContent = formatter.format(
+			parseInt(temp) + service + tax - discount,
+		);
+	} else {
+		// console.log('Cart Total is not defind');
+	}
+};
+
+const updateCartTotal = () => {
+	const isCart = document.querySelector('.cart');
+	if (isCart) {
+		tempCartTotal();
+		cartTotal();
+	}
+};
+
 window.addEventListener('load', (e) => {
 	initializeMasonryJs();
 	initializeWowJs();
@@ -450,7 +549,9 @@ window.addEventListener('load', (e) => {
 	scrollToGalleryProductDetail();
 	qualityInput();
 	deleteRowTableCart();
-	ajaxFilterProducts();
+	// ajaxFilterProducts();
+	checkCart();
+	cartTotal();
 	const ProductDetail = new Tab('.tabs-product-detail .tab-container');
 });
 

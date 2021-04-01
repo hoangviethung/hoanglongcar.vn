@@ -22,7 +22,7 @@
 					left: 0;
 					top: 50%;
 					transform: translateY(-50%);
-					font-family: var(--font-icons);
+					font-family: $hvh-font-icons;
 				}
 				span {
 					margin-left: 0;
@@ -34,7 +34,7 @@
 			@media (min-width: 1025px) {
 				&:hover {
 					> a {
-						color: var(--primary);
+						color: $hvh-primary-color;
 					}
 				}
 			}
@@ -54,7 +54,7 @@
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		background: var(--white);
+		background: $hvh-white-color;
 		padding: 1.6rem;
 		box-shadow: 0 0.3rem 0.6rem rgba($color: #000000, $alpha: 0.16);
 		.btn + .btn {
@@ -76,8 +76,10 @@
 		top: 0;
 		width: 60%;
 		height: 100vh;
+		max-height: 100%;
+		overflow: auto;
 		padding: 2.4rem;
-		background: var(--white);
+		background: $hvh-white-color;
 		z-index: 600;
 		//HIDDEN
 		transform: translateX(-100%);
@@ -137,7 +139,7 @@
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: var(--gray);
+			background: $hvh-gray-color;
 			top: 0;
 			left: 0;
 			z-index: 10;

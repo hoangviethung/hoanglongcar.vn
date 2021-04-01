@@ -14,7 +14,7 @@
 .form-group {
 	margin-bottom: 1.5rem;
 	label {
-		color: var(--gray-text);
+		color: $hvh-gray-text-color;
 		font-size: 1.4rem;
 		font-weight: 500;
 		margin-bottom: 0.5rem;
@@ -32,13 +32,13 @@
 	font-size: 1.4rem;
 	font-weight: 400;
 	height: 4rem;
-	background-color: var(--white);
+	background-color: $hvh-white-color;
 	background-clip: padding-box;
-	border: 0.1rem solid var(--border);
+	border: 0.1rem solid $hvh-gray-border-color;
 	border-radius: 0.3rem;
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	&:focus {
-		border: 0.1rem solid var(--primary);
+		border: 0.1rem solid $hvh-primary-color;
 	}
 }
 
@@ -58,7 +58,7 @@
 		width: 100%;
 		height: 100%;
 		appearance: none;
-		border: 0.1rem solid var(--body);
+		border: 0.1rem solid $hvh-body-text-color;
 		border-radius: 0.5rem;
 		outline: none;
 		transition-duration: 0.3s;
@@ -78,7 +78,7 @@
 			left: 50%;
 			pointer-events: none;
 			opacity: 0;
-			color: var(--body);
+			color: $hvh-body-text-color;
 			transition: 0.3s all ease-in-out;
 		}
 	}
@@ -102,7 +102,7 @@
 	@media (min-width: 1025px) {
 		&:hover {
 			span {
-				color: var(--primary);
+				color: $hvh-primary-color;
 			}
 		}
 	}
@@ -111,18 +111,18 @@
 .select__custom {
 	position: relative;
 	select {
-		color: var(--body);
+		color: $hvh-body-text-color;
 		cursor: pointer;
 		padding: 0.9rem 1.5rem 0.9rem 2rem;
 		height: 4.8rem;
 		min-width: 23rem;
-		border: 0.2rem solid var(--border);
+		border: 0.2rem solid $hvh-gray-border-color;
 		border-radius: 0.3rem;
 		appearance: none;
 	}
 	&:after {
 		content: '\f107';
-		font-family: var(--font-icons);
+		font-family: $hvh-font-icons;
 		position: absolute;
 		right: 1.6rem;
 		top: 50%;
@@ -134,7 +134,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0.2rem;
-	border: 0.1rem solid var(--border);
+	border: 0.1rem solid $hvh-gray-border-color;
 	border-radius: 0.3rem;
 	input {
 		-ms-flex: 0 0 50%;
@@ -155,8 +155,8 @@
 			-ms-flex: 0 0 50%;
 			flex: 0 0 50%;
 			max-width: 50%;
-			background: var(--disable);
-			border: 0.1rem solid var(--border);
+			background: $hvh-gray-text-color;
+			border: 0.1rem solid $hvh-gray-border-color;
 			i {
 				font-weight: 700;
 			}

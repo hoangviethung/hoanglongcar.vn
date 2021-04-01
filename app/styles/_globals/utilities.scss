@@ -71,8 +71,8 @@
 	font-weight: 700;
 	white-space: nowrap;
 	padding: 0.8rem 1.6rem;
-	color: var(--white);
-	border: 0.1rem solid var(--white);
+	color: $hvh-white-color;
+	border: 0.1rem solid $hvh-white-color;
 	transition: 0.3s all ease-in-out;
 	border-radius: 0.3rem;
 	&.btn-large {
@@ -82,35 +82,38 @@
 		}
 	}
 	&.color-dark {
-		color: var(--body);
-		border: 0.1rem solid var(--body);
+		color: $hvh-body-text-color;
+		border: 0.1rem solid $hvh-body-text-color;
 	}
 	&.color-primary {
-		color: var(--body);
-		background: var(--primary);
+		color: $hvh-body-text-color;
+		background: $hvh-primary-color;
 		border: 0;
 	}
 	&.color-neutral-medium_sub {
-		color: var(--gray-text);
-		border: 0.1rem solid var(--gray-text);
+		color: $hvh-gray-text-color;
+		border: 0.1rem solid $hvh-gray-text-color;
 	}
 	&.bg-dark {
-		color: var(--white);
-		background: var(--body);
+		color: $hvh-white-color;
+		background: $hvh-body-text-color;
 	}
 	&.bg-primary {
-		color: var(--body);
-		background: var(--primary);
+		color: $hvh-body-text-color;
+		background: $hvh-primary-color;
 	}
 	&.bg-gray {
-		color: var(--body);
-		background: var(--gray);
+		color: $hvh-body-text-color;
+		background: $hvh-gray-color;
 		&:hover {
-			background: var(--disable);
+			background: $hvh-gray-text-color;
 		}
 	}
 	&.no-border {
 		border: 0;
+	}
+	&:focus{
+		outline: none;
 	}
 	span {
 		margin-left: 0.8rem;
@@ -125,8 +128,8 @@
 	}
 	@media (min-width: 1025px) {
 		&:hover {
-			color: var(--body);
-			background: var(--primary);
+			color: $hvh-body-text-color;
+			background: $hvh-primary-color;
 		}
 	}
 }
@@ -146,8 +149,8 @@
 	transition: 0.3s all ease-in-out;
 	@media (min-width: 1025px) {
 		&:hover {
-			color: var(--white);
-			background: var(--body);
+			color: $hvh-white-color;
+			background: $hvh-body-text-color;
 		}
 	}
 }
@@ -159,13 +162,13 @@
 	padding: 0.9rem 1.5rem 0.9rem 2rem;
 	height: 4.8rem;
 	min-width: 23rem;
-	border: 0.2rem solid var(--border);
+	border: 0.2rem solid $hvh-gray-border-color;
 	span {
 		margin-left: 0.8rem;
 	}
 	&:after {
 		content: '\f424';
-		font-family: var(--font-icons);
+		font-family: $hvh-font-icons;
 		position: absolute;
 		right: 1.6rem;
 		top: 50%;
@@ -175,14 +178,14 @@
 
 .title-section {
 	h2 {
-		font-family: var(--font-title);
+		font-family: $hvh-font-title;
 		display: inline-block;
 		font-size: 2.8rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		span {
 			display: inline-block;
-			color: var(--primary);
+			color: $hvh-primary-color;
 		}
 		@media (max-width: 575.98px) {
 			font-size: 2.2rem;
@@ -190,7 +193,7 @@
 	}
 	&.color-light {
 		h2 {
-			color: var(--light);
+			color: $hvh-light-color;
 		}
 	}
 	&.has-line {
@@ -240,7 +243,7 @@
 
 .subtitle-section {
 	span {
-		color: var(--gray-text);
+		color: $hvh-gray-text-color;
 		display: inline-block;
 		font-size: 1.4rem;
 		font-weight: 700;
@@ -261,9 +264,9 @@
 		padding: 3.2rem 1.6rem;
 	}
 	.top {
-		background: var(--primary);
+		background: $hvh-primary-color;
 		h3 {
-			color: var(--danger);
+			color: $hvh-danger-color;
 			font-size: 2.8rem;
 			font-weight: 700;
 			margin: 0.8rem 0;
@@ -271,14 +274,14 @@
 	}
 	.bottom {
 		position: relative;
-		background: var(--secondary);
+		background: $hvh-secondary-color;
 		h3 {
 			font-size: 2rem;
-			color: var(--light);
+			color: $hvh-light-color;
 			margin-bottom: 0.8rem;
 		}
 		p {
-			color: var(--primary);
+			color: $hvh-primary-color;
 		}
 		.CTA {
 			margin-top: 2.4rem;
@@ -290,13 +293,13 @@
 	position: relative;
 	&:after {
 		content: '\f144';
-		font-family: var(--font-icons);
+		font-family: $hvh-font-icons;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 5.6rem;
-		color: var(--white);
+		color: $hvh-white-color;
 		pointer-events: none;
 	}
 }
@@ -304,7 +307,7 @@
 .button-navigation-slider {
 	position: absolute;
 	cursor: pointer;
-	color: var(--white);
+	color: $hvh-white-color;
 	font-size: 2.4rem;
 	display: flex;
 	justify-content: center;
@@ -319,11 +322,11 @@
 		background: rgba(#ffc513, $alpha: 0.8);
 	}
 	&.bg-white {
-		color: var(--primary);
+		color: $hvh-primary-color;
 		background: rgba($color: #ffffff, $alpha: 0.8);
 	}
 	&.bg-none {
-		color: var(--primary);
+		color: $hvh-primary-color;
 	}
 	&.center-50px {
 		top: 50%;
@@ -348,8 +351,8 @@
 	@media (min-width: 1025px) {
 		transition: 0.3s all ease-in-out;
 		&:hover {
-			color: var(--primary);
-			background: var(--secondary);
+			color: $hvh-primary-color;
+			background: $hvh-secondary-color;
 		}
 	}
 }
@@ -368,7 +371,7 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		border: 0.1rem solid var(--border);
+		border: 0.1rem solid $hvh-gray-border-color;
 		padding: 1.6rem;
 	}
 }
@@ -388,18 +391,18 @@
 			font-size: 2.4rem;
 		}
 		p {
-			color: var(--gray-text);
+			color: $hvh-gray-text-color;
 			font-weight: 500;
 		}
 	}
 }
 
 .list-star {
-	color: var(--primary);
+	color: $hvh-primary-color;
 	&[rate='4'] {
 		i {
 			&:nth-child(5) {
-				color: var(--body);
+				color: $hvh-body-text-color;
 			}
 		}
 	}
@@ -407,7 +410,7 @@
 		i {
 			&:nth-child(5),
 			&:nth-child(4) {
-				color: var(--body);
+				color: $hvh-body-text-color;
 			}
 		}
 	}
@@ -416,7 +419,7 @@
 			&:nth-child(5),
 			&:nth-child(4),
 			&:nth-child(3) {
-				color: var(--body);
+				color: $hvh-body-text-color;
 			}
 		}
 	}
@@ -426,7 +429,7 @@
 			&:nth-child(4),
 			&:nth-child(3),
 			&:nth-child(2) {
-				color: var(--body);
+				color: $hvh-body-text-color;
 			}
 		}
 	}

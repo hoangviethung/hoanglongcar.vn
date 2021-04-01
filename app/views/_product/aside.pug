@@ -3,36 +3,90 @@ block let
 	- categories = {30: 'Hệ thống DVD', 10: 'Film cách nhiệt', 12: 'Camera hành trình', 32: 'Ghế nệm da', 44: 'Combo'};
 	- types = {1: 'Đang giảm giá', 2: 'Sản phẩm nổi bật', 3: 'Sản phẩm có quà tặng'}
 aside.aside-menu-products
-	.filter-wrapper
-		.filter-block
-			h2 Danh mục
-			ul
-				each val,key in categories
-					li
-						a.lcl.lcl-1(href="products.html")
-							span #{val}
-							span (#{key})
-		.filter-block
-			h2 Trạng thái
-			ul
-				each val,key in types
-					li
-						.form-group.checkbox__group
-							label
-								.checkbox__custom
-									input(type="radio" name="filter" data-url="products-filter.html")
-								span #{val}
-								span (#{key})
-		.filter-block
-			h2 Loại xe
-			ul
-				each val,key in cars
-					li
-						.form-group.checkbox__group
-							label
-								.checkbox__custom
-									input(type="radio" name="filter" data-url="products-filter.html")
-								span #{val}
-								span (#{key})
-	.fiiter-submit
-		.btn.color-dark.btn-large.btn-close Xác nhận
+	form#search-filter-form-221.searchandfilter
+		ul
+			li.sf-field-taxonomy-danh_muc(data-sf-field-name='_sft_danh_muc' data-sf-field-type='taxonomy' data-sf-field-input-type='radio')
+				h2 Danh m&#x1EE5;c
+				ul
+					li.sf-level-0.sf-item-0.sf-option-active(data-sf-count='0' data-sf-depth='0')
+						input#sf-input-a7ce0fd690fcc064865c2447844ba868.sf-input-radio(type='radio' value='' name='_sft_danh_muc[]' checked='checked')
+						label.sf-label-radio(for='sf-input-a7ce0fd690fcc064865c2447844ba868') T&#x1EA5;t c&#x1EA3; s&#x1EA3;n ph&#x1EA9;m
+					li.sf-level-0.sf-item-8(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-79a5de4bb79b432a21bf77eda52f19e6.sf-input-radio(type='radio' value='camera-hanh-trinh' name='_sft_danh_muc[]')
+						label.sf-label-radio(for='sf-input-79a5de4bb79b432a21bf77eda52f19e6')
+							| Camera h&agrave;nh tr&igrave;nh
+							span.sf-count (40)
+					li.sf-level-0.sf-item-11(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-751f8be6b68f674f5b3b457915e15745.sf-input-radio(type='radio' value='combo' name='_sft_danh_muc[]')
+						label.sf-label-radio(for='sf-input-751f8be6b68f674f5b3b457915e15745')
+							| Combo
+							span.sf-count (40)
+					li.sf-level-0.sf-item-7(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-2023c0612199f174cac2a62ad52f244a.sf-input-radio(type='radio' value='film-cach-nhiet' name='_sft_danh_muc[]')
+						label.sf-label-radio(for='sf-input-2023c0612199f174cac2a62ad52f244a')
+							| Film c&aacute;ch nhi&#x1EC7;t
+							span.sf-count (40)
+					li.sf-level-0.sf-item-10(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-7fa164226e855573ce05272173b69216.sf-input-radio(type='radio' value='ghe-nem-da' name='_sft_danh_muc[]')
+						label.sf-label-radio(for='sf-input-7fa164226e855573ce05272173b69216')
+							| Gh&#x1EBF; n&#x1EC7;m da
+							span.sf-count (40)
+					li.sf-level-0.sf-item-9(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-3f431f62b7b3a777ad580ca2c4cdd9a8.sf-input-radio(type='radio' value='he-thong-dvd' name='_sft_danh_muc[]')
+						label.sf-label-radio(for='sf-input-3f431f62b7b3a777ad580ca2c4cdd9a8')
+							| H&#x1EC7; th&#x1ED1;ng DVD
+							span.sf-count (40)
+			li.sf-field-taxonomy-trang_thai(data-sf-field-name='_sft_trang_thai' data-sf-field-type='taxonomy' data-sf-field-input-type='checkbox')
+				h2 Tr&#x1EA1;ng th&aacute;i
+				ul(data-operator='and')
+					li.sf-level-0.sf-item-21(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-d6cfe8ec8825809efbe76b2669fb6fa6.sf-input-checkbox(type='checkbox' value='dang-giam-gia' name='_sft_trang_thai[]')
+						label.sf-label-checkbox(for='sf-input-d6cfe8ec8825809efbe76b2669fb6fa6')
+							| &Dstrok;ang gi&#x1EA3;m gi&aacute;
+							span.sf-count (40)
+					li.sf-level-0.sf-item-20(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-09ba92a4eae40f8e741eec8fe73021ac.sf-input-checkbox(type='checkbox' value='san-pham-co-qua-tang' name='_sft_trang_thai[]')
+						label.sf-label-checkbox(for='sf-input-09ba92a4eae40f8e741eec8fe73021ac')
+							| S&#x1EA3;n ph&#x1EA9;m c&oacute; qu&agrave; t&#x1EB7;ng
+							span.sf-count (40)
+					li.sf-level-0.sf-item-19(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-618d4b324c97544ffa69dc229a8ececf.sf-input-checkbox(type='checkbox' value='san-pham-noi-bat' name='_sft_trang_thai[]')
+						label.sf-label-checkbox(for='sf-input-618d4b324c97544ffa69dc229a8ececf')
+							| S&#x1EA3;n ph&#x1EA9;m n&#x1ED5;i b&#x1EAD;t
+							span.sf-count (40)
+			li.sf-field-taxonomy-loai_xe(data-sf-field-name='_sft_loai_xe' data-sf-field-type='taxonomy' data-sf-field-input-type='checkbox')
+				h2 Lo&#x1EA1;i xe
+				ul(data-operator='and')
+					li.sf-level-0.sf-item-12(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-655c2f3031fa2d875adc5bce6739ab8e.sf-input-checkbox(type='checkbox' value='bmw' name='_sft_loai_xe[]')
+						label.sf-label-checkbox(for='sf-input-655c2f3031fa2d875adc5bce6739ab8e')
+							| BMW
+							span.sf-count (40)
+					li.sf-level-0.sf-item-14(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-8f94a190b1b0f26a2b7dc664c872e7c5.sf-input-checkbox(type='checkbox' value='lexus' name='_sft_loai_xe[]')
+						label.sf-label-checkbox(for='sf-input-8f94a190b1b0f26a2b7dc664c872e7c5')
+							| Lexus
+							span.sf-count (40)
+					li.sf-level-0.sf-item-13(data-sf-count='40' data-sf-depth='0')
+						input#sf-input-4e902fe78e36dfc7af8b4adce3de53e2.sf-input-checkbox(type='checkbox' value='toyota' name='_sft_loai_xe[]')
+						label.sf-label-checkbox(for='sf-input-4e902fe78e36dfc7af8b4adce3de53e2')
+							| Toyota
+							span.sf-count (40)
+			li.sf-field-sort_order(data-sf-field-name='_sf_sort_order' data-sf-field-type='sort_order' data-sf-field-input-type='radio')
+				h2 S&#x1EAF;p x&#x1EBF;p
+				ul
+					li.sf-level-0.sf-item-0.sf-option-active(data-sf-depth='0')
+						input#sf-input-4287ab6aa9f89972d3682898e3c5bea5.sf-input-radio(type='radio' value='' name='_sf_sort_order[]' checked='checked')
+						label.sf-label-radio(for='sf-input-4287ab6aa9f89972d3682898e3c5bea5') M&#x1EB7;c &dstrok;&#x1ECB;nh
+					li.sf-level-0(data-sf-depth='0')
+						input#sf-input-14a67433c9a9cc79680f6e1af3057093.sf-input-radio(type='radio' value='date+asc' name='_sf_sort_order[]')
+						label.sf-label-radio(for='sf-input-14a67433c9a9cc79680f6e1af3057093') Ng&agrave;y, t&abreve;ng d&#x1EA7;n
+					li.sf-level-0(data-sf-depth='0')
+						input#sf-input-be9df90c2b6af0d111efeac88406146a.sf-input-radio(type='radio' value='date+desc' name='_sf_sort_order[]')
+						label.sf-label-radio(for='sf-input-be9df90c2b6af0d111efeac88406146a') Ng&agrave;y, gi&#x1EA3;m d&#x1EA7;n
+					li.sf-level-0(data-sf-depth='0')
+						input#sf-input-aa59b86056e31e341f2f169fca2ebb75.sf-input-radio(type='radio' value='_sfm_meta_gia_km+asc+num' name='_sf_sort_order[]')
+						label.sf-label-radio(for='sf-input-aa59b86056e31e341f2f169fca2ebb75') Gi&aacute;, gi&#x1EA3;m d&#x1EA7;n
+					li.sf-level-0(data-sf-depth='0')
+						input#sf-input-5f101227ed75a95b3ecbc3c8a915ae32.sf-input-radio(type='radio' value='_sfm_meta_gia_km+desc+num' name='_sf_sort_order[]')
+						label.sf-label-radio(for='sf-input-5f101227ed75a95b3ecbc3c8a915ae32') Gi&aacute;, t&abreve;ng d&#x1EA7;

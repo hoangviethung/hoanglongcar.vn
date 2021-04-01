@@ -24,11 +24,11 @@
 }
 
 .index-core-value {
-	background: var(--secondary);
+	background: $hvh-secondary-color;
 	h3 {
 		font-size: 1.6rem;
 		font-weight: 700;
-		color: var(--light);
+		color: $hvh-light-color;
 		letter-spacing: 0.1rem;
 		margin-top: 1.6rem;
 		text-transform: uppercase;
@@ -40,7 +40,7 @@
 		}
 	}
 	p {
-		color: var(--disable);
+		color: $hvh-gray-text-color;
 		margin-top: 0.8rem;
 		max-width: 90%;
 		@media (max-width: 1024.98px) {
@@ -134,12 +134,12 @@
 					left: 0;
 					width: 8rem;
 					height: 0.2rem;
-					background: var(--primary);
+					background: $hvh-primary-color;
 				}
 			}
 			h3,
 			p {
-				color: var(--white);
+				color: $hvh-white-color;
 			}
 			.CTA {
 				margin-top: 2.4rem;
@@ -160,7 +160,7 @@
 		.swiper-slide {
 			cursor: pointer;
 			padding: 2.4rem;
-			border: 0.1rem solid var(--border);
+			border: 0.1rem solid $hvh-gray-border-color;
 			transition: 0.3s all ease-in-out;
 			&:after {
 				content: '';
@@ -170,7 +170,7 @@
 				width: 0;
 				transform: translateX(-50%);
 				height: 0.5rem;
-				background: var(--primary);
+				background: $hvh-primary-color;
 				transition: 0.5s all ease-in-out;
 			}
 			&.swiper-slide-thumb-active {
@@ -180,7 +180,7 @@
 			}
 			@media (min-width: 1025px) {
 				&:hover {
-					background: var(--border);
+					background: $hvh-gray-border-color;
 				}
 			}
 		}
@@ -225,7 +225,7 @@
 		left: 1.6rem;
 	}
 	h3 {
-		color: var(--white);
+		color: $hvh-white-color;
 		font-size: 2.4rem;
 		bottom: 1.6rem;
 		transition: 0.3s all ease-in-out;
@@ -235,7 +235,7 @@
 	}
 	span {
 		font-size: 3.2rem;
-		color: var(--primary);
+		color: $hvh-primary-color;
 		font-weight: 700;
 		top: 1.6rem;
 		width: 5.6rem;
@@ -258,14 +258,14 @@
 		overflow: hidden;
 		position: relative;
 		padding-bottom: calc(306 / 306 * 100%);
-		background: var(--gray);
+		background: $hvh-gray-color;
 		img {
 			transition: 0.3s all ease-in-out;
 		}
 		@media (min-width: 1025px) {
 			&:hover {
 				h3 {
-					color: var(--primary);
+					color: $hvh-primary-color;
 				}
 				img {
 					transform: scale(1.2);
@@ -347,8 +347,8 @@
 			font-weight: 700;
 			&:before {
 				content: '\f00c';
-				font-family: var(--font-icons);
-				color: var(--primary);
+				font-family: $hvh-font-icons;
+				color: $hvh-primary-color;
 				margin-right: 8px;
 			}
 			+ li {

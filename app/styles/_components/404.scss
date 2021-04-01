@@ -12,9 +12,9 @@
 	}
 	h2 {
 		font-size: 12rem;
-		color: var(--white);
+		color: $hvh-white-color;
 		span {
-			color: var(--primary);
+			color: $hvh-primary-color;
 			margin-left: 0.8rem;
 		}
 		@media (max-width: 767.98px) {
@@ -22,7 +22,7 @@
 		}
 	}
 	p {
-		color: var(--white);
+		color: $hvh-white-color;
 		font-size: 3.2rem;
 		margin-bottom: 2.4rem;
 		@media (max-width: 767.98px) {

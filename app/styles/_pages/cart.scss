@@ -1,18 +1,32 @@
 .cart {
-	background: var(--secondary);
+	background: $hvh-secondary-color;
 }
 
 .table-cart {
-	background: var(--white);
+	background: $hvh-white-color;
 	overflow-x: auto;
 	padding: 3rem;
+	position: relative;
+	.loading-aj{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #a6a6a694;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: -1;
+		transition: all .2s;
+	}
 	table {
 		width: 100%;
 		min-width: 100rem;
 	}
 	th,
 	td {
-		border: 1px solid var(--border);
+		border: 1px solid $hvh-gray-border-color;
 		height: 6rem;
 		padding: 1.5rem;
 		border-radius: 0.3rem;
@@ -21,6 +35,10 @@
 		}
 	}
 	tr {
+		.empty-cart{
+			text-align: center;
+			font-weight: bold;
+		}
 		td,
 		th {
 			&:first-child {
@@ -34,7 +52,7 @@
 				span {
 					font-size: 1.2rem;
 					font-weight: 500;
-					color: var(--gray-text);
+					color: $hvh-gray-text-color;
 				}
 			}
 			&:nth-child(3),
@@ -52,7 +70,7 @@
 				width: 8.333333%;
 				text-align: center;
 				.btn {
-					background: var(--disable);
+					background: $hvh-gray-text-color;
 					i {
 						font-weight: 700;
 					}
@@ -71,19 +89,40 @@
 	}
 	&::-webkit-scrollbar-thumb {
 		box-shadow: inset 0 0 0.6rem rgba(255, 255, 255, 0);
-		background-color: var(--body);
+		background-color: $hvh-body-text-color;
+	}
+	@media (max-width: 1024.98px) {
+		padding: 0;
 	}
 }
 
 .cart-total-wrapper {
 	margin-top: 2.4rem;
+	.update-cart{
+		margin-left: 10px;
+	}
 }
 
 .cart-total {
-	background: var(--white);
+	background: $hvh-white-color;
 	padding: 2.5rem;
+	.mess{
+		transition: 0.3s all ease-in-out;
+		.flush-content{
+			padding: 7px;
+			background: $hvh-primary-color;
+			border-radius: 5px;
+			font-weight: bold;
+			}
+		}
 	.input-group {
 		margin: 1.5rem 0;
+		input{
+			transition: 0.3s all ease-in-out;
+			&.error{
+				border:1px solid red;
+			}
+		}
 	}
 	h3 {
 		font-size: 2rem;
@@ -96,12 +135,12 @@
 			flex-wrap: wrap;
 			padding: 1rem 0;
 			+ li {
-				border-top: 0.1rem dashed var(--border);
+				border-top: 0.1rem dashed $hvh-gray-border-color;
 			}
 			&:last-child {
 				b {
 					&:last-child {
-						color: var(--primary);
+						color: $hvh-primary-color;
 						font-size: 2.2rem;
 						@media (max-width: 1439.98px) {
 							font-size: 2rem;
@@ -117,6 +156,11 @@
 			&:last-child {
 				text-align: right;
 			}
+			span {
+				+ span {
+					margin-left: 4px;
+				}
+			}
 		}
 	}
 	.btn-popup-form {
@@ -126,3 +170,90 @@
 		margin-top: 2.4rem;
 	}
 }
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+	-webkit-transform: perspective(140px) rotateX(-180deg);
+			transform: perspective(140px) rotateX(-180deg);
+	opacity: 0; 
+  } 25%, 75% {
+	-webkit-transform: perspective(140px) rotateX(0deg);
+			transform: perspective(140px) rotateX(0deg);
+	opacity: 1; 
+  } 90%, 100% {
+	-webkit-transform: perspective(140px) rotateY(180deg);
+			transform: perspective(140px) rotateY(180deg);
+	opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+	-webkit-transform: perspective(140px) rotateX(-180deg);
+			transform: perspective(140px) rotateX(-180deg);
+	opacity: 0; 
+  } 25%, 75% {
+	-webkit-transform: perspective(140px) rotateX(0deg);
+			transform: perspective(140px) rotateX(0deg);
+	opacity: 1; 
+  } 90%, 100% {
+	-webkit-transform: perspective(140px) rotateY(180deg);
+			transform: perspective(140px) rotateY(180deg);
+	opacity: 0; 
+  }
+}
+.sk-folding-cube {
+	margin: 20px auto;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	-webkit-transform: rotateZ(45deg);
+			transform: rotateZ(45deg);
+  }
+  
+  .sk-folding-cube .sk-cube {
+	float: left;
+	width: 50%;
+	height: 50%;
+	position: relative;
+	-webkit-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+			transform: scale(1.1); 
+  }
+  .sk-folding-cube .sk-cube:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	-webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+			animation: sk-foldCubeAngle 2.4s infinite linear both;
+	-webkit-transform-origin: 100% 100%;
+		-ms-transform-origin: 100% 100%;
+			transform-origin: 100% 100%;
+  }
+  .sk-folding-cube .sk-cube2 {
+	-webkit-transform: scale(1.1) rotateZ(90deg);
+			transform: scale(1.1) rotateZ(90deg);
+  }
+  .sk-folding-cube .sk-cube3 {
+	-webkit-transform: scale(1.1) rotateZ(180deg);
+			transform: scale(1.1) rotateZ(180deg);
+  }
+  .sk-folding-cube .sk-cube4 {
+	-webkit-transform: scale(1.1) rotateZ(270deg);
+			transform: scale(1.1) rotateZ(270deg);
+  }
+  .sk-folding-cube .sk-cube2:before {
+	-webkit-animation-delay: 0.3s;
+			animation-delay: 0.3s;
+  }
+  .sk-folding-cube .sk-cube3:before {
+	-webkit-animation-delay: 0.6s;
+			animation-delay: 0.6s; 
+  }
+  .sk-folding-cube .sk-cube4:before {
+	-webkit-animation-delay: 0.9s;
+			animation-delay: 0.9s;
+  }

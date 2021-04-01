@@ -11,10 +11,10 @@
 		display: flex;
 	}
 	.item-social {
-		background: var(--primary);
+		background: $hvh-primary-color;
 		border-radius: 0.3rem;
 		> a {
-			color: var(--body);
+			color: $hvh-body-text-color;
 			width: 3.2rem;
 			height: 3.2rem;
 			display: flex;
@@ -49,7 +49,7 @@
 		+ .card-news-related {
 			margin-top: 1.2rem;
 			padding-top: 1.2rem;
-			border-top: 0.1rem solid var(--border);
+			border-top: 0.1rem solid $hvh-gray-border-color;
 		}
 	}
 	@media (max-width: 767.98px) {
@@ -71,5 +71,5 @@
 .news-tags {
 	padding: 0.8rem;
 	border-radius: 0.3rem;
-	border: 0.1rem solid var(--border);
+	border: 0.1rem solid $hvh-gray-border-color;
 }

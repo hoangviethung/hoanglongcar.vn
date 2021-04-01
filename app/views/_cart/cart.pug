@@ -1,18 +1,24 @@
 section.cart.pd-section
 	.container
 		.table-cart
+			.loading-aj
+				.sk-folding-cube
+					.sk-cube1.sk-cube
+					.sk-cube2.sk-cube
+					.sk-cube4.sk-cube
+					.sk-cube3.sk-cube
 			table
 				thead
 					tr
 						th Hình ảnh
 						th Tên sản phẩm
-						th Đơn giá (1 sản phẩm)
+						th Đơn giá
 						th Số lượng
 						th Tổng cộng
 						th Xóa
 				tbody
-					-for(i=1;i<5;i++)
-						tr
+					-for(i=1;i<5;i++){
+						tr.row-cart-item-product
 							td
 								img(src=`./images/products/product_hoanglongcar_0${i}.jpg`, alt="HOANGLONGCAR-SANPHAM")
 							td
@@ -20,49 +26,57 @@ section.cart.pd-section
 									a.lcl.lcl-1(href="product-detail.html") Exhaust stroke
 								span.lcl.lcl-1 Code: SP9052C
 							td
-								p.lcl.lcl-1 2.000.000
-									span VNĐ
+								p
+									span.unit(data-value="20000000")
 							td
 								.quality-product-input
-									input(type="text" value="1" readonly)
+									input(type="text" value=`${i+21}` readonly data-id=`${i+5}`)
 									.qly-n
 										.btn.btn-plus
 											i.fal.fa-plus
 										.btn.btn-minus
 											i.fal.fa-minus
 							td
-								p.lcl.lcl-1 10.000.000
-									span VNĐ
+								p
+									span.row-total
 							td
 								.btn.btn-delete
 									i.fal.fa-times
+					-}
 		.cart-total-wrapper
 			.row
 				.col-md-6.col-lg-7.col-xl-8
 					a.btn.btn-large.color-primary(href="products.html") Xem thêm sảm phẩm
+					button.btn.btn-large.color-primary.update-cart(href="#") Cập nhật giỏ hàng
 				.col-md-6.col-lg-5.col-xl-4
 					.cart-total
 						h3 Tổng hóa đơn
 						.input-group
 							input.form-control(type="text" placeholder="Nhập mã khuyến mã của bạn")
 							button.btn.color-primary Xác nhận
+						.mess
+							p.flush-content Áp dụng mã giảm giá thành công
 						ul
 							li
 								b Tính tạm:
-								b 10.000.000
+								b
+									span.temp
 							li
-								b Dịch vụ:
-								b Miễn phí
+								b Phí dịch vụ:
+								b
+									span.service(data-value="0")
 							li
 								b Thuế VAT (10%):
-								b - 150.000
+								b
+									span.tax(data-value="10")
 							li
 								b Giảm giá:
-								b - 300.000
+								b
+									span.discount(data-value="0")
 							li
 								b Total:
-								b 15.000.000
-									span VNĐ
+								b
+									span.total
 						a.btn.bg-dark.btn-popup-form(data-fancybox data-src="#popop-form-contact" href="javascript:;") Điền thông tin tư vấn
 						#popop-form-contact(style="display:none")
 							.title-section.has-line.line-left.mb-title

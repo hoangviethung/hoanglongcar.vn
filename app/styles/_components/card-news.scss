@@ -1,11 +1,11 @@
 .card-news {
 	display: block;
-	background: var(--white);
+	background: $hvh-white-color;
 	.news__img {
 		overflow: hidden;
 		position: relative;
 		padding-bottom: calc(280 / 418 * 100%);
-		background: var(--gray);
+		background: $hvh-gray-color;
 		img {
 			transition: 0.3s all ease-in-out;
 		}
@@ -16,7 +16,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: var(--secondary);
+			background: $hvh-secondary-color;
 			opacity: 0;
 			transition: 0.3s all ease-in-out;
 			pointer-events: none;
@@ -25,7 +25,7 @@
 	.news__desc {
 		padding: 1.6rem;
 		&.border {
-			border: 0.1rem solid var(--border);
+			border: 0.1rem solid $hvh-gray-border-color;
 		}
 	}
 	.news__time {
@@ -34,7 +34,7 @@
 		margin-bottom: 0.8rem;
 		&:before {
 			content: '\f017';
-			font-family: var(--font-icons);
+			font-family: $hvh-font-icons;
 			margin-right: 0.8rem;
 		}
 	}
@@ -49,12 +49,16 @@
 			left: 0;
 			height: 0.2rem;
 			width: 8rem;
-			background: var(--primary);
+			background: $hvh-primary-color;
 		}
 	}
 	p {
-		color: var(--gray-text);
+		color: $hvh-gray-text-color;
 		margin-top: 1.6rem;
+		min-height: 75px;
+		@media (max-width: 767.98px) {
+			min-height: 64px;
+		}
 	}
 	.CTA {
 		text-align: right;
