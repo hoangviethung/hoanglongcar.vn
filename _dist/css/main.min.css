@@ -14357,7 +14357,8 @@ footer {
     -moz-appearance: none;
     appearance: none;
     -ms-appearance: none;
-    -o-appearance: none; }
+    -o-appearance: none;
+    visibility: hidden; }
     .searchandfilter ul li[data-sf-field-input-type="checkbox"] ul li input:checked + label:after, .searchandfilter ul li[data-sf-field-input-type="radio"] ul li input:checked + label:after {
       opacity: 1; }
     .searchandfilter ul li[data-sf-field-input-type="checkbox"] ul li input:disabled + label:before, .searchandfilter ul li[data-sf-field-input-type="radio"] ul li input:disabled + label:before {
