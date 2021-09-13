@@ -1,9 +1,9 @@
-[![Build Status](http://runbot.odoo.com/runbot/badge/flat/1/master.svg)](https://github.com/hoangviethung)
-[![Tech Doc](http://img.shields.io/badge/master-docs-875A7B.svg?style=flat&colorA=8F8F8F)](https://github.com/hoangviethung)
-[![Help](http://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://github.com/hoangviethung)
-[![Nightly Builds](http://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://github.com/hoangviethung)
+[![Build Status](http://runbot.odoo.com/runbot/badge/flat/1/master.svg)](https://github.com/hoangviethung/hoanglongcar.vn)
+[![Tech Doc](http://img.shields.io/badge/master-docs-875A7B.svg?style=flat&colorA=8F8F8F)](https://github.com/hoangviethung/hoanglongcar.vn)
+[![Help](http://img.shields.io/badge/master-help-875A7B.svg?style=flat&colorA=8F8F8F)](https://github.com/hoangviethung/hoanglongcar.vn)
+[![Nightly Builds](http://img.shields.io/badge/master-nightly-875A7B.svg?style=flat&colorA=8F8F8F)](https://github.com/hoangviethung/hoanglongcar.vn)
 
-Source PUG - SASS Basic
+Hoàng Long Car
 ----
 
 Chắc hẳn các bạn đã nghe qua SASS SCSS hay LESS giúp cho việc code CSS được nhanh hơn, sử dụng được nhiều chức năng hay như dùng biến, mixins, functions(hàm)…. Có thể tái sử dụng code một cách hợp lý giúp cho việc code trở nên linh hoạt, nhanh lẹ tiết kiệm thời gian…
@@ -26,7 +26,7 @@ Ví dụ bạn code 3 item nào đó có cấu trúc giống nhau và trong HTML
 
 Để cho mau hiểu hơn về PUG các bạn nên tham khảo code ở một số trang nước ngoài và trang chủ của PUG cũng như trên Youtube với từ khóa “pug html mixins, pug html if else, pug html tutorials….”. Cám ơn các bạn đã đọc bài viết và chúc các bạn một ngày tốt lành nhé..
 
-Getting started with Source PUG - SASS Basic
+Getting started with Hoàng Long Car
 -------------------------
-For a standard installation please follow the <a href="https://github.com/hoangviethung">Setup Template</a>
+For a standard installation please follow the <a href="https://github.com/hoangviethung/hoanglongcar.vn">Setup Template</a>
 from the documentation.
